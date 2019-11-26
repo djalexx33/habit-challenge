@@ -1,0 +1,2 @@
+class UserTipsController < ApplicationController
+end
