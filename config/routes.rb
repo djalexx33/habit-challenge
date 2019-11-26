@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :inscriptions, only: [ :create ]
   end
 
-  resources :tips, only: [ :show ] do
+  resources :tips, only: [ :show ] do # The :index method in in a partial because we will display it directly into the Challenges#show
     resources :user_tips, only: [ :create ]
   end
   resources :user_tips, only: [ :index, :destroy ]
