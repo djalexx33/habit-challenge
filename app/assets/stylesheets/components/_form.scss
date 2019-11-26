@@ -1,27 +1,27 @@
 .body {
-  background-color: $light-grey;
+  background-color: $light-gray;
 }
 
 .forms {
-  border: 5px solid $orange;
+  border: 5px solid $brown;
   h1 {
-    color: $orange;
+    color: $brown;
   }
 }
 
 .line-form {
-  border-bottom: 8px solid $orange;
+  border-bottom: 8px solid $brown;
   width: 80px;
   margin: 0;
 }
 
 .form-control {
   border: none;
-  border-bottom: 2px solid $orange;
+  border-bottom: 2px solid $brown;
 }
 
 .form-control:focus{
   box-shadow: none;
   -webkit-box-shadow: none;
-  border-bottom: 1px solid $blue-water;
+  border-bottom: 1px solid $light-green;
 }
