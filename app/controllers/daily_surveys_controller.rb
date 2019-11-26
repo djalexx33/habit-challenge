@@ -1,0 +1,2 @@
+class DailySurveysController < ApplicationController
+end
