@@ -1,134 +1,31 @@
 <div class="options">
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);">
+
+  <% @challenges.each do |challenge| %>
+
+    <div class="option" style="--optionBackground: linear-gradient(rgba(200, 200, 200, 0.5), rgba(0, 100, 100, 0.5)), url(<%= challenge.photo %>);">
       <div class="label">
          <div class="icon">
-            <i class="fas fa-walking"></i>
+            <img src="<%= challenge.badge %>" alt="badge">
          </div>
          <div class="info">
-            <div class="main">Plastic Detox</div>
-            <div class="sub">January</div>
+            <div class="main"><%= challenge.title %></div>
+            <div class="sub"><%= challenge.date.strftime("%B") %></div>
          </div>
       </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-snowflake"></i>
-         </div>
-         <div class="info">
-            <div class="main">Meat Detox</div>
-            <div class="sub">February</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-tree"></i>
-         </div>
-         <div class="info">
-            <div class="main">Seasocal Fever</div>
-            <div class="sub">March</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-tint"></i>
-         </div>
-         <div class="info">
-            <div class="main">Petrol Detex</div>
-            <div class="sub">April</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-sun"></i>
-         </div>
-         <div class="info">
-            <div class="main">Zero Waste</div>
-            <div class="sub">May</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-sun"></i>
-         </div>
-         <div class="info">
-            <div class="main">Water Smart</div>
-            <div class="sub">June</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-sun"></i>
-         </div>
-         <div class="info">
-            <div class="main">Smart Purchasing</div>
-            <div class="sub">July</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-sun"></i>
-         </div>
-         <div class="info">
-            <div class="main">Digital detox</div>
-            <div class="sub">August</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-sun"></i>
-         </div>
-         <div class="info">
-            <div class="main">Street Clean Up</div>
-            <div class="sub">September</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-sun"></i>
-         </div>
-         <div class="info">
-            <div class="main">Electricity Switch</div>
-            <div class="sub">October</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-sun"></i>
-         </div>
-         <div class="info">
-            <div class="main">Involvment</div>
-            <div class="sub">November</div>
-         </div>
-      </div>
-   </div>
-   <div class="option active" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-sun"></i>
-         </div>
-         <div class="info">
-            <div class="main">Petrol Detox</div>
-            <div class="sub">December</div>
-         </div>
-      </div>
-   </div>
+    </div>
+
+  <% end %>
+
+  <div class="option active" style="--optionBackground: linear-gradient(rgba(200, 200, 200, 0.5), rgba(0, 100, 100, 0.5)), url(http://thirdforcenews.org.uk/images/uploads/articles/1745/climatechangeweb.jpg);">
+    <div class="label">
+       <div class="icon">
+          <img src="http://cliparts.co/cliparts/dT9/r9e/dT9r9e69c.jpg" alt="badge">
+       </div>
+       <div class="info">
+          <div class="main">Gathering of all Challenges</div>
+          <div class="sub">December</div>
+       </div>
+    </div>
+  </div>
+
 </div>
