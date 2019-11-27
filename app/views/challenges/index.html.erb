@@ -3,29 +3,38 @@
   <% @challenges.each do |challenge| %>
 
     <div class="option" style="--optionBackground: linear-gradient(rgba(200, 200, 200, 0.5), rgba(0, 100, 100, 0.5)), url(<%= challenge.photo %>);">
-      <div class="label">
-         <div class="icon">
-            <img src="<%= challenge.badge %>" alt="badge">
-         </div>
-         <div class="info">
+<!--       <div class="text"><%= challenge.description %></div>
+ -->
+      <%= link_to challenge_path(challenge.id) do %>
+        <div class="label">
+          <div class="icon"><img src="<%= challenge.badge %>" alt="badge"></div>
+          <div class="info">
             <div class="main"><%= challenge.title %></div>
             <div class="sub"><%= challenge.date.strftime("%B") %></div>
-         </div>
-      </div>
+          </div>
+        </div>
+      <% end %>
+
     </div>
 
   <% end %>
 
   <div class="option active" style="--optionBackground: linear-gradient(rgba(200, 200, 200, 0.5), rgba(0, 100, 100, 0.5)), url(http://thirdforcenews.org.uk/images/uploads/articles/1745/climatechangeweb.jpg);">
-    <div class="label">
-       <div class="icon">
-          <img src="http://cliparts.co/cliparts/dT9/r9e/dT9r9e69c.jpg" alt="badge">
-       </div>
-       <div class="info">
-          <div class="main">Gathering of all Challenges</div>
-          <div class="sub">December</div>
-       </div>
-    </div>
+<!--     <div class="text">
+      <p>bla bla bla bla bla bla</p>
+    </div> -->
+    <%= link_to challenge_path(@challenges.last.id) do %>
+      <div class="label">
+         <div class="icon">
+            <img src="http://cliparts.co/cliparts/dT9/r9e/dT9r9e69c.jpg" alt="badge">
+         </div>
+         <div class="info">
+            <div class="main">Gathering of all Challenges</div>
+            <div class="sub">December</div>
+         </div>
+      </div>
+    <% end %>
+
   </div>
 
 </div>
