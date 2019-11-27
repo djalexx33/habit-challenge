@@ -1,0 +1,57 @@
+.modal {
+  .modal-body {
+    overflow-y: auto;
+    max-height: 350px;
+  }
+  .modal-content {
+    height: 500px;
+    border-radius: 7px;
+    border: none;
+  }
+  .modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+  .close {
+    font-size: 2.5rem;
+  }
+
+}
+
+  .nav-tabs {
+    border-bottom: none;
+    background-color: transparent;
+    border-color: transparent;
+    .nav-link.active {
+      background-color: transparent;
+      border-color: transparent;
+      border-bottom: 6px solid black;
+    }
+    .nav-item.show {
+      background-color: transparent;
+      border-color: transparent;
+    }
+    .nav-link {
+      background-color: transparent;
+      border-color: transparent;
+      color: black;
+    }
+    .nav-link:hover {
+      border-color: transparent;
+      color: black;
+    }
+    .nav-link.active:hover {
+      border-color: transparent;
+      color: black;
+      border-bottom: 6px solid black;
+    }
+  }
+
+
+
+
+
+
