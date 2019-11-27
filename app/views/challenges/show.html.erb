@@ -1,41 +1,9 @@
 <h1>Coucou SHOW</h1>
 <%= @challenge.title %>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-Join the challenge !
+<%= link_to "Lien vers Inscriptions #create", challenge_inscriptions_path(@challenge), method: :post %>
+<button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal">
+Join
 </button>
+<%= render "shared/tips_index", locals: { challenge: @challenge } %>
 
 
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active pl-5 pr-5" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h3>Sign Up</h3></a>
-          </li>
-          <%= render "./devise/registrations/new" %>
-          <li class="nav-item">
-            <a class="nav-link pl-5 pr-5" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h3>Log In</h3></a>
-          </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary justify-content-center">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal -->

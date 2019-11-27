@@ -1,1 +1,6 @@
 <h1>Coucou Tips index</h1>
+
+<% @tips.each do |tip| %>
+  <%= tip.title %>
+  <%= link_to "User_tips #CREATE", tip_user_tips_path(tip, challenge_id: @challenge ), method: :post %>
+<% end %>
