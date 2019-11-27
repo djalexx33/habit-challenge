@@ -435,3 +435,14 @@ article.surveys-dashboard-card:hover .infos .seats, article.surveys-dashboard-ca
   opacity: 1;
 }
 // end
+
+// For Dashboard profil infos card:
+
+.list-group-item {
+  border: none;
+}
+
+.dashboard-profil-card {
+  box-shadow: 5px 7px 6px #e6e5e5;
+  border: none;
+}
