@@ -9,6 +9,6 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :username, presence: true, uniqueness: true
-  validates :avatar, presence: true
+  # validates :avatar, presence: true
   validates :city, presence: true
 end
