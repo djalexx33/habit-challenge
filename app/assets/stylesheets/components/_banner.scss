@@ -12,8 +12,10 @@
   //background-position: center;
   padding: 150px 0;
   height: 700px;
+  width: 100%;
   color: black;
   margin-top: -80px;
+  display: flex;
   .button-banner {
     position: absolute;
     bottom: 50px;
@@ -41,4 +43,15 @@
   }
 }
 
+.banner p{
+  color: white;
+  text-align: right;
+  padding-top: 40px;
+  font-size: 20px;
+}
 
+.banner-show-challenge-content {
+  h1{
+    font-size: 80px;
+  }
+}
