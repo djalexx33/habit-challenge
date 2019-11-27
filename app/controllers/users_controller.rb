@@ -20,9 +20,9 @@ class UsersController < ApplicationController
 
 
   def destroy
-    @challenge = Challenge.find(params[:id])
-    @challenge.destroy
-    redirect_to user_path
+    # @challenge = Challenge.find(params[:id])
+    # @challenge.destroy
+    # redirect_to user_path
   end
 
 
