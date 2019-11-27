@@ -14,6 +14,7 @@
 @import "components/card";
 
 body {
+  background-color: white;
   h1 {
     font-family: "Roboto";
     font-weight: bold;
@@ -34,5 +35,11 @@ body {
   p {
     font-family: "Nunito";
     font-size: 18px;
+  }
+  a {
+    color: $green;
+  }
+  a:hover {
+    color: $green;
   }
 }

@@ -1,9 +1,54 @@
-<h1>Coucou SHOW</h1>
-<%= @challenge.title %>
-<%= link_to "Lien vers Inscriptions #create", challenge_inscriptions_path(@challenge), method: :post %>
-<button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleModal">
-Join
-</button>
-<%= render "shared/tips_index", locals: { challenge: @challenge } %>
+<div class="banner banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://miro.medium.com/max/12000/1*KBZH2aoKRqG_zSsFcFI-QQ.jpeg);">
+  <div class="container">
+    <div class="banner">
+      <div class="banner-show-challenge-content">
+        <h1><span id="hashtag">#</span><%= @challenge.title %></h1>
+        <div class="button-banner-show">
+          <% if user_signed_in? %>
+          <%= link_to "Subscribe to the challenge", challenge_inscriptions_path(@challenge), method: :post, class: "btn btn-primary btn-lg white-button" %>
+          <% else %>
+          <%= render "shared/login_form" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="banner-show-description">
+      <p>Plastic respresent 80% of marine pollution. Challenge yourself on saving your planet</p></div>
+    </div>
+  </div>
+</div>
 
+<div class="container">
+  <p>PLACE FOR MAP</p>
+  <div class="bloc-section">
+    <div class="bloc-section-1">
+      <div class="bloc-section-1-photo">
+      </div>
+      <div class="bloc-section-1-content">
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    
+    <div class="bloc-section-2">
+      <div class="bloc-section-2-photo">
+
+      </div>
+      <div class="bloc-section-2-content">
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="bloc-section-3">
+      <div class="bloc-section-3-photo">
+
+      </div>
+      <div class="bloc-section-3-content">
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+</div>
 
