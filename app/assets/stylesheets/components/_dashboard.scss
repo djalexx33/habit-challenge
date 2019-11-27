@@ -1,0 +1,43 @@
+.dashboard-profil-card {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.dashboard-profil-content {
+  position: relative;
+  .btn {
+    position: absolute;
+    bottom: 10px;
+  }
+  .nav-tabs .nav-link.active {
+    border-bottom: none;
+  }
+  .nav-link.active {
+    .h3-border-bottom {
+      border-bottom: 6px solid $green;
+    }
+  }
+  .tab-content {
+    overflow: scroll;
+    height: 500px;
+  }
+  .tips-card {
+    .general {
+      // padding: 4vh;
+    }
+    .additional {
+      // width: 60%;
+      // padding: 4vh;
+      .user-card {
+        // width: 30%;
+      }
+      .more-info {
+        // width: 70%;
+        .btn {
+          position: initial;
+        }
+      }
+    }
+  }
+}
