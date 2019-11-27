@@ -195,7 +195,7 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
   flex-direction:row;
   align-items:stretch;
   overflow:hidden;
-  height:50vh;
+  height:85vh;
   margin:20px;
   @for $i from 1 through 4 {
      @media screen and (max-width:798px - $i*80) {
@@ -233,9 +233,6 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
         border-radius:40px;
 
         background-size:auto 100%;
-        .shadow {
-           box-shadow:inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
-        }
         .label {
            bottom:20px;
            left:20px;
@@ -244,9 +241,6 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
               opacity:1;
            }
         }
-        /*&:active {
-           transform:scale(0.9);
-        }*/
      }
      &:not(.active) {
         flex-grow:1;
@@ -265,16 +259,7 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
            }
         }
      }
-     .shadow {
-        position: absolute;
-        bottom:0px;
-        left:0px;
-        right:0px;
 
-        height:120px;
-
-        transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-     }
      .label {
         display:flex;
         position: absolute;
@@ -310,6 +295,12 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
               position: relative;
 
               transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
+           }
+           .text {
+              font-weight:normal;
+              flex-wrap: wrap;
+              color: white;
+              font-size:1.2rem;
            }
            .main {
               font-weight:bold;
