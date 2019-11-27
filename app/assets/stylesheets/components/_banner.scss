@@ -1,0 +1,44 @@
+// .home-banner {
+//   background-image: url('.../assets/images/camera.jpg');
+//   background-size: cover;
+//   height: 100vh;
+//   color: #eee;
+//   text-align: center;
+//   padding-top: 40vh;
+// }
+
+.banner {
+  background-size: cover;
+  //background-position: center;
+  padding: 150px 0;
+  height: 700px;
+  color: black;
+  margin-top: -80px;
+  .button-banner {
+    position: absolute;
+    bottom: 50px;
+  }
+  .form-banner {
+    margin-top: 50px;
+  }
+}
+
+.banner h1{
+  color: white;
+  font-size: 80px;
+  padding-right: 500px;
+}
+
+.banner h2{
+  color: $green;
+  font-size: 70px;
+  margin-top: -90px;
+  text-shadow: 1;
+  #hashtag {
+    font-size: 120px;
+    color: $green;
+    margin-top: 15px;
+  }
+}
+
+
