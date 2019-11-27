@@ -299,12 +299,6 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
 
               transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
            }
-           .text {
-              font-weight:normal;
-              flex-wrap: wrap;
-              color: white;
-              font-size:1.2rem;
-           }
            .main {
               font-weight:bold;
               font-size:1.2rem;
@@ -313,7 +307,16 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
               transition-delay:.1s;
            }
         }
+        .info:hover {
+          color: black;
+        }
      }
+    .text {
+    font-weight:500;
+    color: white;
+    margin-top: 200px;
+    margin-left: 100px;
+    }
   }
 }
 // end
