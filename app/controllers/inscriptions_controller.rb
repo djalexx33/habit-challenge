@@ -10,6 +10,9 @@ class InscriptionsController < ApplicationController
   end
 
   def destroy
+    @inscription = Inscription.find(params[:id])
+    @inscription.destroy
+    redirect_to challenges_path
   end
 
   private

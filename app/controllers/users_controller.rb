@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    @inscriptions = @user.inscriptions
   end
 
   def new
