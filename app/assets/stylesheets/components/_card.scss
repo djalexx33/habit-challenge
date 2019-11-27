@@ -306,11 +306,14 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
            .sub {
               transition-delay:.1s;
            }
-        }
-        .info:hover {
-          color: black;
+         .info:hover {}
         }
      }
+      .label:hover {
+        .main {
+          text-decoration: underline;
+        }
+      }
     .text {
     font-weight:500;
     color: white;
