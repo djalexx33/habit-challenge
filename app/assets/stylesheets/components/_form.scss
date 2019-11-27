@@ -25,3 +25,16 @@
   -webkit-box-shadow: none;
   border-bottom: 1px solid $light-green;
 }
+
+.upload-photo {
+  background: linear-gradient(to right, $green, $green-gradient);
+  border-radius: 25px;
+  color: white;
+  border: none;
+  padding: 10px;
+  &:hover{
+    background: transparent;
+    color: $green;
+    border: 1px solid $green;
+  }
+}
