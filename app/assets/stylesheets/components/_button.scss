@@ -1,0 +1,54 @@
+.main-button{
+  background: linear-gradient(to right, $green, $green-gradient);
+  border-radius: 25px;
+  border: none;
+  &:hover{
+    background: transparent;
+    color: $green;
+    border: 1px solid $green;
+  }
+}
+
+.light-main-button{
+  background: transparent;
+  color: $green;
+  border: 1px solid $green;
+  border-radius: 25px;
+  &:hover{
+    background: linear-gradient(to right, $green, $green-gradient);
+    border: none;
+  }
+}
+
+.second-button{
+  background: linear-gradient(to right, $dark-green, $dark-green-gradient);
+  border-radius: 25px;
+  border: none;
+  &:hover{
+    background: transparent;
+    color: $dark-green;
+    border: 1px solid $dark-green;
+  }
+}
+
+.light-second-button{
+  background: transparent;
+  color: $dark-green;
+  border: 1px solid $dark-green;
+  border-radius: 25px;
+  &:hover{
+    background: linear-gradient(to right, $dark-green, $dark-green-gradient);
+    border: none;
+  }
+}
+
+.white-button{
+  background: white;
+  color: $dark-green;
+  border: 1px solid $dark-green;
+  border-radius: 25px;
+  &:hover{
+    background: transparent;
+    border: 1px solid white;
+  }
+}
