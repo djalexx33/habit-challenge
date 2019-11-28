@@ -29,7 +29,9 @@
       </ul>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="challenges" role="tabpanel" aria-labelledby="challenges-tab">
-        <%= @inscriptions %>
+        <% @inscriptions.each do |inscription| %>
+        <%= inscription.challenge.title %>
+        <% end %>
         <%= link_to "Add challenge", challenges_path, :class => "btn btn-primary btn-lg main-button pl-4 pr-4 " %>
         </div>
         <div class="tab-pane fade" id="surveys" role="tabpanel" aria-labelledby="surveys-tab">
