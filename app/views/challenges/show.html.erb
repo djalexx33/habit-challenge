@@ -8,7 +8,7 @@
           <%= link_to "Subscribe to the challenge", challenge_inscriptions_path(@challenge), method: :post, class: "btn btn-primary btn-lg white-button" %>
           <% else %>
           <%= link_to "Subscribe to the challenge",new_user_session_path, class: "btn btn-primary btn-lg white-button" %>
-       <!--    <%#= render "shared/login_form" %> -->
+          <%= render "shared/login_form" %>
           <% end %>
         </div>
       </div>
@@ -21,32 +21,136 @@
 <div class="container">
   <p>PLACE FOR MAP</p>
   <div class="bloc-section">
-    <div class="bloc-section-1">
-      <div class="bloc-section-1-photo">
+    <div class="bloc-section-right">
+      <div class="bloc-section-right-photo">
+        <img src="https://cdn.pixabay.com/photo/2014/07/09/23/43/plastic-bottles-388679_1280.jpg" alt="">
       </div>
-      <div class="bloc-section-1-content">
-        <h1></h1>
-        <p></p>
-      </div>
-    </div>
-
-    <div class="bloc-section-2">
-      <div class="bloc-section-2-photo">
-
-      </div>
-      <div class="bloc-section-2-content">
-        <h1></h1>
-        <p></p>
+      <div class="bloc-section-right-content">
+        <div class="title">
+          <h1>#Impact</h1>
+        </div>
+        <div class="description">
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab.</p>
+        </div>
       </div>
     </div>
 
-    <div class="bloc-section-3">
-      <div class="bloc-section-3-photo">
-
+    <div class="bloc-section-left">
+      <div class="bloc-section-left-content text-right">
+        <div class="title">
+          <h1>Hope#</h1>
+        </div>
+        <div class="description">
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab.</p>
+        </div>
       </div>
-      <div class="bloc-section-3-content">
-        <h1></h1>
-        <p></p>
+      <div class="bloc-section-left-photo">
+      <img src="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+      </div>
+    </div>
+
+    <div class="bloc-section-right">
+      <div class="bloc-section-right-photo">
+      <img src="https://images.unsplash.com/photo-1565885548177-12df13a7e1bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" alt="">
+      </div>
+      <div class="bloc-section-right-content">
+        <div class="title">
+          <h1>#How</h1>
+        </div>
+        <div class="description">
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container text-center">
+  <div class="tips-title pb-5 pt-5">
+    <h1>All our <strong>tips</strong><br>
+      &nbsp;&nbsp;&nbsp;&nbsp; to help you on the <strong>plastic challenge</strong></h1>
+  </div>
+  <div class="tips-index">
+    <div class="tips-card shampoo">
+      <div class="additional">
+        <div class="user-card">
+          <div class="level center">
+            Tip n°2
+          </div>
+          <div class="points center">
+            100 points
+          </div>
+          <div>
+            <img class="item-avatar center"src="https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg">
+          </div>
+        </div>
+        <div class="more-info">
+          <h1>Do your own shampoo</h1>
+          <div class="stats">
+            <div>
+              <div class="title">CO2</div>
+              <div class="value">0</div>
+            </div>
+            <div>
+              <div class="title">PLASTIC</div>
+              <div class="value">0</div>
+            </div>
+            <div>
+              <div class="title">HEALTHY</div>
+              <div class="value infinity">∞</div>
+            </div>
+          </div>
+          <div class="subscription">
+            <a class="btn btn-primary white-button" href="#" role="button">Pin to your dashboard</a>
+          </div>
+        </div>
+      </div>
+      <div class="general">
+        <h1>Do your own shampoo</h1>
+        <p>Follow our wonderful recipe to do your own shampoo and start to save plastic and lots of greats improvements</p>
+        <span class="more">Mouse over the card for more info</span>
+      </div>
+    </div>
+
+    <div class="tips-card diy">
+      <div class="additional">
+        <div class="user-card">
+          <div class="level center">
+            Tip n°2
+          </div>
+          <div class="points center">
+            100 points
+          </div>
+          <div>
+            <img class="item-avatar center"src="https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg">
+          </div>
+        </div>
+        <div class="more-info">
+          <h1>Do your own shampoo</h1>
+          <div class="stats">
+            <div>
+              <div class="title">CO2</div>
+              <div class="value">0</div>
+            </div>
+            <div>
+              <div class="title">PLASTIC</div>
+              <div class="value">0</div>
+            </div>
+            <div>
+              <div class="title">HEALTHY</div>
+              <div class="value infinity">∞</div>
+            </div>
+          </div>
+          <div class="subscription">
+            <a class="btn btn-primary white-button" href="#" role="button">Pin to your dashboard</a>
+          </div>
+        </div>
+      </div>
+      <div class="general">
+        <h1>Do your own shampoo</h1>
+        <p>Follow our wonderful recipe to do your own shampoo and start to save plastic and lots of greats improvements</p>
+        <span class="more">Mouse over the card for more info</span>
       </div>
     </div>
 

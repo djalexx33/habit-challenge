@@ -1,4 +1,5 @@
 class InscriptionsController < ApplicationController
+  before_action :authenticate_user!, only:[:create]
   def create
     @user = current_user
     @challenge = Challenge.find(params[:challenge_id])
