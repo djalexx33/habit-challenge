@@ -1,6 +1,6 @@
 class Challenge < ApplicationRecord
-  has_many :tips
-  has_many :inscriptions
+  has_many :tips, dependent: :destroy
+  has_many :inscriptions, dependent: :destroy
   has_many :questions
   has_many :users, through: :inscriptions
   validates :title, presence: true, uniqueness: true
