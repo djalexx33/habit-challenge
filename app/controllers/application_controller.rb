@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
   end
 
   def store_user_location!
-   store_location_for(:user, request.fullpath)
+    store_location_for(:user, request.fullpath)
+  end
 
   def set_challenge_of_the_month
     @challenge_of_the_month = Challenge.where('extract(month from date) = ?', Date.today.month).first
