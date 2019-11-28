@@ -1,1 +1,30 @@
 // Specific CSS for your home-page
+#user-count {
+  color: $green;
+}
+
+.home-infos {
+  p {
+    text-align: center;
+    span {
+      font-size: 35px;
+      font-family: cursive;
+    }
+  #home-infos-act {
+    margin-top: 50px;
+  }
+}
+  .home-infos-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 61px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .home-infos-content-left, .home-infos-content-right {
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
+
