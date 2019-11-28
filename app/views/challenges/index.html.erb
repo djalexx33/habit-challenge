@@ -17,7 +17,6 @@
     <% if challenge.date.strftime("%B") == Date.today.strftime("%B") %>
 
       <div class="option active" style="--optionBackground: linear-gradient(rgba(200, 200, 200, 0.5), rgba(0, 100, 100, 0.5)), url(<%= challenge.photo %>);">
-        <div class="info">bla bla bla</div>
         <%= link_to challenge_path(challenge.id) do %>
           <div class="label">
             <div class="icon"><img src="<%= challenge.badge %>" alt="badge"></div>
@@ -33,7 +32,6 @@
     <% else %>
 
       <div class="option" style="--optionBackground: linear-gradient(rgba(200, 200, 200, 0.5), rgba(0, 100, 100, 0.5)), url(<%= challenge.photo %>);">
-        <div class="info">bla bla bla</div>
         <%= link_to challenge_path(challenge.id) do %>
           <div class="label">
             <div class="icon"><img src="<%= challenge.badge %>" alt="badge"></div>
