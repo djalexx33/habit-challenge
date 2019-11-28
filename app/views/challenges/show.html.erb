@@ -7,7 +7,8 @@
           <% if user_signed_in? %>
           <%= link_to "Subscribe to the challenge", challenge_inscriptions_path(@challenge), method: :post, class: "btn btn-primary btn-lg white-button" %>
           <% else %>
-          <%= render "shared/login_form" %>
+          <%= link_to "Subscribe to the challenge",new_user_session_path, class: "btn btn-primary btn-lg white-button" %>
+       <!--    <%#= render "shared/login_form" %> -->
           <% end %>
         </div>
       </div>
@@ -28,7 +29,7 @@
         <p></p>
       </div>
     </div>
-    
+
     <div class="bloc-section-2">
       <div class="bloc-section-2-photo">
 
