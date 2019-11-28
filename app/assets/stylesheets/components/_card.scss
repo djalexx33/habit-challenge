@@ -190,12 +190,22 @@
 // For challenges#index cards:
 $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
 
+.page-prez {
+  a {
+    color: $green;
+  }
+  a:hover {
+    text-decoration: none;
+    font-weight: 900;
+  }
+}
+
 .options {
   display:flex;
   flex-direction:row;
   align-items:stretch;
   overflow:hidden;
-  height:85vh;
+  height:50vh;
   margin:20px;
   @for $i from 1 through 4 {
      @media screen and (max-width:798px - $i*80) {
