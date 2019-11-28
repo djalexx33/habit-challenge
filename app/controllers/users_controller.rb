@@ -7,6 +7,8 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @inscriptions = @user.inscriptions
+    @challenge = Challenge.find(params[:id])
+
   end
 
   def new
@@ -17,6 +19,8 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
+
+    @user.save!
   end
 
   def destroy
