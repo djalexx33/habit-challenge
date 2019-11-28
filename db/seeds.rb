@@ -8,7 +8,9 @@
 
 puts "Creating our users..."
 User.destroy_all
-User.create(first_name: "Leonardo", last_name: "Di Caprio", username: "Leo", email: "leo@gmail.com", avatar: "https://gentlemanmoderne.com/wp-content/uploads/2017/09/leonardo_dicaprio-portrait-blog-homme.jpg", password: "azerty", city: "Los Angeles")
+
+leo = User.create(first_name: "Leonardo", last_name: "Di Caprio", username: "Leo", email: "leo@gmail.com", avatar: "https://gentlemanmoderne.com/wp-content/uploads/2017/09/leonardo_dicaprio-portrait-blog-homme.jpg", password: "azerty", city: "Los Angeles")
+puts " ----> Leo has been created."
 User.create(first_name: "Bernardo", last_name: "Il Bocaccio", username: "Berno", email: "berno@gmail.com", avatar: "https://upload.wikimedia.org/wikipedia/commons/6/63/Bernardo_Silva_2017.jpg", password: "azerty", city: "Mooloolaba")
 User.create(first_name: "Alfredo", last_name: "boulanger", username: "bobol", email: "bobol@gmail.com", password: "azerty", city: "Mooloolaba")
 User.create(first_name: "mama", last_name: "moranger", username: "momo", email: "momo@gmail.com", password: "azerty", city: "Jakarta")
@@ -37,6 +39,35 @@ Challenge.create(title: "Responsible Purchasing", description: "Ask yourself if 
 Challenge.create(title: "Digital Detox", description: "Use a respectful search engine, reduce the amount of emails you send, erase your old emails, watch videos only with the necessary quality", date: "2019-08-06 19:08:40.011480", photo: "https://cdn.arstechnica.net/wp-content/uploads/2017/09/googscotusstorypic.jpg", badge: "https://image.flaticon.com/icons/png/512/498/498869.png")
 Challenge.create(title: "Vegetate your city", description: "Show the example by picking the trashes in the street to dump them in the public bin around the corner, plant seeds in public parks and around trees", date: "2019-09-06 19:08:40.011480", photo: "https://environmentamerica.org/sites/environment/files/cpn/AMN-033117-REPORT/assets/img/WEB_AMN_Shining-Cities_Slideshow_Austin-01.jpg", badge: "https://www.countryfinancial.com/content/dam/cfin/bands/icons/icon_history_2008_plant-01.png")
 Challenge.create(title: "Green Energy Switch", description: "Support green energy and stop purchasing from oil, gaz and coal companies", date: "2019-10-06 19:08:40.011480", photo: "https://www.publicdomainpictures.net/pictures/10000/velka/87-12681332789SQ8.jpg", badge: "https://purepng.com/public/uploads/large/purepng.com-glowing-yellow-light-bulbelectronicsbulb-light-941524679911ixxqy.png")
-Challenge.create(title: "Plastic Free", description: "Ban sigle-use plastic for the month of January, reduce your consumption of other plastics", date: "2019-11-06 19:08:40.011480", photo: "https://i.pinimg.com/736x/5e/c7/8d/5ec78d8a78867aacb099a7956e834753.jpg", badge: "https://toppng.com/public/uploads/preview/free-png-plastic-water-bottle-png-11519803083hnhiljypmg.png")
+plastic = Challenge.create(title: "Plastic Free", description: "Ban sigle-use plastic for the month of January, reduce your consumption of other plastics", date: "2019-11-06 19:08:40.011480", photo: "https://i.pinimg.com/736x/5e/c7/8d/5ec78d8a78867aacb099a7956e834753.jpg", badge: "https://toppng.com/public/uploads/preview/free-png-plastic-water-bottle-png-11519803083hnhiljypmg.png")
 puts " ----> 11 challenges have been created"
 
+puts "Creating inscription..."
+Inscription.create(challenge: plastic, user: leo)
+
+puts "Creating questions..."
+
+question_1 = Question.create(title: "Did you use platic today", challenge: plastic)
+question_2 = Question.create(title: "Did you eat plastic today", challenge: plastic)
+question_3 = Question.create(title: "Did you make plastic today", challenge: plastic)
+
+puts "Creating our options..."
+
+option_1_q1 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_1)
+option_2_q1 = Option.create(title: "Between 0 and 10 times", pounderation: 2, question: question_1)
+option_3_q1 = Option.create(title: "0 time", pounderation: 4, question: question_1)
+
+option_1_q2 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_2)
+option_2_q2 = Option.create(title: "Between 0 and 10 times", pounderation: 2, question: question_2)
+option_3_q2 = Option.create(title: "O time", pounderation: 4, question: question_2)
+
+
+option_1_q3 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_3)
+option_2_q3 = Option.create(title: "Between 0 and 10 times", pounderation: 2, question: question_3)
+option_3_q3 = Option.create(title: "0 time", pounderation: 4, question: question_3)
+
+puts "Creating our survey..."
+
+survey_1 = DailySurvey.create(date: Date.today, inscription: leo.inscriptions.first)
+
+puts "Finished"
