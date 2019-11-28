@@ -12,7 +12,7 @@ class InscriptionsController < ApplicationController
   def destroy
     @inscription = Inscription.find(params[:id])
     @inscription.destroy
-    redirect_to challenges_path
+    redirect_to user_path(current_user)
   end
 
   private
