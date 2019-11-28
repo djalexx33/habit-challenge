@@ -1,22 +1,52 @@
-<div class="options">
+<div class="page-prez ml-4 my-3">
+  <h1 class="mb-5">All the challenges available are listed here.</h1>
+  <p>A new challenge is unlocked every month. You can subscribe to as many challenges as you like.</p>
+  <p>Click on a card below to see more details about one challenge.</p>
+  <h3>Challenge for <%= Date.today.strftime("%B") %>:
+    <% @challenges.each do |challenge| %>
+      <%= link_to challenge_path(challenge.id) do %>
+        <%= challenge.title if challenge.date.strftime("%B") == Date.today.strftime("%B") %>
+      <% end %>
+    <% end %></h3>
+</div>
+
+<div class="options pt-3 border-top">
 
   <% @challenges.each do |challenge| %>
 
-    <div class="option" style="--optionBackground: linear-gradient(rgba(200, 200, 200, 0.5), rgba(0, 100, 100, 0.5)), url(<%= challenge.photo %>);">
-<!--       <div class="text"><%= challenge.description %></div>
- -->
-      <%= link_to challenge_path(challenge.id) do %>
-        <div class="label">
-          <div class="icon"><img src="<%= challenge.badge %>" alt="badge"></div>
-          <div class="info">
-            <div class="main"><%= challenge.title %></div>
-            <div class="sub"><%= challenge.date.strftime("%B") %></div>
-          </div>
-        </div>
-      <% end %>
+    <% if challenge.date.strftime("%B") == Date.today.strftime("%B") %>
 
-    </div>
+      <div class="option active" style="--optionBackground: linear-gradient(rgba(200, 200, 200, 0.5), rgba(0, 100, 100, 0.5)), url(<%= challenge.photo %>);">
+        <%= link_to challenge_path(challenge.id) do %>
+          <div class="label">
+            <div class="icon"><img src="<%= challenge.badge %>" alt="badge"></div>
+            <div class="info">
+              <div class="main"><%= challenge.title %></div>
+              <div class="sub"><%= challenge.date.strftime("%B") %></div>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+
+    <% else %>
+
+      <div class="option" style="--optionBackground: linear-gradient(rgba(200, 200, 200, 0.5), rgba(0, 100, 100, 0.5)), url(<%= challenge.photo %>);">
+        <%= link_to challenge_path(challenge.id) do %>
+          <div class="label">
+            <div class="icon"><img src="<%= challenge.badge %>" alt="badge"></div>
+            <div class="info">
+              <div class="main"><%= challenge.title %></div>
+              <div class="sub"><%= challenge.date.strftime("%B") %></div>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+
+    <% end %>
 
   <% end %>
 
+</div>
 

@@ -23,11 +23,9 @@ class UsersController < ApplicationController
     @user.save!
   end
 
-
   def destroy
     # @challenge = Challenge.find(params[:id])
     # @challenge.destroy
     # redirect_to user_path
   end
-
 end
