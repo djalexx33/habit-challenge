@@ -3,7 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
   has_many :user_tips
   has_many :inscriptions
   validates :first_name, presence: true
@@ -12,4 +11,7 @@ class User < ApplicationRecord
   # validates :avatar, presence: true
   validates :city, presence: true
   mount_uploader :avatar, PhotoUploader
+
+  geocoded_by :city
+  after_validation :geocode, if: :will_save_change_to_city?
 end
