@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-
+  before_action :set_challenge_of_the_month
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :store_user_location!, if: :storable_location?
 
@@ -17,5 +17,8 @@ class ApplicationController < ActionController::Base
 
   def store_user_location!
    store_location_for(:user, request.fullpath)
+
+  def set_challenge_of_the_month
+    @challenge_of_the_month = Challenge.where('extract(month from date) = ?', Date.today.month).first
   end
 end
