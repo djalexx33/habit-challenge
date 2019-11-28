@@ -5,8 +5,10 @@
       <h3><%= @user.username %></h3>
       <div class="card-body">
         <h5 class="card-title"><%= @user.city %></h5>
-        <p class="card-text">Member since:</p><p> <%= @user.created_at %> </p>
-        <h5 class="card-title">Badges</h5>
+        <p class="card-text">Member since:</p><p> <%= @user.created_at.strftime("%B, %d, %Y") %> </p>
+        <h5 class="card-title">Badges</h5><%= "You don't have any badge yet 😔" %>
+        <p></p>
+        <h5 class="card-title">Points :</h5><%= "1000" %>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"></li>
