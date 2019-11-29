@@ -26,4 +26,5 @@ class UsersController < ApplicationController
     # @challenge.destroy
     # redirect_to user_path
   end
+
 end

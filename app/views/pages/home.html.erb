@@ -34,6 +34,7 @@ Join
       </div>
     </div>
   </div>
+
   <div class="home-infos mt-5">
     <h2 id="home-infos-act"><span class="highlight">We need to act</span></h2>
     <div class="home-infos-content">
@@ -49,13 +50,12 @@ Join
     </div>
   </div>
 
-  <h2 class="text-center mb-4">Join the <span id="user-count"><%= User.all.count %></span> people who already act for a better world</h2>
+  <h2 class="text-center">Join the <span id="user-count"><%= User.all.count %></span> people who already act for a better world</h2>
   <div
-    class="mb-4"
     id="map"
     style="width: 100%;
     height: 600px;"
-    data-markers="<%= @markers.to_json %>"
+    data-users="<%= @geojson.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 </div>
