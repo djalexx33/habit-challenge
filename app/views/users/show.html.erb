@@ -4,11 +4,11 @@
       <%= cl_image_tag @user.avatar, height: 300, width: 300, crop: :fill %>
       <h3 class="text-center mt-3"><%= @user.username %></h3>
       <div class="card-body">
-        <h5 class="card-title"><%= @user.city %></h5>
-        <p class="card-text">Member since:</p><p> <%= @user.created_at.strftime("%B, %d, %Y") %> </p>
-        <h5 class="card-title">Badges</h5><%= "You don't have any badge yet 😔" %>
+        <h5 class="card-title"><%= @user.city %></h5><p></p>
+        <h5 class="card-text">Member since:</h5><p> <%= @user.created_at.strftime("%B, %d, %Y") %> </p>
+        <h5 class="card-title">Badges:</h5><p><%= "You don't have any badge yet" %></p>
         <p></p>
-        <h5 class="card-title">Points :</h5><%= "1000" %>
+        <h5 class="card-title">Points:</h5><p><%= "1000" %></p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"></li>
