@@ -1,5 +1,6 @@
 import Typed from 'typed.js';
 
+
 const loadDynamicBannerText = () => {
   new Typed('#typed-text', {
     strings: ["#Zero Plastic"],
