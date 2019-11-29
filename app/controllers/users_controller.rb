@@ -7,8 +7,6 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @inscriptions = @user.inscriptions
-    @challenge = Challenge.find(params[:id])
-
   end
 
   def new
