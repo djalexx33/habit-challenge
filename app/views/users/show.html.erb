@@ -37,7 +37,7 @@
           <% @inscriptions.each do |inscription| %>
             <div class="card-challenge-dashboard bg-white w-100 rounded mb-4">
               <div class="card-challenge-dashboard-img">
-                <%= image_tag "https://i.pinimg.com/736x/5e/c7/8d/5ec78d8a78867aacb099a7956e834753.jpg", badge: "https://toppng.com/public/uploads/preview/free-png-plastic-water-bottle-png-11519803083hnhiljypmg.png" %>
+                <%= image_tag inscription.challenge.photo %>
               </div>
               <div class="card-challenge-dashboard-infos-description p-2">
                 <h4><%= inscription.challenge.title %></h4>
