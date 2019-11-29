@@ -14,4 +14,18 @@ class User < ApplicationRecord
 
   geocoded_by :city
   after_validation :geocode, if: :will_save_change_to_city?
+
+  def coordinates
+    [longitude, latitude]
+  end
+
+  def to_feature
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": coordinates
+      }
+    }
+  end
 end
