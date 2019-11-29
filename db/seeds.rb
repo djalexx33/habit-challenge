@@ -23,7 +23,20 @@ User.create(first_name: "baltazar", last_name: "Smith", username: "Zoupette", em
 User.create(first_name: "arthur", last_name: "Pauloilo", username: "lol", email: "lol@gmail.com", password: "azerty", city: "Santiago")
 User.create(first_name: "Joannha", last_name: "Poilocu", username: "jojo", email: "jojo@gmail.com", password: "azerty", city: "Sayulita")
 User.create(first_name: "Alexandre", last_name: "babtu", username: "alex", email: "alex@gmail.com", password: "azerty", city: "Moscow")
-User.create(first_name: "foufou", last_name: "calin", username: "fuite", email: "fuite@gmail.com", password: "azerty", city: "Caire")
+User.create(first_name: "foufo", last_name: "cali", username: "fuit", email: "fuit@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "foufu", last_name: "caln", username: "fuie", email: "fuie@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "fouou", last_name: "cain", username: "fute", email: "fute@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "fofou", last_name: "clin", username: "fite", email: "fite@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "fufou", last_name: "alin", username: "uite", email: "uite@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "oufou", last_name: "cal", username: "fte", email: "fte@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "fofo", last_name: "cin", username: "fui", email: "fui@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "fufu", last_name: "lin", username: "te", email: "te@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "fou", last_name: "ali", username: "ui", email: "ui@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "foui", last_name: "alibaba", username: "uii", email: "ui@gmail.com", password: "azerty", city: "Paris")
+User.create(first_name: "foufoi", last_name: "alimama", username: "uiu", email: "u@gmail.com", password: "azerty", city: "Paris")
+User.create(first_name: "fouff", last_name: "alipopo", username: "uiuu", email: "i@gmail.com", password: "azerty", city: "Paris")
+User.create(first_name: "fouqe", last_name: "alipipi", username: "uiiii", email: "uiuu@gmail.com", password: "azerty", city: "Paris")
+User.create(first_name: "fouty", last_name: "alipepe", username: "uiuiu", email: "uiii@gmail.com", password: "azerty", city: "Paris")
 puts " ----> Leo and many users have been created."
 
 puts "Creating our challenges..."
