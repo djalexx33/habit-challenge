@@ -10,7 +10,6 @@ puts "Creating our users..."
 User.destroy_all
 
 leo = User.create(first_name: "Leonardo", last_name: "Di Caprio", username: "Leo", email: "leo@gmail.com", avatar: "https://gentlemanmoderne.com/wp-content/uploads/2017/09/leonardo_dicaprio-portrait-blog-homme.jpg", password: "azerty", city: "Los Angeles")
-puts " ----> Leo has been created."
 User.create(first_name: "Bernardo", last_name: "Il Bocaccio", username: "Berno", email: "berno@gmail.com", avatar: "https://upload.wikimedia.org/wikipedia/commons/6/63/Bernardo_Silva_2017.jpg", password: "azerty", city: "Mooloolaba")
 User.create(first_name: "Alfredo", last_name: "boulanger", username: "bobol", email: "bobol@gmail.com", password: "azerty", city: "Mooloolaba")
 User.create(first_name: "mama", last_name: "moranger", username: "momo", email: "momo@gmail.com", password: "azerty", city: "Jakarta")
@@ -25,7 +24,7 @@ User.create(first_name: "arthur", last_name: "Pauloilo", username: "lol", email:
 User.create(first_name: "Joannha", last_name: "Poilocu", username: "jojo", email: "jojo@gmail.com", password: "azerty", city: "Sayulita")
 User.create(first_name: "Alexandre", last_name: "babtu", username: "alex", email: "alex@gmail.com", password: "azerty", city: "Moscow")
 User.create(first_name: "foufou", last_name: "calin", username: "fuite", email: "fuite@gmail.com", password: "azerty", city: "Caire")
-puts " ----> many have been created."
+puts " ----> Leo and many users have been created."
 
 puts "Creating our challenges..."
 Challenge.destroy_all
