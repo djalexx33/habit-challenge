@@ -38,17 +38,19 @@ Challenge.create(title: "Responsible Purchasing", description: "Ask yourself if 
 Challenge.create(title: "Digital Detox", description: "Use a respectful search engine, reduce the amount of emails you send, erase your old emails, watch videos only with the necessary quality", date: "2019-08-06 19:08:40.011480", photo: "https://cdn.arstechnica.net/wp-content/uploads/2017/09/googscotusstorypic.jpg", badge: "https://image.flaticon.com/icons/png/512/498/498869.png")
 Challenge.create(title: "Vegetate your city", description: "Show the example by picking the trashes in the street to dump them in the public bin around the corner, plant seeds in public parks and around trees", date: "2019-09-06 19:08:40.011480", photo: "https://environmentamerica.org/sites/environment/files/cpn/AMN-033117-REPORT/assets/img/WEB_AMN_Shining-Cities_Slideshow_Austin-01.jpg", badge: "https://www.countryfinancial.com/content/dam/cfin/bands/icons/icon_history_2008_plant-01.png")
 Challenge.create(title: "Green Energy Switch", description: "Support green energy and stop purchasing from oil, gaz and coal companies", date: "2019-10-06 19:08:40.011480", photo: "https://www.publicdomainpictures.net/pictures/10000/velka/87-12681332789SQ8.jpg", badge: "https://purepng.com/public/uploads/large/purepng.com-glowing-yellow-light-bulbelectronicsbulb-light-941524679911ixxqy.png")
-plastic = Challenge.create(title: "Plastic Free", description: "Ban sigle-use plastic for the month of January, reduce your consumption of other plastics", date: "2019-11-06 19:08:40.011480", photo: "https://miro.medium.com/max/12000/1*KBZH2aoKRqG_zSsFcFI-QQ.jpeg", badge: "https://toppng.com/public/uploads/preview/free-png-plastic-water-bottle-png-11519803083hnhiljypmg.png")
-puts " ----> 11 challenges have been created"
+Challenge.create(title: "Plastic Free", description: "Ban sigle-use plastic for the month of January, reduce your consumption of other plastics", date: "2019-11-06 19:08:40.011480", photo: "https://miro.medium.com/max/12000/1*KBZH2aoKRqG_zSsFcFI-QQ.jpeg", badge: "https://toppng.com/public/uploads/preview/free-png-plastic-water-bottle-png-11519803083hnhiljypmg.png")
+food_waste = Challenge.create(title: "No Food Waste", description: "Rotting food in landfills emits methane gas, a big contributor to global warming.", date: "2019-12-01 19:08:40.011480", photo: "https://images.unsplash.com/photo-1495770283154-c990d0050a12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80", badge: "https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80")
+
+puts " ----> 12 challenges have been created"
 
 puts "Creating inscription..."
-Inscription.create(challenge: plastic, user: leo)
+Inscription.create(challenge: food_waste, user: leo)
 
 puts "Creating questions..."
 
-question_1 = Question.create(title: "Did you use platic today", challenge: plastic)
-question_2 = Question.create(title: "Did you eat plastic today", challenge: plastic)
-question_3 = Question.create(title: "Did you make plastic today", challenge: plastic)
+question_1 = Question.create(title: "Did you use platic today", challenge: food_waste)
+question_2 = Question.create(title: "Did you eat plastic today", challenge: food_waste)
+question_3 = Question.create(title: "Did you make plastic today", challenge: food_waste)
 
 puts "Creating our options..."
 
