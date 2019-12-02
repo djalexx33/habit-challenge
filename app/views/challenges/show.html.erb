@@ -174,7 +174,7 @@
   </div>
 
   <div class="map border-top pt-5 border-dark">
-    <h2 class="text-center">Join the <span id="user-count"><%= @challenge.inscriptions.count %></span> people who already act for a better world</h2>
+    <h2 class="text-center">Join the <span class="green-text"><%= @challenge.inscriptions.count %></span> people involved in this challenge</h2>
     <div
       id="map"
       style="width: 100%;
@@ -182,8 +182,16 @@
       data-users="<%= @geojson.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     ></div>
-    <br>
   </div>
 
+    <div class="search-bar d-flex flex-column mt-5">
+      <%= form_tag(display_path, method: :get, remote: true) do %>
+        <div class="d-flex justify-content-center align-items-center my-3 flex-column w-100">
+          <%= text_field_tag :query, params[:query], class: "w-25 form-control my-3", placeholder: "Find a friend"%>
+          <%= submit_tag "Search", class: "btn main-button" %>
+        </div>
+      <% end %>
+      <div class="query-list d-flex justify-content-center align-items-centerflex-column w-100 mt-4"></div>
+    </div>
 </div>
 

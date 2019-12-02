@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
     @user = current_user
     @questions = Question.all
-    @users = User.all # returns Users with coordinates
+    @users = User.all
     @geojson = build_geojson
   end
 
