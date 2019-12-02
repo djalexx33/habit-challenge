@@ -6,10 +6,10 @@ class UserTipsController < ApplicationController
 
   def create
     @user = current_user
-    @tip = Tip.first
+    @tip = Tip.find(params[:tip_id])
     @user_tip = UserTip.new(user: @user, tip: @tip)
     @user_tip.save
-    redirect_to challenge_path(params[:challenge_id])
+    redirect_to user_path(current_user)
   end
 
   def destroy

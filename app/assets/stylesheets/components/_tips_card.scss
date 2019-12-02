@@ -7,7 +7,7 @@
 
 .tips-title{
   h1{
-    padding-left: 200px;
+    // padding-left: 200px;
     text-align: left;
   }
   strong{
@@ -155,19 +155,19 @@
 }
 
 .tips-card .additional .stats div.title {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .tips-card .additional .stats div.value {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1.5rem;
 }
 
 .tips-card .additional .stats div.value.infinity {
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 
 .tips-card .general {
