@@ -1,24 +1,24 @@
-<div class="container mt-4">
+<div class="">
   <div class="row">
     <div class="card dashboard-profil-card col-md-3" style="width: 18rem;">
       <%= cl_image_tag @user.avatar, height: 300, width: 300, crop: :fill %>
       <h3 class="text-center mt-3"><%= @user.username %></h3>
-      <div class="card-body">
-        <h5 class="card-title"><%= @user.city %></h5><p></p>
-        <h5 class="card-text">Member since:</h5><p> <%= @user.created_at.strftime("%B, %d, %Y") %> </p>
-        <h5 class="card-title">Badges:</h5><p><%= "You don't have any badge yet" %></p>
+      <div class="card-body p-5">
+        <h5 class="card-title text-center"><%= @user.city %></h5><p></p>
+        <p class="text-center"><%= "1000" %> Points</p>
+        <h5 class="card-text">Member since</h5><p> <%= @user.created_at.strftime("%B, %d, %Y") %> </p>
+        <h5 class="card-title">Badges</h5><p><%= "You don't have any badge yet" %></p>
         <p></p>
-        <h5 class="card-title">Points:</h5><p><%= "1000" %></p>
       </div>
-      <ul class="list-group list-group-flush">
+<!--       <ul class="list-group list-group-flush">
         <li class="list-group-item"></li>
-      </ul>
+      </ul> -->
       <div class="card-body">
 <!--         <a href="#edit" class="card-link"><p>Edit profil</p></a>
  -->  </div>
     </div>
     <div class="dashboard-profil-content col-md-9">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <ul class="nav nav-tabs bg-white mt-3 p-4" id="myTab" role="tablist">
         <li class="nav-item">
           <a class="nav-link active pl-2 pr-4" id="home-tab" data-toggle="tab" href="#challenges" role="tab" aria-controls="challenges" aria-selected="true"><h4 class="h3-border-bottom">My challenges</h4></a>
         </li>
@@ -35,16 +35,16 @@
       <div class="tab-content mt-3" id="myTabContent">
         <div class="tab-pane fade show active" id="challenges" role="tabpanel" aria-labelledby="challenges-tab">
           <% @inscriptions.each do |inscription| %>
-            <div class="card-challenge-dashboard bg-white w-100 rounded mb-4">
+            <div class="card-challenge-dashboard bg-white w-100 mb-4">
               <div class="card-challenge-dashboard-img">
                 <%= image_tag inscription.challenge.photo %>
               </div>
-              <div class="card-challenge-dashboard-infos-description p-2">
+              <div class="card-challenge-dashboard-infos-description p-3">
                 <h4><%= inscription.challenge.title %></h4>
                 <p><%= inscription.challenge.description %><p>
               </div>
-              <div class="card-challenge-dashboard-button p-2">
-                <div class="card-challenge-dashboard-button-show p-2">
+              <div class="card-challenge-dashboard-button p-3">
+                <div class="card-challenge-dashboard-button-show pt-2 pb-2">
                   <%= link_to "Show", challenge_path(inscription.challenge), :class => "btn btn-primary btn-lg main-button pl-4 pr-4"%>
                 </div>
                 <div class="card-challenge-dashboard-button-unsusbcribe">
