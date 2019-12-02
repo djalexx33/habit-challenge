@@ -20,6 +20,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @inscriptions = @user.inscriptions
+    @user_tips = @user.user_tips
   end
 
   def new
