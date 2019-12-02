@@ -1,0 +1,9 @@
+<div class="selected-users">
+  <% @users.each do |user| %>
+    <p><strong><%= user.first_name.capitalize %> <%= user.last_name.capitalize %></strong> alias '<%= user.username %>' from <u><%= user.city %></u> |
+      Involved in: <% user.challenges.each do |challenge| %>
+        <span class="green-text"> <%= challenge.title %>. </span>
+      <% end %>
+    </p>
+  <% end %>
+</div>
