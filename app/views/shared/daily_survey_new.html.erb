@@ -1,0 +1,8 @@
+<h1><%= Date.today.strftime("%D") %></h1>
+
+<% @questions.each do |question| %>
+  <h5><%= question.title %></h5>
+  <% question.options.each do |option| %>
+    <p><%= option.title %></p>
+  <% end %>
+<% end %>
