@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :users, only: [ :show ]
+  get '/display', to: "users#display"
+  resources :users, only: [ :show, :index ]
   resources :challenges, only: [ :show, :index ] do
     resources :inscriptions, only: [ :create ]
   end

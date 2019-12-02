@@ -1,14 +1,15 @@
 <div class="">
   <div class="row">
     <div class="card dashboard-profil-card col-md-3" style="width: 18rem;">
-      <%= cl_image_tag @user.avatar, height: 300, width: 300, crop: :fill %>
-      <h3 class="text-center mt-3"><%= @user.username %></h3>
-      <div class="card-body p-5">
-        <h5 class="card-title text-center"><%= @user.city %></h5><p></p>
-        <p class="text-center">
-          <%= calculate_score(@user) %> Points
-        </p>
-        <h5 class="card-text">Member since</h5><p> <%= @user.created_at.strftime("%B, %d, %Y") %> </p>
+      <div class="mt-4 avatar-dashboard">
+        <%= cl_image_tag @user.avatar, class: "avatar-dashboard-img" %>
+      </div>
+      <h3 class="text-center mt-3"><%= @user.username.capitalize %></h3>
+      <h4 class="card-title text-center"><%= @user.city.capitalize %></h4><p></p>
+      <span id="border-dashboard"></span>
+      <div class="card-body pl-5 pr-5">
+        <h2 class="text-center"><%= calculate_score(@user) %></h2><p class="text-center">Points</p>
+        <br><h5 class="card-text">Member since</h5><p> <%= @user.created_at.strftime("%B, %d, %Y") %> </p>
         <h5 class="card-title">Badges</h5><p><%= "You don't have any badge yet" %></p>
         <p></p>
       </div>
@@ -42,7 +43,7 @@
                 <%= image_tag inscription.challenge.photo %>
               </div>
               <div class="card-challenge-dashboard-infos-description p-3">
-                <h4><%= inscription.challenge.title %></h4>
+                <h4><%= inscription.challenge.title%></h4>
                 <p><%= inscription.challenge.description %><p>
               </div>
               <div class="card-challenge-dashboard-button p-3">

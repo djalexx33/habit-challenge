@@ -3,6 +3,9 @@
   overflow: hidden;
   background-image: linear-gradient($light-green, $green);
   color: white;
+  #border-dashboard {
+    border-bottom: 1px solid #91d6bc;
+  }
 }
 
 .dashboard-profil-content {
@@ -11,8 +14,14 @@
     position: absolute;
     bottom: 10px;
   }
+  .card-challenge-dashboard-infos-description {
+    h4 {
+      color: $green;
+    }
+  }
   .nav-tabs {
     border-radius: 10px;
+    box-shadow: 2px 4px 15px #efebeb;
   }
   .nav-tabs .nav-link.active {
     border-bottom: none;
