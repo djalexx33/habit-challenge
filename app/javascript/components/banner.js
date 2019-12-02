@@ -3,7 +3,7 @@ import Typed from 'typed.js';
 
 const loadDynamicBannerText = () => {
   new Typed('#typed-text', {
-    strings: ["#Plastic Free"],
+    strings: ["#Plastic Free December"],
     typeSpeed: 50,
     loop: false
   });
