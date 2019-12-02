@@ -107,15 +107,23 @@ plastic = Challenge.create(title: "Plastic Free", description: "Ban sigle-use pl
 puts " ----> 12 challenges have been created"
 
 puts "Creating inscription..."
+Inscription.destroy_all
 Inscription.create(challenge: plastic, user: leo)
 
-puts "Creating questions..."
+puts "Creating tip..."
+Tip.destroy_all
+Tip.create(title: "Do your own shampoo", description: "Follow our wonderful recipe to do your own shampoo and start to save plastic and lots of great improvements", challenge: plastic, score: 100, saved_co2: 100, saved_money: 10, saved_energy: 50, avatar: "https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg")
+Tip.create(title: "Use a reusable bag", description: "A single plastic bag can take 1,000 years to degrade. Purchase or make your own reusable produce bag!", challenge: plastic, score: 300, saved_co2: 300, saved_money: 20, saved_energy: 100, avatar: "https://images.unsplash.com/photo-1572810643082-c8c8759ee348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")
 
+
+puts "Creating questions..."
+Question.destroy_all
 question_1 = Question.create(title: "Did you use platic today", challenge: plastic)
 question_2 = Question.create(title: "Did you eat plastic today", challenge: plastic)
 question_3 = Question.create(title: "Did you make plastic today", challenge: plastic)
 
 puts "Creating our options..."
+Option.destroy_all
 
 option_1_q1 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_1)
 option_2_q1 = Option.create(title: "Between 0 and 10 times", pounderation: 2, question: question_1)
@@ -131,6 +139,7 @@ option_2_q3 = Option.create(title: "Between 0 and 10 times", pounderation: 2, qu
 option_3_q3 = Option.create(title: "0 time", pounderation: 4, question: question_3)
 
 puts "Creating our survey..."
+DailySurvey.destroy_all
 
 survey_1 = DailySurvey.create(date: Date.today, inscription: leo.inscriptions.first)
 

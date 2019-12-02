@@ -86,91 +86,59 @@
 <div class="container text-center">
   <div class="tips-title pb-5 pt-5">
     <h1>All our <strong class="highlight">tips</strong><br>
-      &nbsp;&nbsp;&nbsp;&nbsp; to help you on the <strong>plastic challenge</strong></h1>
+      &nbsp;&nbsp;&nbsp;&nbsp; to help you on the <strong><%= @challenge.title %></strong> challenge</h1>
   </div>
   <div class="tips-index">
-    <div class="tips-card shampoo">
+    <% @tips.each do |tip| %>
+
+      <div class="tips-card shampoo">
       <div class="additional">
         <div class="user-card">
           <div class="level center">
-            Tip n°1
+            Tip n°<%= tip.id %>
           </div>
           <div class="points center">
-            100 points
+            <%= tip.score %> points
           </div>
           <div>
             <img class="item-avatar center"src="https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg">
           </div>
         </div>
         <div class="more-info">
-          <h1>Do your own shampoo</h1>
+          <h1> <%= tip.title %></h1>
           <div class="stats">
             <div>
               <div class="title">CO2</div>
-              <div class="value">0</div>
+              <div class="value"><%= tip.saved_co2 %></div>
             </div>
             <div>
-              <div class="title">PLASTIC</div>
-              <div class="value">0</div>
+              <div class="title">SAVED</div>
+              <div class="value"><%= tip.saved_money %> $</div>
             </div>
             <div>
-              <div class="title">HEALTHY</div>
-              <div class="value infinity">∞</div>
+              <div class="title">SAVED</div>
+              <div class="value infinity"><%= tip.saved_energy %> kwH</div>
             </div>
           </div>
           <div class="subscription" id="pin">
-            <a class="btn btn-primary white-button" href="#pin" role="button">Pin to your dashboard</a>
+            <% if user_signed_in? %>
+              <%= link_to "Pin to your dashboard", tip_user_tips_path(tip), method: :post, class: "btn btn-primary white-button" %>
+              <% else %>
+              <button type="button" class="btn btn-primary white-button" data-toggle="modal" data-target="#exampleModal">
+                Pin to your dashboard
+              </button>
+              <%= render "shared/login_form" %>
+            <% end %>
           </div>
         </div>
       </div>
       <div class="general">
-        <h1>Do your own shampoo</h1>
-        <p>Follow our wonderful recipe to do your own shampoo and start to save plastic and lots of great improvements</p>
+        <h1><%= tip.title %></h1>
+        <p><%= tip.description %></p>
         <span class="more">Mouse over the card for more info</span>
       </div>
     </div>
-
-    <div class="tips-card diy">
-      <div class="additional">
-        <div class="user-card">
-          <div class="level center">
-            Tip n°2
-          </div>
-          <div class="points center">
-            300 points
-          </div>
-          <div>
-            <img class="item-avatar center"src="https://images.unsplash.com/photo-1572810643082-c8c8759ee348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
-          </div>
-        </div>
-        <div class="more-info">
-          <h1>Use a reusable bag </h1>
-          <div class="stats">
-            <div>
-              <div class="title">CO2</div>
-              <div class="value">0</div>
-            </div>
-            <div>
-              <div class="title">PLASTIC</div>
-              <div class="value">0</div>
-            </div>
-            <div>
-              <div class="title">PLANET</div>
-              <div class="value infinity">∞</div>
-            </div>
-          </div>
-          <div class="subscription" id="pin2">
-            <a class="btn btn-primary white-button" href="#pin2" role="button">Pin to your dashboard</a>
-          </div>
-        </div>
-      </div>
-      <div class="general">
-        <h1>Use a reusable bag</h1>
-        <p>A single plastic bag can take 1,000 years to degrade. Purchase or make your own reusable produce bag!</p>
-        <span class="more">Mouse over the card for more info</span>
-      </div>
-    </div>
-
+    <% end %>
   </div>
 
   <div class="map border-top pt-5 border-dark">
