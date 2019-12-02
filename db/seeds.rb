@@ -127,23 +127,23 @@ question_3 = Question.create(title: "Did you make plastic today", challenge: pla
 puts "---> Few questions have been created!"
 
 puts "Creating our options..."
-option_1_q1 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_1)
-option_2_q1 = Option.create(title: "Between 0 and 10 times", pounderation: 2, question: question_1)
-option_3_q1 = Option.create(title: "0 time", pounderation: 4, question: question_1)
+Option.create!(title: "Between 10 and 15 times", pounderation: 0, question: question_1)
+Option.create!(title: "Between 0 and 10 times", pounderation: 2, question: question_1)
+Option.create!(title: "0 time", pounderation: 4, question: question_1)
 
-option_1_q2 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_2)
-option_2_q2 = Option.create(title: "Between 0 and 10 times", pounderation: 2, question: question_2)
-option_3_q2 = Option.create(title: "O time", pounderation: 4, question: question_2)
+Option.create!(title: "Between 10 and 15 times", pounderation: 0, question: question_2)
+Option.create!(title: "Between 0 and 10 times", pounderation: 2, question: question_2)
+Option.create!(title: "0 time", pounderation: 4, question: question_2)
 
 
-option_1_q3 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_3)
-option_2_q3 = Option.create(title: "Between 0 and 10 times", pounderation: 2, question: question_3)
-option_3_q3 = Option.create(title: "0 time", pounderation: 4, question: question_3)
+Option.create!(title: "Between 10 and 15 times", pounderation: 0, question: question_3)
+Option.create!(title: "Between 0 and 10 times", pounderation: 2, question: question_3)
+Option.create!(title: "0 time", pounderation: 4, question: question_3)
 puts "---> Few options have been created!"
 
-puts "Creating 1 survey..."
-survey_1 = DailySurvey.create(date: Date.today, inscription: leo.inscriptions.first)
-puts "1 survey have been created!"
+# puts "Creating 1 survey..."
+# survey_1 = DailySurvey.create(date: Date.today, inscription: leo.inscriptions.first)
+# puts "1 survey have been created!"
 
 puts ""
 puts "Seed Finished."

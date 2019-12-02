@@ -1,15 +1,13 @@
-<h1>Coucou NIET</h1>
+<h1>Day <%= Date.today.strftime("%d") %></h1>
 
-<article class="surveys-dashboard-card">
-  <div class="thumb"></div>
-  <div class="infos">
-    <h2 class="title">No Plastic Challenge<span class="flag"></span></h2>
-    <h3 class="date">Day 1</h3>
-    <h3 class="seats">Questions remaining: 2</h3>
-    <p class="txt">
-      Click in the link below to access to
-      your daily survey!
-    </p>
-    <h3 class="details">See your Review of the day</h3>
-  </div>
-</article>
+
+
+<%= simple_form_for [@inscription, @daily_survey] do |f| %>
+  <% @questions.each do |question| %>
+  <h5><%= question.title %></h5>
+    <%= f.simple_fields_for :daily_answers, DailyAnswer.new do |i| %>
+      <%= i.collection_radio_buttons :option_id, question.options, :id, :title %>
+    <% end %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
