@@ -13,7 +13,7 @@
           <li class="nav-item">
             <a class="nav-link active pl-5 pr-5" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><h3>Log In</h3></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mb-5">
             <a class="nav-link pl-5 pr-5" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><h3>Sign Up</h3></a>
           </li>
         </ul>
@@ -32,7 +32,7 @@
               </div>
 
               <div class="form-actions">
-                <%= f.button :submit, "Log in" %>
+                <%= f.button :submit, "Log in", class: "btn btn-primary light-main-button" %>
               </div>
             <% end %>
           </div>
@@ -59,7 +59,7 @@
               </div>
 
               <div class="form-actions">
-                <%= f.button :submit, "Sign up" %>
+                <%= f.button :submit, "Sign up", class: "btn btn-primary light-main-button" %>
               </div>
             <% end %>
           </div>
@@ -68,3 +68,4 @@
     </div>
   </div>
 </div>
+
