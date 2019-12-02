@@ -4,6 +4,7 @@ Inscription.destroy_all
 Question.destroy_all
 Option.destroy_all
 DailySurvey.destroy_all
+Tip.destroy_all
 
 puts "Creating our users..."
 leo = User.create(first_name: "Leonardo", last_name: "Di Caprio", username: "Leo", email: "leo@gmail.com", avatar: "https://gentlemanmoderne.com/wp-content/uploads/2017/09/leonardo_dicaprio-portrait-blog-homme.jpg", password: "azerty", city: "Los Angeles")
@@ -113,12 +114,17 @@ Inscription.create(challenge: plastic, user: youpi)
 Inscription.create(challenge: plastic, user: tofu)
 puts "---> Few inscriptions have been created!"
 
+puts "Creating tips..."
+Tip.destroy_all
+Tip.create(title: "Do your own shampoo", description: "Follow our wonderful recipe to do your own shampoo and start to save plastic and lots of great improvements", challenge: plastic, score: 100, saved_co2: 100, saved_money: 10, saved_energy: 50, avatar: "https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg")
+Tip.create(title: "Use a reusable bag", description: "A single plastic bag can take 1,000 years to degrade. Purchase or make your own reusable produce bag!", challenge: plastic, score: 300, saved_co2: 300, saved_money: 20, saved_energy: 100, avatar: "https://images.unsplash.com/photo-1572810643082-c8c8759ee348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")
+puts "---> Tips have been created!"
+
 puts "Creating some questions..."
 question_1 = Question.create(title: "Did you use platic today", challenge: plastic)
 question_2 = Question.create(title: "Did you eat plastic today", challenge: plastic)
 question_3 = Question.create(title: "Did you make plastic today", challenge: plastic)
 puts "---> Few questions have been created!"
-
 
 puts "Creating our options..."
 option_1_q1 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_1)
