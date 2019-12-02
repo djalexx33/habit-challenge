@@ -22,4 +22,8 @@ class ApplicationController < ActionController::Base
   def set_challenge_of_the_month
     @challenge_of_the_month = Challenge.where('extract(month from date) = ?', Date.today.month).first
   end
+
+  def default_url_options
+  { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end

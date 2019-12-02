@@ -1,31 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Challenge.destroy_all
+Inscription.destroy_all
+Question.destroy_all
+Option.destroy_all
+DailySurvey.destroy_all
+Tip.destroy_all
 
 puts "Creating our users..."
-User.destroy_all
-
 leo = User.create(first_name: "Leonardo", last_name: "Di Caprio", username: "Leo", email: "leo@gmail.com", avatar: "https://gentlemanmoderne.com/wp-content/uploads/2017/09/leonardo_dicaprio-portrait-blog-homme.jpg", password: "azerty", city: "Los Angeles")
-User.create(first_name: "Bernardo", last_name: "Il Bocaccio", username: "Berno", email: "berno@gmail.com", avatar: "https://upload.wikimedia.org/wikipedia/commons/6/63/Bernardo_Silva_2017.jpg", password: "azerty", city: "Mooloolaba")
+bernardo = User.create(first_name: "Bernardo", last_name: "Il Bocaccio", username: "Berno", email: "berno@gmail.com", avatar: "https://upload.wikimedia.org/wikipedia/commons/6/63/Bernardo_Silva_2017.jpg", password: "azerty", city: "Mooloolaba")
+mama = User.create(first_name: "mama", last_name: "moranger", username: "momo", email: "momo@gmail.com", password: "azerty", city: "Jakarta")
+papa = User.create(first_name: "papa", last_name: "potager", username: "popo", email: "popo@gmail.com", password: "azerty", city: "Hong Kong")
+uncle = User.create(first_name: "uncle", last_name: "baliverne", username: "balili", email: "balili@gmail.com", password: "azerty", city: "Katmandu")
+yaya = User.create(first_name: "yaya", last_name: "telefute", username: "flute", email: "flute@gmail.com", password: "azerty", city: "Berlin")
+youpi = User.create(first_name: "youpi", last_name: "brocoli", username: "coco", email: "coco@gmail.com", password: "azerty", city: "Oslo")
+tofu = User.create(first_name: "tofu", last_name: "cali", username: "fuit", email: "fuit@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "calin", last_name: "caln", username: "fuie", email: "fuie@gmail.com", password: "azerty", city: "Bordeaux")
+User.create(first_name: "mouton", last_name: "cain", username: "fute", email: "fute@gmail.com", password: "azerty", city: "Bordeaux")
 User.create(first_name: "Alfredo", last_name: "boulanger", username: "bobol", email: "bobol@gmail.com", password: "azerty", city: "Mooloolaba")
-User.create(first_name: "mama", last_name: "moranger", username: "momo", email: "momo@gmail.com", password: "azerty", city: "Jakarta")
-User.create(first_name: "papa", last_name: "potager", username: "popo", email: "popo@gmail.com", password: "azerty", city: "Hong Kong")
-User.create(first_name: "uncle", last_name: "baliverne", username: "balili", email: "balili@gmail.com", password: "azerty", city: "Katmandu")
 User.create(first_name: "BOBO", last_name: "poudlard", username: "poud23", email: "poud23@gmail.com", password: "azerty", city: "Cape Town")
-User.create(first_name: "yaya", last_name: "telefute", username: "flute", email: "flute@gmail.com", password: "azerty", city: "Berlin")
-User.create(first_name: "youpi", last_name: "brocoli", username: "coco", email: "coco@gmail.com", password: "azerty", city: "Oslo")
 User.create(first_name: "conardo", last_name: "coxis", username: "zizi", email: "zizi@gmail.com", password: "azerty", city: "Athènes")
 User.create(first_name: "baltazar", last_name: "Smith", username: "Zoupette", email: "Zoupette@gmail.com", password: "azerty", city: "Rio")
 User.create(first_name: "arthur", last_name: "Pauloilo", username: "lol", email: "lol@gmail.com", password: "azerty", city: "Santiago")
 User.create(first_name: "Joannha", last_name: "Poilocu", username: "jojo", email: "jojo@gmail.com", password: "azerty", city: "Sayulita")
 User.create(first_name: "Alexandre", last_name: "babtu", username: "alex", email: "alex@gmail.com", password: "azerty", city: "Moscow")
-User.create(first_name: "foufo", last_name: "cali", username: "fuit", email: "fuit@gmail.com", password: "azerty", city: "Bordeaux")
-User.create(first_name: "foufu", last_name: "caln", username: "fuie", email: "fuie@gmail.com", password: "azerty", city: "Bordeaux")
-User.create(first_name: "fouou", last_name: "cain", username: "fute", email: "fute@gmail.com", password: "azerty", city: "Bordeaux")
 User.create(first_name: "fofou", last_name: "clin", username: "fite", email: "fite@gmail.com", password: "azerty", city: "Bordeaux")
 User.create(first_name: "fufou", last_name: "alin", username: "uite", email: "uite@gmail.com", password: "azerty", city: "Bordeaux")
 User.create(first_name: "oufou", last_name: "cal", username: "fte", email: "fte@gmail.com", password: "azerty", city: "Bordeaux")
@@ -88,10 +86,9 @@ User.create(first_name: "Baba", last_name: "Cool", username: "babacool47", email
 User.create(first_name: "Baba", last_name: "Cool", username: "babacool48", email: "babacool48@amsn.com", password: "azerty", city: "Medina")
 User.create(first_name: "Baba", last_name: "Cool", username: "babacool49", email: "babacool49@msn.com", password: "azerty", city: "Medina")
 User.create(first_name: "Baba", last_name: "Cool", username: "babacool50", email: "babacool50@msn.com", password: "azerty", city: "Medina")
-puts " ----> Leo and many users have been created."
+puts " ---> Leo and many users have been created!"
 
 puts "Creating our challenges..."
-Challenge.destroy_all
 Challenge.create(title: "Get Involved", description: "Get involved, join an association, start devoting time for the protection of the environment", date: "2019-01-06 19:08:40.011480", photo: "https://vosizneias.com/wp-content/uploads/2018/10/AP18286417971595.jpg", badge: "https://fitnessactivist.com/wp-content/uploads/2016/09/Fitness-activist-header-logo.jpg")
 Challenge.create(title: "Meatless Detox", description: "Stop eating meat completely for the month of February, reduce your consumption of other animal products such as dairy and eggs", date: "2019-02-06 19:08:40.011480", photo: "https://www.wilderutopia.com/wp-content/uploads/2014/10/Beef-Cattle-Factory-Farm-Socially-Responsible-Agriculture-Flickr.jpg", badge: "https://images.emojiterra.com/twitter/v12/512px/1f969.png")
 Challenge.create(title: "Seasocal Fever", description: "Eat only local and seasonal, consume products that grow at this season and that did not travel from far away. ", date: "2019-03-06 19:08:40.011480", photo: "https://thenypost.files.wordpress.com/2019/05/crop-farmer.jpg?quality=90&strip=all&w=618&h=410&crop=1", badge: "https://www.teetransfers.co.uk/images/products/tools_0016_Layer%2012.jpg")
@@ -104,27 +101,32 @@ Challenge.create(title: "Vegetate your city", description: "Show the example by 
 Challenge.create(title: "Green Energy Switch", description: "Support green energy and stop purchasing from oil, gaz and coal companies", date: "2019-10-06 19:08:40.011480", photo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Wind_power_plants_in_Xinjiang%2C_China.jpg", badge: "https://purepng.com/public/uploads/large/purepng.com-glowing-yellow-light-bulbelectronicsbulb-light-941524679911ixxqy.png")
 Challenge.create(title: "No Food Waste", description: "Fight against food waste for this month of December by not throwing away food. Make a compost, feed animals of give away what you do not use, eat or drink", date: "2019-11-06 19:08:40.011480", photo: "https://media4.s-nbcnews.com/j/newscms/2017_49/2250466/171205-food-waste-compost-ac-421p_77851c253c01aa3afddce30c1f631583.1200;630;7;70;5.jpg", badge: "https://www.ssbwiki.com/images/thumb/7/7a/BananaPeelWiiU.png/200px-BananaPeelWiiU.png")
 plastic = Challenge.create(title: "Plastic Free", description: "Ban sigle-use plastic for the month of January, reduce your consumption of other plastics", date: "2019-12-06 19:08:40.011480", photo: "https://miro.medium.com/max/12000/1*KBZH2aoKRqG_zSsFcFI-QQ.jpeg", badge: "https://toppng.com/public/uploads/preview/free-png-plastic-water-bottle-png-11519803083hnhiljypmg.png")
-puts " ----> 12 challenges have been created"
+puts " ---> 12 challenges have been created!"
 
-puts "Creating inscription..."
-Inscription.destroy_all
+puts "Creating some inscription..."
 Inscription.create(challenge: plastic, user: leo)
+Inscription.create(challenge: plastic, user: bernardo)
+Inscription.create(challenge: plastic, user: mama)
+Inscription.create(challenge: plastic, user: papa)
+Inscription.create(challenge: plastic, user: uncle)
+Inscription.create(challenge: plastic, user: yaya)
+Inscription.create(challenge: plastic, user: youpi)
+Inscription.create(challenge: plastic, user: tofu)
+puts "---> Few inscriptions have been created!"
 
-puts "Creating tip..."
+puts "Creating tips..."
 Tip.destroy_all
 Tip.create(title: "Do your own shampoo", description: "Follow our wonderful recipe to do your own shampoo and start to save plastic and lots of great improvements", challenge: plastic, score: 100, saved_co2: 100, saved_money: 10, saved_energy: 50, avatar: "https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg")
 Tip.create(title: "Use a reusable bag", description: "A single plastic bag can take 1,000 years to degrade. Purchase or make your own reusable produce bag!", challenge: plastic, score: 300, saved_co2: 300, saved_money: 20, saved_energy: 100, avatar: "https://images.unsplash.com/photo-1572810643082-c8c8759ee348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")
+puts "---> Tips have been created!"
 
-
-puts "Creating questions..."
-Question.destroy_all
+puts "Creating some questions..."
 question_1 = Question.create(title: "Did you use platic today", challenge: plastic)
 question_2 = Question.create(title: "Did you eat plastic today", challenge: plastic)
 question_3 = Question.create(title: "Did you make plastic today", challenge: plastic)
+puts "---> Few questions have been created!"
 
 puts "Creating our options..."
-Option.destroy_all
-
 option_1_q1 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_1)
 option_2_q1 = Option.create(title: "Between 0 and 10 times", pounderation: 2, question: question_1)
 option_3_q1 = Option.create(title: "0 time", pounderation: 4, question: question_1)
@@ -137,10 +139,11 @@ option_3_q2 = Option.create(title: "O time", pounderation: 4, question: question
 option_1_q3 = Option.create(title: "Between 10 and 15 times", pounderation: 0, question: question_3)
 option_2_q3 = Option.create(title: "Between 0 and 10 times", pounderation: 2, question: question_3)
 option_3_q3 = Option.create(title: "0 time", pounderation: 4, question: question_3)
+puts "---> Few options have been created!"
 
-puts "Creating our survey..."
-DailySurvey.destroy_all
-
+puts "Creating 1 survey..."
 survey_1 = DailySurvey.create(date: Date.today, inscription: leo.inscriptions.first)
+puts "1 survey have been created!"
 
-puts "Finished"
+puts ""
+puts "Seed Finished."

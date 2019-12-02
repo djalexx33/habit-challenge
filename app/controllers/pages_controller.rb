@@ -2,13 +2,7 @@ class PagesController < ApplicationController
   def home
     @user = current_user
     @questions = Question.all
-    @users = User.all #returns Users with coordinates
-    @markers = @users.map do |user|
-      {
-        lat: user.latitude,
-        lng: user.longitude
-      }
-    end
+    @users = User.all # returns Users with coordinates
     @geojson = build_geojson
   end
 
