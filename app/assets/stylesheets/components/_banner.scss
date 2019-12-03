@@ -16,6 +16,9 @@
   // color: black;
   // margin-top: -80px;
   display: flex;
+  .button-challenge-execute {
+    visibility: hidden;
+  }
   .button-banner {
     position: absolute;
     bottom: 50px;
