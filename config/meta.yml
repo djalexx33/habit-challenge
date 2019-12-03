@@ -2,6 +2,6 @@
 
 meta_product_name: "Rebearth"
 meta_title: "Rebearth | No more talk"
-meta_description: "Relevant description"
-meta_image: "SUCCESS-BOOK-facebook 1.png" # should exist in `app/assets/images/`
+meta_description: "Join different challenges to protect our planet"
+meta_image: "success.png" # should exist in `app/assets/images/`
 twitter_account: "@alex_barat"   # required for Twitter Cards
