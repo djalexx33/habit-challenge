@@ -11,6 +11,19 @@ class ChallengesController < ApplicationController
     @geojson = build_geojson
   end
 
+  def display_selection
+    @challenge_users = Challenge.find(params[:id]).users
+    if params[:query].present?
+      sql_query = "first_name ILIKE :query OR last_name ILIKE :query OR username ILIKE :query OR city ILIKE :query"
+      @users = @challenge_users.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @users = []
+    end
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def build_geojson
     {
       type: "FeatureCollection",

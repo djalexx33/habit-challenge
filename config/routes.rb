@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  get '/display', to: "users#display"
+  get '/display_all', to: "users#display_all"
+  get '/display_selection', to: "challenges#display_selection"
   resources :users, only: [ :show, :index ]
   resources :challenges, only: [ :show, :index ] do
     resources :inscriptions, only: [ :create ]
