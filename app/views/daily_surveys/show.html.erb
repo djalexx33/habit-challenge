@@ -1,3 +1,16 @@
-<% @daily_answer.options each do |option| %>
-<%= option.title %>
+<% @daily_answers.each do |daily_answer| %>
+<div class="div">
+  <h4><%= daily_answer.option.question.title %></h4>
+  <div class="div">
+    <p>Your answer : <%= daily_answer.option.title %></p>
+  </div>
+</div>
 <% end %>
+  <div class="div">
+    <p>Your score for this survey : <%= @daily_survey.score %></p>
+  </div>
+
+<%= link_to "Back to your dashboard", user_path(@user) %>
+
+
+
