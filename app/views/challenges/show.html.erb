@@ -16,6 +16,10 @@
               <%= link_to "Subscribe to the challenge", challenge_inscriptions_path(@challenge), method: :post, remote: :true, class: "btn btn-primary btn-lg light-white-button button-challenge" %>
             <% end %>
           <% else %>
+          <button type="button" class="btn btn-primary btn-lg light-white-button" data-toggle="modal" data-target="#exampleModal">
+              Subscribe to challenge
+          </button>
+          <%= render "shared/login_form" %>
           <%#= link_to "Subscribe to the challenge",new_user_session_path, class: "btn btn-primary btn-lg light-white-button" %>
           <%#= render "shared/login_form" %>
           <% end %>
