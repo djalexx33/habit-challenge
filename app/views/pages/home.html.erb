@@ -67,9 +67,10 @@ Join
   ></div>
 
   <div class="search-bar d-flex flex-column mt-5">
-    <%= form_tag(display_path, method: :get, remote: true) do %>
-      <div class="d-flex justify-content-center align-items-center my-3 flex-column w-100">
-        <%= text_field_tag :query, params[:query], class: "w-25 form-control my-3", placeholder: "Find a friend"%>
+    <h3 class="text-center"><%= label_tag "find a committed friend here:" %>
+    <%= form_tag(display_all_path, method: :get, remote: true) do %>
+      <div class="d-flex justify-content-center align-items-center flex-column w-100">
+        <%= text_field_tag :query, params[:query], class: "w-25 form-control my-3", placeholder: "Type a name or a city"%>
         <%= submit_tag "Search", class: "btn main-button" %>
       </div>
     <% end %>
