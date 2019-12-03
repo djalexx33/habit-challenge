@@ -5,7 +5,8 @@ const loadDynamicBannerText = () => {
   new Typed('#typed-text', {
     strings: ["#Plastic Free December"],
     typeSpeed: 50,
-    loop: false
+    loop: false,
+    showCursor: false
   });
 }
 
