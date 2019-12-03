@@ -17,10 +17,10 @@
 <% current_user.inscriptions.each do |inscription| %>
   <% inscription.daily_surveys.each do |daily_survey| %>
     <article class="surveys-dashboard-card2">
-      <div class="thumb"></div>
+      <div class="thumb" style="background: url(<%= inscription.challenge.photo %>)"></div>
       <div class="infos">
         <h2 class="title"><%= inscription.challenge.title %><span class="flag"></span></h2>
-        <h3 class="date"><%= daily_survey.created_at.strftime("%y %m %d") %></h3>
+        <h3 class="date">Day <%= daily_survey.created_at.strftime("%d") %></h3>
         <p class="txt">
           Click in the link below to access to
           your daily survey!
@@ -29,19 +29,20 @@
       </div>
     </article>
   <% end %>
-
-    <article class="surveys-dashboard-card2">
-      <div class="thumb"></div>
-      <div class="infos">
-        <h2 class="title"><%= inscription.challenge.title %><span class="flag"></span></h2>
-        <h3 class="date"><%= Date.today.strftime("%y %m %d") %></h3>
-        <p class="txt">
-          Click in the link below to access to
-          your daily survey!
-        </p>
-        <%= link_to "Answer your Review of the day", new_inscription_daily_survey_path(inscription), class: "btn btn-primary main-button" %>
-      </div>
-    </article>
+    <% unless DailySurvey.find_by(inscription: inscription, date: Date.today) %>
+      <article class="surveys-dashboard-card2">
+        <div class="thumb"></div>
+        <div class="infos">
+          <h2 class="title"><%= inscription.challenge.title %><span class="flag"></span></h2>
+          <h3 class="date">Day <%= Date.today.strftime("%d") %></h3>
+          <p class="txt">
+            Click in the link below to answer
+            your daily survey!
+          </p>
+          <%= link_to "Answer your Review of the day", new_inscription_daily_survey_path(inscription), class: "btn btn-primary main-button" %>
+        </div>
+      </article>
+    <% end %>
 <% end %>
 
 
