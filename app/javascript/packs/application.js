@@ -20,5 +20,5 @@ alert();
 
 const popup_btn = document.querySelector(".button-challenge");
 if (popup_btn) {
-  popup_challenge_subscription();
+  popup_challenge_subscription(popup_btn);
 }
