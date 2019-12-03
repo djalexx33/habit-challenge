@@ -4,7 +4,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import { initMapbox } from '../plugins/init_mapbox';
 import { loadDynamicBannerText } from '../components/banner';
 import { expand } from '../components/card';
-import { popup } from '../components/popupchallenge';
+import { popup_challenge_subscription } from '../components/popupchallenge';
 import { alert } from '../components/alert';
 
 const divType = document.querySelector('#typed-text');
@@ -17,3 +17,8 @@ expand();
 initMapbox();
 
 alert();
+
+const popup_btn = document.querySelector(".button-challenge");
+if (popup_btn) {
+  popup_challenge_subscription();
+}
