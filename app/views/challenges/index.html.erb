@@ -17,22 +17,21 @@
 </div>
 
 <div class="page-prez ml-5 my-3">
-  <h1 class="mb-5 text-center" id="chal-index">All the <span class="highlight">challenges available</span> are listed here.</h1>
   <div class="text-center mb-5">
-    <p>A new challenge is unlocked every month. You can subscribe to as many challenges as you like.</p>
-    <p>Click on a card below to see more details about one challenge.</p>
-    <div class="challenge-list mt-5">
+    <div class="challenge-list my-5">
       <h3>Challenge for <%= Date.today.strftime("%B") %>:
       <% @challenges.each do |challenge| %>
-      <%= link_to challenge_path(challenge.id) do %>
-        <%= challenge.title if challenge.date.strftime("%B") == Date.today.strftime("%B") %>
-      <% end %>
-    <% end %></h3>
+        <%= link_to challenge_path(challenge.id) do %>
+          <span class="highlight"><%= challenge.title if challenge.date.strftime("%B") == Date.today.strftime("%B") %></span>
+        <% end %>
+      <% end %></h3>
     </div>
+    <p>A new challenge is unlocked every month. You can subscribe to as many challenges as you like.</p>
+    <p>Click on a card below to see more details about one challenge.</p>
   </div>
 </div>
 
-<div class="options pt-3 border-top">
+<div class="options pt-3">
 
   <% @challenges.each do |challenge| %>
 
