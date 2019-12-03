@@ -1,8 +1,9 @@
-const popup = document.querySelector(".button-challenge");
-popup.addEventListener("click", (event) => {
-  const btn = document.querySelector(".button-challenge-execute");
-  btn.click();
-  popup.innerHTML = "Go to your dashboard";
-});
+const popup_challenge_subscription = () => {
+  popup_btn.addEventListener("click", (event) => {
+    const btn = document.querySelector(".button-challenge-execute");
+    btn.click();
+    popup_btn.innerHTML = "Go to your dashboard";
+  });
+}
 
-export { popup };
+export { popup_challenge_subscription };

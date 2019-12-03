@@ -5,11 +5,11 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
 
 .page-prez {
   a {
-    color: $green;
+    color: black;
   }
   a:hover {
     text-decoration: none;
-    font-weight: 900;
+    color: $dark-gray;
   }
 }
 
@@ -133,7 +133,7 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
           font-weight: bolder;
         }
         .icon {
-          box-shadow: 2px 3px rgba(30, 30, 30, 1);
+          box-shadow: 2px 3px $dark-gray;
         }
       }
     .text {
