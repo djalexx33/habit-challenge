@@ -10,15 +10,14 @@
 }
 
 .line-form {
-  border-bottom: 8px solid $brown;
+  border-bottom: 8px solid $green;
   width: 80px;
   margin: 0;
 }
 
 .form-control {
   border: none;
-  border-bottom: 2px solid $brown;
-  background-color: $light-gray;
+  border-bottom: 2px solid $green;
 
 }
 
@@ -26,7 +25,6 @@
   box-shadow: none;
   -webkit-box-shadow: none;
   border-bottom: 1px solid $light-green;
-  background-color: $light-gray;
 }
 
 .upload-photo {

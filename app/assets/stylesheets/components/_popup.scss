@@ -7,6 +7,11 @@
     height: 500px;
     border-radius: 7px;
     border: none;
+    .form-actions {
+      .light-main-button {
+        width: 230px;
+      }
+    }
   }
   .modal-header {
     border-bottom: none;
@@ -28,7 +33,7 @@
     .nav-link.active {
       background-color: transparent;
       border-color: transparent;
-      border-bottom: 6px solid black;
+      border-bottom: 6px solid $green;
       color: black;
     }
     .nav-item.show {
@@ -47,7 +52,7 @@
     .nav-link.active:hover {
       border-color: transparent;
       color: black;
-      border-bottom: 6px solid black;
+      border-bottom: 6px solid $green;
     }
   }
 
