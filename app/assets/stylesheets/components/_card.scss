@@ -172,9 +172,8 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
 
 article.surveys-dashboard-card {
   position: absolute;
-  left: 50%;
+  left: 20%;
   top: 50%;
-  left: 50%;
   width: 350px;
   height: 350px;
   -webkit-transform: translate(-50%, -50%) translateZ(0);
@@ -186,7 +185,7 @@ article.surveys-dashboard-card {
 article.surveys-dashboard-card .thumb {
   width: auto;
   height: 260px;
-  background: url("https://images.unsplash.com/photo-1544550581-1bcabf842b77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=658&q=80") no-repeat center;
+  background-position: center;
   background-size: cover;
   border-radius: 3px;
 }

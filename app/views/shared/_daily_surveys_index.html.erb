@@ -1,4 +1,4 @@
-<article class="surveys-dashboard-card">
+<!-- <article class="surveys-dashboard-card">
   <div class="thumb"></div>
   <div class="infos">
     <h2 class="title">Plastic Free Challenge<span class="flag"></span></h2>
@@ -8,6 +8,39 @@
       Click in the link below to access to
       your daily survey!
     </p>
-    <%= link_to "See your Review of the day", new_inscription_daily_survey_path(:inscription_id), class: "btn btn-primary main-button" %>
+    <%#= link_to "See your Review of the day", new_inscription_daily_survey_path(:inscription_id), class: "btn btn-primary main-button" %>
   </div>
-</article>
+</article> -->
+
+<%#= link_to "See your Review of the day", new_inscription_daily_survey_path(62), class: "btn btn-primary main-button" %>
+
+<% current_user.inscriptions.each do |inscription| %>
+  <% inscription.daily_surveys.each do |daily_survey| %>
+    <article class="surveys-dashboard-card2">
+      <div class="thumb" style="background: url(<%= inscription.challenge.photo %>)"></div>
+      <div class="infos">
+        <h2 class="title"><%= inscription.challenge.title %><span class="flag"></span></h2>
+        <h3 class="date">Day <%= daily_survey.created_at.strftime("%d") %></h3>
+        <p class="txt">
+          Click in the link below to access to
+          your daily survey!
+        </p>
+        <%= link_to "Check your survey", daily_survey_path(daily_survey), class: "btn btn-primary main-button" %>
+      </div>
+    </article>
+  <% end %>
+    <% unless DailySurvey.find_by(inscription: inscription, date: Date.today) %>
+      <article class="surveys-dashboard-card2">
+        <div class="thumb"></div>
+        <div class="infos">
+          <h2 class="title"><%= inscription.challenge.title %><span class="flag"></span></h2>
+          <h3 class="date">Day <%= Date.today.strftime("%d") %></h3>
+          <p class="txt">
+            Click in the link below to answer
+            your daily survey!
+          </p>
+          <%= link_to "Answer your Review of the day", new_inscription_daily_survey_path(inscription), class: "btn btn-primary main-button" %>
+        </div>
+      </article>
+    <% end %>
+<% end %>

@@ -5,7 +5,9 @@ class DailySurvey < ApplicationRecord
   accepts_nested_attributes_for :daily_answers,
                                 allow_destroy: true
   has_many :options, through: :daily_answers, dependent: :destroy
-  validates :date, presence: true, uniqueness: true
+  validates :date, presence: true
+  validates :date, uniqueness: { scope: :inscription,
+    message: "You already did your challenge day survey" }
 
   def score
     score = 0
