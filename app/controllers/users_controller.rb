@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def index
     @inscriptions = current_user.inscriptions
     @user = current_user
@@ -31,7 +32,6 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
-
     @user.save!
   end
 
