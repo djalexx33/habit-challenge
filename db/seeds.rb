@@ -89,17 +89,17 @@ User.create(first_name: "Baba", last_name: "Cool", username: "babacool50", email
 puts " ---> Leo and many users have been created!"
 
 puts "Creating our challenges..."
-Challenge.create(title: "Get Involved", description: "Get involved, join an association, start devoting time for the protection of the environment", date: "2019-01-06 19:08:40.011480", photo: "https://vosizneias.com/wp-content/uploads/2018/10/AP18286417971595.jpg", badge: "https://fitnessactivist.com/wp-content/uploads/2016/09/Fitness-activist-header-logo.jpg")
-Challenge.create(title: "Meatless Detox", description: "Stop eating meat completely for the month of February, reduce your consumption of other animal products such as dairy and eggs", date: "2019-02-06 19:08:40.011480", photo: "https://www.wilderutopia.com/wp-content/uploads/2014/10/Beef-Cattle-Factory-Farm-Socially-Responsible-Agriculture-Flickr.jpg", badge: "https://images.emojiterra.com/twitter/v12/512px/1f969.png")
-Challenge.create(title: "Seasocal Fever", description: "Eat only local and seasonal, consume products that grow at this season and that did not travel from far away. ", date: "2019-03-06 19:08:40.011480", photo: "https://thenypost.files.wordpress.com/2019/05/crop-farmer.jpg?quality=90&strip=all&w=618&h=410&crop=1", badge: "https://www.teetransfers.co.uk/images/products/tools_0016_Layer%2012.jpg")
-Challenge.create(title: "Petrol Cure", description: "Reduce your petrol consumption, take the bike, walk, use public transportation", date: "2019-04-06 19:08:40.011480", photo: "https://www.aydinlik.com.tr/_usr/files/img/2017111709322019_i1hp7qcm011mbu2767gdm3rnf11.gif", badge: "http://pngimg.com/uploads/fuel/fuel_PNG49.png")
-Challenge.create(title: "Zero Waste", description: "Reduce your wastes, buy in bulk, bring your containers at the supermarket, refuse packagings", date: "2019-05-06 19:08:40.011480", photo: "https://ngthai.com/app/uploads/2019/03/01_india_nationalgeographic_2702759.adapt_.1900.1.jpg", badge: "https://www.vector-eps.com/wp-content/gallery/family-objects-as-transparent-png-icons/transparent-trash-can-png-icon.jpg")
-Challenge.create(title: "Water Smart", description: "Reduce your consumption of drinkable water", date: "2019-06-06 19:08:40.011480", photo: "https://cdn.eso.org/images/publicationjpg/max_a211758s.jpg", badge: "http://1.bp.blogspot.com/-5WRYj85LvXI/UZT58_uOcWI/AAAAAAAAEzE/ncXYnzV8NhM/s1600/water-drop.png")
-Challenge.create(title: "Responsible Purchasing", description: "Ask yourself if it is necessary and what industry you will contribute to before purching anything", date: "2019-07-06 19:08:40.011480", photo: "http://1.bp.blogspot.com/_RX1XntT9N_k/TKBKhrC3c0I/AAAAAAAAAB4/Fy8sBDAesk4/s1600/global-warming-pollution.jpg", badge: "https://image.flaticon.com/icons/png/512/783/783256.png")
-Challenge.create(title: "Digital Detox", description: "Use a respectful search engine, reduce the amount of emails you send, erase your old emails, watch videos only with the necessary quality", date: "2019-08-06 19:08:40.011480", photo: "https://cdn.arstechnica.net/wp-content/uploads/2017/09/googscotusstorypic.jpg", badge: "https://clipart.info/images/ccovers/1503608504asus%20smartphone%20mobile%20png.png")
-Challenge.create(title: "Vegetate your city", description: "Show the example by picking the trashes in the street to dump them in the public bin around the corner, plant seeds in public parks and around trees", date: "2019-09-06 19:08:40.011480", photo: "https://environmentamerica.org/sites/environment/files/cpn/AMN-033117-REPORT/assets/img/WEB_AMN_Shining-Cities_Slideshow_Austin-01.jpg", badge: "https://www.countryfinancial.com/content/dam/cfin/bands/icons/icon_history_2008_plant-01.png")
-Challenge.create(title: "Green Energy Switch", description: "Support green energy and stop purchasing from oil, gaz and coal companies", date: "2019-10-06 19:08:40.011480", photo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Wind_power_plants_in_Xinjiang%2C_China.jpg", badge: "https://purepng.com/public/uploads/large/purepng.com-glowing-yellow-light-bulbelectronicsbulb-light-941524679911ixxqy.png")
-Challenge.create(title: "No Food Waste", description: "Fight against food waste for this month of December by not throwing away food. Make a compost, feed animals of give away what you do not use, eat or drink", date: "2019-11-06 19:08:40.011480", photo: "https://media4.s-nbcnews.com/j/newscms/2017_49/2250466/171205-food-waste-compost-ac-421p_77851c253c01aa3afddce30c1f631583.1200;630;7;70;5.jpg", badge: "https://www.ssbwiki.com/images/thumb/7/7a/BananaPeelWiiU.png/200px-BananaPeelWiiU.png")
+involved = Challenge.create(title: "Get Involved", description: "Get involved, join an association, start devoting time for the protection of the environment", date: "2019-01-06 19:08:40.011480", photo: "https://vosizneias.com/wp-content/uploads/2018/10/AP18286417971595.jpg", badge: "https://fitnessactivist.com/wp-content/uploads/2016/09/Fitness-activist-header-logo.jpg")
+meatless = Challenge.create(title: "Meatless Detox", description: "Stop eating meat completely for the month of February, reduce your consumption of other animal products such as dairy and eggs", date: "2019-02-06 19:08:40.011480", photo: "https://www.wilderutopia.com/wp-content/uploads/2014/10/Beef-Cattle-Factory-Farm-Socially-Responsible-Agriculture-Flickr.jpg", badge: "https://images.emojiterra.com/twitter/v12/512px/1f969.png")
+seasocal = Challenge.create(title: "Seasocal Fever", description: "Eat only local and seasonal, consume products that grow at this season and that did not travel from far away. ", date: "2019-03-06 19:08:40.011480", photo: "https://thenypost.files.wordpress.com/2019/05/crop-farmer.jpg?quality=90&strip=all&w=618&h=410&crop=1", badge: "https://www.teetransfers.co.uk/images/products/tools_0016_Layer%2012.jpg")
+petrol = Challenge.create(title: "Petrol Cure", description: "Reduce your petrol consumption, take the bike, walk, use public transportation", date: "2019-04-06 19:08:40.011480", photo: "https://www.aydinlik.com.tr/_usr/files/img/2017111709322019_i1hp7qcm011mbu2767gdm3rnf11.gif", badge: "http://pngimg.com/uploads/fuel/fuel_PNG49.png")
+waste = Challenge.create(title: "Zero Waste", description: "Reduce your wastes, buy in bulk, bring your containers at the supermarket, refuse packagings", date: "2019-05-06 19:08:40.011480", photo: "https://ngthai.com/app/uploads/2019/03/01_india_nationalgeographic_2702759.adapt_.1900.1.jpg", badge: "https://www.vector-eps.com/wp-content/gallery/family-objects-as-transparent-png-icons/transparent-trash-can-png-icon.jpg")
+water = Challenge.create(title: "Water Smart", description: "Reduce your consumption of drinkable water", date: "2019-06-06 19:08:40.011480", photo: "https://cdn.eso.org/images/publicationjpg/max_a211758s.jpg", badge: "http://1.bp.blogspot.com/-5WRYj85LvXI/UZT58_uOcWI/AAAAAAAAEzE/ncXYnzV8NhM/s1600/water-drop.png")
+responsible = Challenge.create(title: "Responsible Purchasing", description: "Ask yourself if it is necessary and what industry you will contribute to before purching anything", date: "2019-07-06 19:08:40.011480", photo: "http://1.bp.blogspot.com/_RX1XntT9N_k/TKBKhrC3c0I/AAAAAAAAAB4/Fy8sBDAesk4/s1600/global-warming-pollution.jpg", badge: "https://image.flaticon.com/icons/png/512/783/783256.png")
+digital = Challenge.create(title: "Digital Detox", description: "Use a respectful search engine, reduce the amount of emails you send, erase your old emails, watch videos only with the necessary quality", date: "2019-08-06 19:08:40.011480", photo: "https://cdn.arstechnica.net/wp-content/uploads/2017/09/googscotusstorypic.jpg", badge: "https://clipart.info/images/ccovers/1503608504asus%20smartphone%20mobile%20png.png")
+vegetate = Challenge.create(title: "Vegetate your city", description: "Show the example by picking the trashes in the street to dump them in the public bin around the corner, plant seeds in public parks and around trees", date: "2019-09-06 19:08:40.011480", photo: "https://environmentamerica.org/sites/environment/files/cpn/AMN-033117-REPORT/assets/img/WEB_AMN_Shining-Cities_Slideshow_Austin-01.jpg", badge: "https://www.countryfinancial.com/content/dam/cfin/bands/icons/icon_history_2008_plant-01.png")
+energy = Challenge.create(title: "Green Energy Switch", description: "Support green energy and stop purchasing from oil, gaz and coal companies", date: "2019-10-06 19:08:40.011480", photo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Wind_power_plants_in_Xinjiang%2C_China.jpg", badge: "https://purepng.com/public/uploads/large/purepng.com-glowing-yellow-light-bulbelectronicsbulb-light-941524679911ixxqy.png")
+food = Challenge.create(title: "No Food Waste", description: "Fight against food waste for this month of December by not throwing away food. Make a compost, feed animals of give away what you do not use, eat or drink", date: "2019-11-06 19:08:40.011480", photo: "https://media4.s-nbcnews.com/j/newscms/2017_49/2250466/171205-food-waste-compost-ac-421p_77851c253c01aa3afddce30c1f631583.1200;630;7;70;5.jpg", badge: "https://www.ssbwiki.com/images/thumb/7/7a/BananaPeelWiiU.png/200px-BananaPeelWiiU.png")
 plastic = Challenge.create(title: "Plastic Free", description: "Ban sigle-use plastic for the month of January, reduce your consumption of other plastics", date: "2019-12-06 19:08:40.011480", photo: "https://miro.medium.com/max/12000/1*KBZH2aoKRqG_zSsFcFI-QQ.jpeg", badge: "https://toppng.com/public/uploads/preview/free-png-plastic-water-bottle-png-11519803083hnhiljypmg.png")
 puts " ---> 12 challenges have been created!"
 
@@ -121,24 +121,191 @@ Tip.create(title: "Use a reusable bag", description: "A single plastic bag can t
 puts "---> Tips have been created!"
 
 puts "Creating some questions..."
-question_1 = Question.create(title: "Did you use platic today", challenge: plastic)
-question_2 = Question.create(title: "Did you eat plastic today", challenge: plastic)
-question_3 = Question.create(title: "Did you make plastic today", challenge: plastic)
+
+question_1 = Question.create(title: "Did you join an association ?", challenge: involved)
+question_2 = Question.create(title: "Did you already make some action with them ?", challenge: involved)
+question_3 = Question.create(title: "Did you talk to someone about it ?", challenge: involved)
+
+question_4 = Question.create(title: "Did you eat some meat today ?", challenge: meatless)
+question_5 = Question.create(title: "Did you consume dairy products and eggs ?", challenge: meatless)
+question_6 = Question.create(title: "Did you consume any food made out of animals products ?", challenge: meatless)
+
+question_7 = Question.create(title: "Did you eat locally today ?", challenge: seasocal)
+question_8 = Question.create(title: "Did you eat seasonal products today ?", challenge: seasocal)
+question_9 = Question.create(title: "Did you eat bio products today ?", challenge: seasocal)
+
+question_10 = Question.create(title: "Did you only use bike or your feet today ?", challenge: petrol)
+question_11 = Question.create(title: "Did you use your own motorised transport today ?", challenge: petrol)
+question_12 = Question.create(title: "Did you use shared or public transport today ?", challenge: petrol)
+
+question_13 = Question.create(title: "Did you buy any packaging today (groceries) ?", challenge: waste)
+question_14 = Question.create(title: "Did you take away food with its single-use containers today ? ", challenge: waste)
+question_15 = Question.create(title: "Did you recycle your waste? ", challenge: waste)
+
+question_16 = Question.create(title: "Did you take a shower less than 2 minutes today? ", challenge: water)
+question_17 = Question.create(title: "Did you turn off tap during your daily taks today ? ", challenge: water)
+question_18 = Question.create(title: "Did you use your washing machine only for full loads ? ", challenge: water)
+
+question_19 = Question.create(title: "Did you ask yourself what was the best option for what you bought today (the one with the least impact on the environment) ?", challenge: responsible)
+question_20 = Question.create(title: "Did you purchase the best available option today according to you (food, beverages, products)?", challenge: responsible)
+question_21 = Question.create(title: "Did you purchase at all ?", challenge: responsible)
+
+question_22 = Question.create(title: "Did you receive any newsletter / email you don’t need today ?", challenge: digital)
+question_23 = Question.create(title: "Did you erase useless mails and unsubscibed from useless senders?", challenge: digital)
+question_24 = Question.create(title: "Did you watch online video with the higher quality when unecessay today ?", challenge: digital)
+
+question_25 = Question.create(title: "Are you a vegetable ?", challenge: vegetate)
+question_26 = Question.create(title: "Do you like your vegetable condition ?", challenge: vegetate)
+question_27 = Question.create(title: "Do your eat other vegetable ? ", challenge: vegetate)
+
+question_28 = Question.create(title: "Did you switch off lights and other device when not needed?", challenge: energy)
+question_29 = Question.create(title: "Did you use any electric device when you could do otherwise? ", challenge: energy)
+question_30 = Question.create(title: "Did you turn off the air conditionned or heater when not necessary ?", challenge: energy)
+
+question_31 = Question.create(title: "Did you compost today ? ", challenge: food)
+question_32 = Question.create(title: "Did you dump any food ? ", challenge: food)
+question_33 = Question.create(title: "Did you really ?", challenge: food)
+
+question_34 = Question.create(title: "Did you use platic today ?", challenge: plastic)
+question_35 = Question.create(title: "Did you eat plastic today ?", challenge: plastic)
+question_36 = Question.create(title: "Did you make plastic today ?", challenge: plastic)
 puts "---> Few questions have been created!"
 
 puts "Creating our options..."
-Option.create!(title: "Between 10 and 15 times", pounderation: 0, question: question_1)
-Option.create!(title: "Between 0 and 10 times", pounderation: 2, question: question_1)
-Option.create!(title: "0 time", pounderation: 4, question: question_1)
+Option.create!(title: "Not yet", pounderation: 0, question: question_1)
+Option.create!(title: "Yes I join one", pounderation: 10, question: question_1)
+Option.create!(title: "Yes I join several", pounderation: 50, question: question_1)
 
-Option.create!(title: "Between 10 and 15 times", pounderation: 0, question: question_2)
-Option.create!(title: "Between 0 and 10 times", pounderation: 2, question: question_2)
-Option.create!(title: "0 time", pounderation: 4, question: question_2)
+Option.create!(title: "Not yet", pounderation: 0, question: question_2)
+Option.create!(title: "Yes between 1 to 3", pounderation: 10, question: question_2)
+Option.create!(title: "Yes more than 3", pounderation: 30, question: question_2)
 
 
-Option.create!(title: "Between 10 and 15 times", pounderation: 0, question: question_3)
-Option.create!(title: "Between 0 and 10 times", pounderation: 2, question: question_3)
-Option.create!(title: "0 time", pounderation: 4, question: question_3)
+Option.create!(title: "Not yet", pounderation: 0, question: question_3)
+Option.create!(title: "Yes to one person", pounderation: 2, question: question_3)
+Option.create!(title: "Yes to more than one person", pounderation: 4, question: question_3)
+
+Option.create!(title: "Yes between 1 and 3 times", pounderation: 0, question: question_4)
+Option.create!(title: "Yes only once", pounderation: 4, question: question_4)
+Option.create!(title: "Not at all", pounderation: 10, question: question_4)
+
+Option.create!(title: "Yes more than 3 times", pounderation: 0, question: question_5)
+Option.create!(title: "Yes between 1 to 3 times", pounderation: 20, question: question_5)
+Option.create!(title: "Not at all", pounderation: 50, question: question_5)
+
+
+Option.create!(title: "Yes more than 4 times", pounderation: 0, question: question_6)
+Option.create!(title: "Yes between 0 and 4 times", pounderation: 30, question: question_6)
+Option.create!(title: "Not at all", pounderation: 80, question: question_6)
+
+Option.create!(title: "No ", pounderation: 0, question: question_7)
+Option.create!(title: "Yes between 1 and 5 products", pounderation: 10, question: question_7)
+Option.create!(title: "Yes all my products were locals", pounderation: 50, question: question_7)
+
+Option.create!(title: "No", pounderation: 0, question: question_8)
+Option.create!(title: "Yes between 1 to 5 products", pounderation: 10, question: question_8)
+Option.create!(title: "Yes all my products were seasonal", pounderation: 50, question: question_8)
+
+
+Option.create!(title: "No", pounderation: 0, question: question_9)
+Option.create!(title: "Yes between 1 and 5 products", pounderation: 10, question: question_9)
+Option.create!(title: "Yes all my products were bio", pounderation: 50, question: question_9)
+
+Option.create!(title: "No ", pounderation: 0, question: question_10)
+Option.create!(title: "Yes", pounderation: 50, question: question_10)
+
+
+Option.create!(title: "No", pounderation: 0, question: question_11)
+Option.create!(title: "Yes between 1 and 3 times", pounderation: -20, question: question_11)
+Option.create!(title: "Yes more than three times", pounderation: -50, question: question_11)
+
+
+Option.create!(title: "No", pounderation: 0, question: question_12)
+Option.create!(title: "Yes between 1 and 4 times", pounderation: 5, question: question_12)
+Option.create!(title: "Yes more than 4 times", pounderation: -5, question: question_12)
+
+Option.create!(title: "Yes three or more ", pounderation: 0, question: question_13)
+Option.create!(title: "Yes between 1 and 3", pounderation: 10, question: question_13)
+Option.create!(title: "Not at all", pounderation: 50, question: question_13)
+
+Option.create!(title: "Yes", pounderation: 0, question: question_14)
+Option.create!(title: "No", pounderation: 30, question: question_14)
+
+
+Option.create!(title: "No", pounderation: 0, question: question_15)
+Option.create!(title: "Yes", pounderation: 20, question: question_15)
+Option.create!(title: "No need, I don't produced waste today", pounderation: 100, question: question_15)
+
+Option.create!(title: "No ", pounderation: 0, question: question_16)
+Option.create!(title: "Yes", pounderation: 40, question: question_16)
+Option.create!(title: "I did'not take shower", pounderation: 80, question: question_16)
+
+Option.create!(title: "No", pounderation: 0, question: question_17)
+Option.create!(title: "Yes", pounderation: 30, question: question_17)
+
+Option.create!(title: "No", pounderation: 0, question: question_18)
+Option.create!(title: "Yes", pounderation: 30, question: question_18)
+Option.create!(title: "No need", pounderation: 50, question: question_18)
+
+Option.create!(title: "No ", pounderation: 0, question: question_19)
+Option.create!(title: "Yes", pounderation: 30, question: question_19)
+
+Option.create!(title: "No", pounderation: 0, question: question_20)
+Option.create!(title: "Yes", pounderation: 20, question: question_20)
+
+Option.create!(title: "Yes", pounderation: 0, question: question_21)
+Option.create!(title: "No", pounderation: 70, question: question_21)
+
+Option.create!(title: "Yes ", pounderation: 0, question: question_22)
+Option.create!(title: "No", pounderation: 40, question: question_22)
+
+Option.create!(title: "No", pounderation: 0, question: question_23)
+Option.create!(title: "Yes", pounderation: 30, question: question_23)
+Option.create!(title: "No need", pounderation: 50, question: question_23)
+
+Option.create!(title: "Yes", pounderation: 0, question: question_24)
+Option.create!(title: "No", pounderation: 30, question: question_24)
+
+Option.create!(title: "Yes ", pounderation: 0, question: question_25)
+Option.create!(title: "No", pounderation: 40, question: question_25)
+
+Option.create!(title: "Yes", pounderation: 0, question: question_26)
+Option.create!(title: "No", pounderation: 30, question: question_26)
+
+Option.create!(title: "Yes", pounderation: 0, question: question_27)
+Option.create!(title: "No", pounderation: 30, question: question_27)
+
+Option.create!(title: "Yes ", pounderation: 0, question: question_28)
+Option.create!(title: "No", pounderation: 40, question: question_28)
+
+Option.create!(title: "Yes", pounderation: 0, question: question_29)
+Option.create!(title: "No", pounderation: 30, question: question_29)
+
+Option.create!(title: "Yes", pounderation: 0, question: question_30)
+Option.create!(title: "No", pounderation: 30, question: question_30)
+
+Option.create!(title: "Yes ", pounderation: 0, question: question_31)
+Option.create!(title: "No", pounderation: 40, question: question_31)
+
+Option.create!(title: "Yes", pounderation: 0, question: question_32)
+Option.create!(title: "No", pounderation: 30, question: question_32)
+
+Option.create!(title: "Yes", pounderation: 0, question: question_33)
+Option.create!(title: "No", pounderation: 30, question: question_33)
+
+
+Option.create!(title: "Between 10 and 15 times", pounderation: 0, question: question_34)
+Option.create!(title: "Between 0 and 10 times", pounderation: 2, question: question_34)
+Option.create!(title: "0 time", pounderation: 4, question: question_34)
+
+Option.create!(title: "Between 10 and 15 times", pounderation: 0, question: question_35)
+Option.create!(title: "Between 0 and 10 times", pounderation: 2, question: question_35)
+Option.create!(title: "0 time", pounderation: 4, question: question_35)
+
+
+Option.create!(title: "Between 10 and 15 times", pounderation: 0, question: question_36)
+Option.create!(title: "Between 0 and 10 times", pounderation: 2, question: question_36)
+Option.create!(title: "0 time", pounderation: 4, question: question_36)
 puts "---> Few options have been created!"
 
 # puts "Creating 1 survey..."

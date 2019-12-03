@@ -21,27 +21,33 @@
       <div class="infos">
         <h2 class="title"><%= inscription.challenge.title %><span class="flag"></span></h2>
         <h3 class="date"><%= daily_survey.created_at.strftime("%y %m %d") %></h3>
-        <h3 class="seats">Questions remaining: 2</h3>
         <p class="txt">
           Click in the link below to access to
           your daily survey!
         </p>
-        <%= link_to "See your Review of the day", daily_survey_path(daily_survey), class: "btn btn-primary main-button" %>
+        <%= link_to "Check your survey", daily_survey_path(daily_survey), class: "btn btn-primary main-button" %>
       </div>
     </article>
   <% end %>
 
-  <article class="surveys-dashboard-card2">
-    <div class="thumb"></div>
-    <div class="infos">
-      <h2 class="title"><%= inscription.challenge.title %><span class="flag"></span></h2>
-      <h3 class="date"><%= Date.today.strftime("%y %m %d") %></h3>
-      <h3 class="seats">Questions remaining: 2</h3>
-      <p class="txt">
-        Click in the link below to access to
-        your daily survey!
-      </p>
-      <%= link_to "See your Review of the day", new_inscription_daily_survey_path(inscription), class: "btn btn-primary main-button" %>
-    </div>
-  </article>
+    <article class="surveys-dashboard-card2">
+      <div class="thumb"></div>
+      <div class="infos">
+        <h2 class="title"><%= inscription.challenge.title %><span class="flag"></span></h2>
+        <h3 class="date"><%= Date.today.strftime("%y %m %d") %></h3>
+        <p class="txt">
+          Click in the link below to access to
+          your daily survey!
+        </p>
+        <%= link_to "Answer your Review of the day", new_inscription_daily_survey_path(inscription), class: "btn btn-primary main-button" %>
+      </div>
+    </article>
 <% end %>
+
+
+<!-- if daily_survey.date == Date.today && daily_survey exist
+dont display button
+
+si la daily survey est déjà remplie, il faut lui proposer uniquement de checker sa daily_survey déjà remplie
+
+ -->

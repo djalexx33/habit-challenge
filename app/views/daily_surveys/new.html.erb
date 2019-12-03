@@ -1,9 +1,7 @@
 <h1>Day <%= Date.today.strftime("%d") %></h1>
 
-
-
 <%= simple_form_for [@inscription, @daily_survey] do |f| %>
-  <% @questions.each do |question| %>
+  <% @inscription.challenge.questions.each do |question| %>
   <h5><%= question.title %></h5>
     <%= f.simple_fields_for :daily_answers, DailyAnswer.new do |i| %>
       <%= i.collection_radio_buttons :option_id, question.options, :id, :title %>

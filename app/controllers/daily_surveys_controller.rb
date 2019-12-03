@@ -15,7 +15,6 @@ class DailySurveysController < ApplicationController
     @daily_survey = DailySurvey.new(daily_survey_params)
     @daily_survey.inscription = @inscription
     @daily_survey.date = Date.today
-
     if @daily_survey.save
       # @daily_survey.score
       flash[:notice] = 'Successfully created daily survey.'
