@@ -1,0 +1,7 @@
+function insertUsers(usersHTML) {
+  const queryList = document.querySelector('.query-list');
+  queryList.innerHTML = "";
+  queryList.insertAdjacentHTML('beforeend', usersHTML);
+}
+
+insertUsers("<%= j render 'pages/user_index', users: @users %>");

@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
+
   def index
     @inscriptions = current_user.inscriptions
     @user = current_user
   end
 
-  def display
+  def display_all
     if params[:query].present?
       sql_query = "first_name ILIKE :query OR last_name ILIKE :query OR username ILIKE :query OR city ILIKE :query"
       @users = User.where(sql_query, query: "%#{params[:query]}%")
@@ -31,7 +32,6 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
-
     @user.save!
   end
 

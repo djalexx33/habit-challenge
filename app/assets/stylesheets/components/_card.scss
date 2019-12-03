@@ -40,11 +40,8 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
      background:var(--optionBackground, var(--defaultBackground, #E6E9ED));
      background-size:auto 120%;
      background-position:center;
-
      cursor: pointer;
-
      transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-
      @for $i from 1 through length($optionDefaultColours) {
         &:nth-child(#{$i}) {
            --defaultBackground:#{nth($optionDefaultColours, $i)};
@@ -92,7 +89,7 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
         right:0px;
 
         height:40px;
-        transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+        transition:.1s cubic-bezier(0.05, 0.61, 0.41, 0.95);
         .icon {
            display:flex;
            flex-direction:row;
@@ -120,21 +117,23 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
            >div {
               position: relative;
 
-              transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
+              transition:.1s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
            }
            .main {
-              font-weight:bold;
+              font-weight: normal;
               font-size:1.2rem;
            }
-           .sub {
-              transition-delay:.1s;
-           }
-         .info:hover {}
         }
      }
       .label:hover {
         .main {
-          text-decoration: underline;
+          font-weight: bolder;
+        }
+        .sub {
+          font-weight: bolder;
+        }
+        .icon {
+          box-shadow: 2px 3px rgba(30, 30, 30, 1);
         }
       }
     .text {
