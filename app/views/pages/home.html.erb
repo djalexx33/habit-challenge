@@ -44,7 +44,7 @@ Join
 
   <div class="home-infos mt-5">
     <h2 id="home-infos-act"><span class="highlight">We need to act</span></h2>
-    <div class="home-infos-content">
+    <div class="home-infos-content mb-5">
       <div class="home-infos-content-left">
         <p>Climate experts are formal: the earth is warming up at a steady pace. The reason for this is the increase in human-caused greenhouse gases, which has led to health, ecological and humanitarian crises.
         Despite this, the fight against climate change is a real opportunity to transition
@@ -54,6 +54,9 @@ Join
         <p>The goal has always been to bring climate change under control by stopping the release of carbon dioxide and other heat-trapping “greenhouse” gases. But sometimes it seems as though we’re fighting a losing battle. What can an individual really do ?
         No matter where you live, you can contribute to the solution with actions that reach far beyond your own home.</p>
       </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <%= link_to "Join the movement", challenge_path(@challenge_of_the_month.id), class: "btn btn-primary btn-lg light-main-button pl-4 pr-4" %>
     </div>
   </div>
 
