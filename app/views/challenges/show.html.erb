@@ -15,7 +15,7 @@
             <% else %>
               <%= link_to "Subscribe to the challenge", challenge_inscriptions_path(@challenge), method: :post, remote: :true, class: "btn btn-primary btn-lg light-white-button button-challenge" %>
             <% end %>
-            <button type="button" class="btn btn-primary btn-lg light-white-button button-challenge-execute" data-toggle="modal" data-target="#modal-challenge">
+            <button type="button" class="btn btn-primary btn-lg light-white-button" data-toggle="modal" data-target="#modal-challenge">
               Subscribe to the challenge
             </button>
             <%= render "shared/popup_challenge" %>
