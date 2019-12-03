@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   resources :inscriptions, only: [ :destroy ] do
     resources :daily_surveys, only: [ :new, :create ]
   end
-
+  resources :daily_surveys, only: [ :show]
 end

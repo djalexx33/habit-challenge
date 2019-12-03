@@ -1,7 +1,9 @@
 class DailySurveysController < ApplicationController
   def new
+    @user = current_user
+    @inscriptions = Inscription.where(user: current_user)
     @inscription = Inscription.find(params[:inscription_id])
-    @challenge = @inscription.challenge
+    @challenge = @challenge_of_the_month
     @questions = @challenge.questions
     @daily_survey = DailySurvey.new
   end
