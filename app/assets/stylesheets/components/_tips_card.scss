@@ -104,6 +104,9 @@
   position: absolute;
   left: 150px;
   height: 100%;
+  h1:hover {
+    text-decoration: none !important;
+  }
 }
 
 .tips-card .additional .more-info h1 {
@@ -113,6 +116,7 @@
 
 .tips-card .additional .more-info h1 {
   color: white;
+  text-decoration: none !important;
 }
 
 .tips-card .additional .coords {
@@ -180,6 +184,7 @@
   box-sizing: border-box;
   padding: 1rem;
   padding-top: 0;
+  text-decoration: none;
 }
 
 .tips-card .general .more {
