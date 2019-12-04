@@ -8,7 +8,7 @@
       <h4 class="card-title text-center"><%= @user.city.capitalize %></h4><p></p>
       <span id="border-dashboard"></span>
       <div class="card-body pl-5 pr-5">
-        <h2 class="text-center"><%= calculate_score(@user) %></h2><p class="text-center">Points</p>
+        <h2 class="text-center"><%= @user.score %></h2><p class="text-center">Points</p>
         <br><h5 class="card-text">Member since</h5><p> <%= @user.created_at.strftime("%B, %d, %Y") %> </p>
         <h5 class="card-title">Badges</h5><p><%= "You don't have any badge yet" %></p>
         <p></p>
@@ -112,5 +112,7 @@
       </div>
     </div>
   </div>
-        <%= link_to "Join another challenge", challenges_path, :class => "btn btn-primary btn-lg main-button pl-4 pr-4 btn-challenge" %>
+    <div class="join-button">
+      <%= link_to "Join another challenge", challenges_path, :class => "btn btn-primary btn-lg main-button pl-4 pr-4 btn-challenge" %>
+    </div>
 </div>
