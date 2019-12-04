@@ -5,6 +5,10 @@
   padding-bottom: 40px;
 }
 
+.iframe{
+  padding-left: 100px;
+}
+
 .tips-title{
   h1{
     // padding-left: 200px;
@@ -104,6 +108,9 @@
   position: absolute;
   left: 150px;
   height: 100%;
+  h1:hover {
+    text-decoration: none !important;
+  }
 }
 
 .tips-card .additional .more-info h1 {
@@ -113,6 +120,7 @@
 
 .tips-card .additional .more-info h1 {
   color: white;
+  text-decoration: none !important;
 }
 
 .tips-card .additional .coords {
@@ -180,6 +188,7 @@
   box-sizing: border-box;
   padding: 1rem;
   padding-top: 0;
+  text-decoration: none;
 }
 
 .tips-card .general .more {
@@ -437,6 +446,10 @@
   padding-right: 50px;
 }
 
+.tips-header-description {
+  padding-right: 100px;
+  padding-top: 50px;
+}
 
 
 // .circle-avatar {
