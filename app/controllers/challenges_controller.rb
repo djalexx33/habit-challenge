@@ -30,4 +30,13 @@ class ChallengesController < ApplicationController
       features: @challenge.users.map(&:to_feature)
     }
   end
+
+  # def scoring
+  #   @users = User.all
+  #   @scores = []
+  #   @users.each do |user|
+  #     scores << [calulate_score(user)]
+  #   end
+  #   scores.sort.first(10)
+  # end
 end

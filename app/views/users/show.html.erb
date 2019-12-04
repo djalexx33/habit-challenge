@@ -11,7 +11,7 @@
         <h2 class="text-center"><%= @user.score %></h2><p class="text-center">Points</p>
         <br><h5 class="card-text">Member since</h5><p> <%= @user.created_at.strftime("%B, %d, %Y") %> </p>
         <h5 class="card-title">Badges</h5><p><%= "You don't have any badge yet" %></p>
-        <p></p>
+        <%= link_to "Join another challenge", challenges_path, :class => "btn btn-primary btn-lg light-white-button pl-4 pr-4 btn-challenge" %>
       </div>
 <!--       <ul class="list-group list-group-flush">
         <li class="list-group-item"></li>
@@ -112,7 +112,6 @@
       </div>
     </div>
   </div>
-    <div class="text-right pr-4">
-        <%= link_to "Join another challenge", challenges_path, :class => "btn btn-primary btn-lg main-button pl-4 pr-4 btn-challenge" %>
-    </div>
+<!--     <div class="join-button">
+    </div> -->
 </div>
