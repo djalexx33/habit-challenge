@@ -6,6 +6,7 @@ import { loadDynamicBannerText } from '../components/banner';
 import { expand } from '../components/card';
 import { popup_challenge_subscription } from '../components/popupchallenge';
 import { alert } from '../components/alert';
+import { anchor } from '../components/anchor';
 
 const divType = document.querySelector('#typed-text');
 if (divType !== null) {
@@ -17,6 +18,8 @@ expand();
 initMapbox();
 
 alert();
+
+anchor();
 
 const popup_btn = document.querySelector(".button-challenge");
 if (popup_btn) {
