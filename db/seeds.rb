@@ -3,7 +3,6 @@ Challenge.destroy_all
 Inscription.destroy_all
 Question.destroy_all
 Option.destroy_all
-DailySurvey.destroy_all
 Tip.destroy_all
 
 puts "Creating our users..."
@@ -132,12 +131,10 @@ Inscription.create(challenge: plastic, user: camille)
 puts "---> Few inscriptions have been created!"
 
 puts "Creating tips..."
-Tip.destroy_all
 Tip.create(title: "Use a reusable bag", description: "A single plastic bag takes hundreds of years to decompose. Bring your own reusable bag when you do your groceries!", challenge: plastic, score: 40, saved_co2: 300, saved_money: 20, saved_energy: 100, avatar: "https://images.unsplash.com/photo-1572810643082-c8c8759ee348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
 Tip.create(title: "Make your own shampoo", description: "Follow our wonderful recipe to do your own shampoo and start to save plastic", challenge: plastic, score: 65, saved_co2: 100, saved_money: 10, saved_energy: 50, avatar: "https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg", video: "https://player.vimeo.com/video/131666300?color=ee4375&title=0&byline=0&portrait=0", energy: "By doing your own shampoo you will permit a real save in energy of almost 100 kwH, because of all the electricity used by machine during industrial processing", money: "This also allows you to save money: making your own shampoo makes you save on average 100 $ each year! Not bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission thanks to this action: up to 100 kg of Co2 per year!")
 Tip.create(title: "Refuse straws", description: "A single plastic bag takes hundreds of years to decompose. Straws are one of the most commun plastic waste in the oceans!", challenge: plastic, score: 30, saved_co2: 250, saved_money: 10, saved_energy: 80, avatar: "https://media.mnn.com/assets/images/2018/07/bendable_straws.jpg.653x0_q80_crop-smart.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
 Tip.create(title: "Buy in bulks", description: "By buying directly in bulk, you do not consume any useless packaging that will end up in your bin, or worse.", challenge: plastic, score: 50, saved_co2: 320, saved_money: 70, saved_energy: 540, avatar: "https://touteca.files.wordpress.com/2015/07/vrac-crac-1.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
-
 Tip.create(title: "Print your calendar of seasonal products", description: "By buying directly in bulk, you do not consume any useless packaging that will end up in your bin, or worse.", challenge: seasocal, score: 55, saved_co2: 10, saved_money: 22, saved_energy: 640, avatar: "https://i.pinimg.com/originals/4c/47/e2/4c47e290a7dc5d9e10890cdcdc54791b.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
 Tip.create(title: "Go to your local markets every week", description: "By buying directly in bulk, you do not consume any useless packaging that will end up in your bin, or worse.", challenge: seasocal, score: 75, saved_co2: 320, saved_money: 70, saved_energy: 530, avatar: "http://greatlakesecho.org/wp-content/uploads/2012/04/farm-market1.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
 puts "---> Some tips have been created!"
@@ -326,10 +323,6 @@ Option.create!(title: "Yes", pounderation: 10, question: question_36)
 Option.create!(title: "No", pounderation: 0, question: question_36)
 Option.create!(title: "No need", pounderation: 20, question: question_36)
 puts "---> Few options have been created!"
-
-# puts "Creating 1 survey..."
-# survey_1 = DailySurvey.create(date: Date.today, inscription: leo.inscriptions.first)
-# puts "1 survey have been created!"
 
 puts ""
 puts "Seed Finished."
