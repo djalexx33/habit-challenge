@@ -1,3 +1,73 @@
+  .card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: 0.4s 0.15s;
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+  .survey-text {
+  display: none;
+}
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.card-trip-image {
+  height: 300px;
+  background-size: cover !important;
+}
+
+.card-trip:hover {
+  background-color: white;
+  color: black;
+  .card-trip-image {
+    height: 0px;
+  }
+  .card-trip-infos {
+    margin-top: 48px;
+  }
+  .avatar-bordered {
+    margin-top: 40px;
+  }
+  .survey-text {
+  display: block !important
+;
+  }
+}
+
+
+
+
 
 
 // For challenges#index cards:
@@ -157,9 +227,9 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.eot"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.ttf"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.woff");
   font-weight: bold;
 }
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 div.surveys-dashboard-card {
   width: 350px;
@@ -243,8 +313,10 @@ div.surveys-dashboard-card .infos .details {
   transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
 div.surveys-dashboard-card:hover .infos {
-  -webkit-transform: translateY(-260px);
-          transform: translateY(-260px);
+  // -webkit-transform: translateY(-260px);
+  //         transform: translateY(-260px);
+  position: relative;
+  top: 250px;
 }
 div.surveys-dashboard-card:hover .infos .seats, div.surveys-dashboard-card:hover .infos .txt, div.surveys-dashboard-card:hover .infos .details {
   opacity: 1;
