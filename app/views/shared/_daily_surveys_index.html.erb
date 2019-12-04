@@ -1,6 +1,7 @@
 <div class="row">
   <% current_user.inscriptions.each do |inscription| %>
     <% inscription.daily_surveys.each do |daily_survey| %>
+
       <div class="surveys-dashboard-card col-sm-4">
         <div class="thumb" style="background: url(<%= inscription.challenge.photo %>);background-size: cover;" ></div>
         <div class="infos">
@@ -16,7 +17,12 @@
             Click in the link below to access to
             your daily survey!
           </p>
-          <%= link_to "Check your survey", daily_survey_path(daily_survey), class: "btn btn-primary main-button" %>
+          <%#= link_to "Check your survey", daily_survey_path(daily_survey), class: "btn btn-primary main-button" %>
+          <button type="button" class="btn btn-primary main-button survey-button-click" data-toggle="modal" data-target="#modal-survey-show">
+              Check your survey
+          </button>
+
+          <%= render "shared/daily_survey_show", daily_answers: daily_survey.daily_answers, daily_survey: daily_survey%>
         </div>
       </div>
     <% end %>
@@ -41,7 +47,11 @@
               Click in the link below to answer
               your daily survey!
             </p>
-            <%= link_to "Answer your Review of the day", new_inscription_daily_survey_path(inscription), class: "btn btn-primary main-button" %>
+            <%#= link_to "Answer your Review of the day", new_inscription_daily_survey_path(inscription), class: "btn btn-primary main-button" %>
+            <button type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#modal-survey-new">
+                Answer your Review of the day
+            </button>
+          <%= render "shared/daily_survey_new", questions: inscription.challenge.questions, inscription: inscription, daily_survey: DailySurvey.new %>
           </div>
         </div>
       <% end %>
