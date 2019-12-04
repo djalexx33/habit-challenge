@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
     @inscriptions = current_user.inscriptions
     @user = current_user
@@ -22,9 +21,13 @@ class UsersController < ApplicationController
     @user = current_user
     @inscriptions = @user.inscriptions
     @user_tips = @user.user_tips
+    @inscriptions = @user.inscriptions
+    # @chall
+    # @questions =
   end
 
   def new
+
   end
 
   def create
