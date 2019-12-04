@@ -2,13 +2,11 @@ class DailySurveysController < ApplicationController
 
  def show
     @user = current_user
-
     # @inscription = Inscription.find(params[:inscription_id])
     # @daily_survey.inscription = @inscription
     @daily_survey = DailySurvey.find(params[:id])
     @daily_answers = @daily_survey.daily_answers
   end
-
 
   def new
     @user = current_user

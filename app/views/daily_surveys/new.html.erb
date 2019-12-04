@@ -1,11 +1,15 @@
-<h1>Day <%= Date.today.strftime("%d") %></h1>
-
-<%= simple_form_for [@inscription, @daily_survey] do |f| %>
-  <% @inscription.challenge.questions.each do |question| %>
-  <h5><%= question.title %></h5>
-    <%= f.simple_fields_for :daily_answers, DailyAnswer.new do |i| %>
-      <%= i.collection_radio_buttons :option_id, question.options, :id, :title %>
+<div class="container w-50 mt-5 d-flex justify-content-center flex-column align-items-center text-center">
+  <h1><span class="highlight"><%= @inscription.challenge.title %></span></h1>
+  <h1 class="text-dark mb-5">Day <%= Date.today.strftime("%d") %></h1>
+  <span class="w-75 text-justify"><%= simple_form_for [@inscription, @daily_survey] do |f| %></span>
+    <% @inscription.challenge.questions.each do |question| %>
+      <h5><%= question.title %></h5>
+      <%= f.simple_fields_for :daily_answers, DailyAnswer.new do |i| %>
+        <%= i.collection_radio_buttons :option_id, question.options, :id, :title %>
+      <% end %>
     <% end %>
+    <div class="d-flex justify-content-center mt-4">
+      <%= f.submit 'Submit survey', class: "btn btn-primary main-button" %>
+    </div>
   <% end %>
-  <%= f.submit %>
-<% end %>
+</div>

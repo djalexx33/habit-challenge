@@ -266,7 +266,7 @@ Option.create!(title: "No need", pounderation: 50, question: question_23)
 Option.create!(title: "Yes", pounderation: 0, question: question_24)
 Option.create!(title: "No", pounderation: 30, question: question_24)
 
-Option.create!(title: "Yes ", pounderation: 0, question: question_25)
+Option.create!(title: "Yes", pounderation: 0, question: question_25)
 Option.create!(title: "No", pounderation: 40, question: question_25)
 
 Option.create!(title: "Yes", pounderation: 0, question: question_26)
