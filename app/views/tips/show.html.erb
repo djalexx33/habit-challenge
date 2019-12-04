@@ -3,6 +3,8 @@
       <h1><span class="highlight"><%= @tip.title %></span></h1>
       <div class="tips-header-description">
         <p><%= @tip.description %></p>
+        <br>
+        <%= link_to "Pin to your dashboard", tip_user_tips_path(@tip), method: :post, class: "btn btn-primary light-main-button" %>
       </div>
     </div>
   <iframe src=<%= @tip.video %> width="800" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
