@@ -100,7 +100,7 @@ digital = Challenge.create(title: "Digital Detox", description: "Use a respectfu
 vegetate = Challenge.create(title: "Vegetate your city", description: "Show the example by picking the trashes in the street to dump them in the public bin around the corner, plant seeds in public parks and around trees", date: "2019-09-06 19:08:40.011480", photo: "https://environmentamerica.org/sites/environment/files/cpn/AMN-033117-REPORT/assets/img/WEB_AMN_Shining-Cities_Slideshow_Austin-01.jpg", badge: "https://www.countryfinancial.com/content/dam/cfin/bands/icons/icon_history_2008_plant-01.png")
 energy = Challenge.create(title: "Green Energy Switch", description: "Support green energy and stop purchasing from oil, gaz and coal companies", date: "2019-10-06 19:08:40.011480", photo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Wind_power_plants_in_Xinjiang%2C_China.jpg", badge: "https://purepng.com/public/uploads/large/purepng.com-glowing-yellow-light-bulbelectronicsbulb-light-941524679911ixxqy.png")
 food = Challenge.create(title: "No Food Waste", description: "Fight against food waste for this month of December by not throwing away food. Make a compost, feed animals of give away what you do not use, eat or drink", date: "2019-11-06 19:08:40.011480", photo: "https://media4.s-nbcnews.com/j/newscms/2017_49/2250466/171205-food-waste-compost-ac-421p_77851c253c01aa3afddce30c1f631583.1200;630;7;70;5.jpg", badge: "https://www.ssbwiki.com/images/thumb/7/7a/BananaPeelWiiU.png/200px-BananaPeelWiiU.png")
-plastic = Challenge.create(title: "Plastic Free", description: "Ban sigle-use plastic for the month of January, reduce your consumption of other plastics", date: "2019-12-06 19:08:40.011480", photo: "https://miro.medium.com/max/12000/1*KBZH2aoKRqG_zSsFcFI-QQ.jpeg", badge: "https://toppng.com/public/uploads/preview/free-png-plastic-water-bottle-png-11519803083hnhiljypmg.png")
+plastic = Challenge.create(title: "Plastic Free", description: "Ban sigle-use plastic for the month of January, reduce your consumption of other plastics", date: "2019-12-06 19:08:40.011480", photo: "https://miro.medium.com/max/12000/1*KBZH2aoKRqG_zSsFcFI-QQ.jpeg", badge: "http://blog.aisinsurance.com/wp-content/uploads/2014/07/Plastic-Bottle.png")
 puts " ---> 12 challenges have been created!"
 
 puts "Creating some inscription..."
@@ -116,8 +116,8 @@ puts "---> Few inscriptions have been created!"
 
 puts "Creating tips..."
 Tip.destroy_all
-Tip.create(title: "Do your own shampoo", description: "Follow our wonderful recipe to do your own shampoo and start to save plastic and lots of great improvements", challenge: plastic, score: 100, saved_co2: 100, saved_money: 10, saved_energy: 50, avatar: "https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg")
-Tip.create(title: "Use a reusable bag", description: "A single plastic bag can take 1,000 years to degrade. Purchase or make your own reusable produce bag!", challenge: plastic, score: 300, saved_co2: 300, saved_money: 20, saved_energy: 100, avatar: "https://images.unsplash.com/photo-1572810643082-c8c8759ee348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")
+Tip.create(title: "Do your own shampoo", description: "Follow our wonderful recipe to do your own shampoo and start to save plastic and lots of great improvements", challenge: plastic, score: 100, saved_co2: 100, saved_money: 10, saved_energy: 50, avatar: "https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg", video: "https://player.vimeo.com/video/131666300?color=ee4375&title=0&byline=0&portrait=0", energy: "By doing your own shampoo you will permit a real save of energy almost 100kwH, because of all the electricity used by machine during industrial fabrication", money: "Being more responsible could also permit you to save money, by contrary of all ideas, with your own shampoo you will save 100$ each year, not bad isn't it ?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission, because you will save 100 CO2 units by doing your own shampoo")
+Tip.create(title: "Use a reusable bag", description: "A single plastic bag can take 1,000 years to degrade. Purchase or make your own reusable produce bag!", challenge: plastic, score: 300, saved_co2: 300, saved_money: 20, saved_energy: 100, avatar: "https://images.unsplash.com/photo-1572810643082-c8c8759ee348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By doing your own shampoo you will permit a real save of energy almost 100kwH, because of all the electricity used by machine during industrial fabrication", money: "Being more responsible could also permit you to save money, by contrary of all ideas, with your own shampoo you will save 100$ each year, not bad isn't it ?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission, because you will save 100 CO2 units by doing your own shampoo")
 puts "---> Tips have been created!"
 
 puts "Creating some questions..."
@@ -266,7 +266,7 @@ Option.create!(title: "No need", pounderation: 50, question: question_23)
 Option.create!(title: "Yes", pounderation: 0, question: question_24)
 Option.create!(title: "No", pounderation: 30, question: question_24)
 
-Option.create!(title: "Yes ", pounderation: 0, question: question_25)
+Option.create!(title: "Yes", pounderation: 0, question: question_25)
 Option.create!(title: "No", pounderation: 40, question: question_25)
 
 Option.create!(title: "Yes", pounderation: 0, question: question_26)

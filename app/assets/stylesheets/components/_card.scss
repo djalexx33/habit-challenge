@@ -161,35 +161,23 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
   box-sizing: border-box;
 }
 
-.note {
-  margin-top: 30px;
-  color: #fff;
-  font-size: 1rem;
-  font-family: "Merriweather", sans-serif;
-  line-height: 1.5;
-  text-align: center;
-}
-
-article.surveys-dashboard-card {
-  position: absolute;
-  left: 20%;
-  top: 50%;
+div.surveys-dashboard-card {
   width: 350px;
   height: 350px;
-  -webkit-transform: translate(-50%, -50%) translateZ(0);
-          transform: translate(-50%, -50%) translateZ(0);
-  border-radius: 3px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
   overflow: hidden;
+  box-shadow: 3px 3px $light-gray;
+  padding: 5px;
 }
-article.surveys-dashboard-card .thumb {
+
+div.surveys-dashboard-card .thumb {
   width: auto;
   height: 260px;
-  background-position: center;
-  background-size: cover;
-  border-radius: 3px;
+  // background-position: center;
+  // background-size: cover;
+  border-radius: 5px;
 }
-article.surveys-dashboard-card .infos {
+div.surveys-dashboard-card .infos {
   width: auto;
   height: 350px;
   position: relative;
@@ -197,7 +185,7 @@ article.surveys-dashboard-card .infos {
   background: #fff;
   transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
-article.surveys-dashboard-card .infos .title {
+div.surveys-dashboard-card .infos .title {
   position: relative;
   margin: 10px 0;
   letter-spacing: 3px;
@@ -207,26 +195,23 @@ article.surveys-dashboard-card .infos .title {
   text-transform: uppercase;
   text-shadow: 0 0 0px #32577f;
 }
-article.surveys-dashboard-card .infos .flag {
+div.surveys-dashboard-card .infos .flag {
   position: absolute;
   top: 50%;
   right: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   width: 35px;
   height: 35px;
-  background: url("https://cdn4.iconfinder.com/data/icons/no-plastic-flat-save-the-earth/512/no_plastic_bottle-512.png") no-repeat top right;
   background-size: 100% auto;
   display: inline-block;
 }
-article.surveys-dashboard-card .infos .date, article.surveys-dashboard-card .infos .seats {
+div.surveys-dashboard-card .infos .date, div.surveys-dashboard-card .infos .seats {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-size: .85rem;
   color: rgba(21, 37, 54, 0.7);
   font-family: "Grotesque", sans-serif;
 }
-article.surveys-dashboard-card .infos .seats {
+div.surveys-dashboard-card .infos .seats {
   display: inline-block;
   margin-bottom: 24px;
   padding-bottom: 24px;
@@ -234,7 +219,7 @@ article.surveys-dashboard-card .infos .seats {
   opacity: 0;
   transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
-article.surveys-dashboard-card .infos .txt {
+div.surveys-dashboard-card .infos .txt {
   font-family: "Merriweather", sans-serif;
   line-height: 2;
   font-size: .95rem;
@@ -242,7 +227,7 @@ article.surveys-dashboard-card .infos .txt {
   opacity: 0;
   transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
-article.surveys-dashboard-card .infos .details {
+div.surveys-dashboard-card .infos .details {
   position: absolute;
   left: 20px;
   bottom: 0;
@@ -257,11 +242,11 @@ article.surveys-dashboard-card .infos .details {
   opacity: 0;
   transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
 }
-article.surveys-dashboard-card:hover .infos {
+div.surveys-dashboard-card:hover .infos {
   -webkit-transform: translateY(-260px);
           transform: translateY(-260px);
 }
-article.surveys-dashboard-card:hover .infos .seats, article.surveys-dashboard-card:hover .infos .txt, article.surveys-dashboard-card:hover .infos .details {
+div.surveys-dashboard-card:hover .infos .seats, div.surveys-dashboard-card:hover .infos .txt, div.surveys-dashboard-card:hover .infos .details {
   opacity: 1;
 }
 // end
@@ -377,3 +362,85 @@ article.surveys-dashboard-card:hover .infos .seats, article.surveys-dashboard-ca
 .gradient{
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
+
+
+// For Tips show:
+.bloc-section-tips{
+  .bloc-section-right{
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .bloc-section-right-photo{
+    width: 450px;
+    position: relative;
+    img{
+      width: 400px;
+      height: 300px;
+      box-shadow: 1px 2px 9px #aba9a9;;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .bloc-section-right-content{
+    text-align: left;
+     .description{
+    padding-right: 300px;
+    padding-top: 110px;
+    padding-left: 20px;
+      }
+      .title{
+        position: absolute;
+        left: 390px;
+        padding-bottom: 20px;
+        h1{
+          font-size: 70px;
+          color: $green;
+          // text-shadow: 1px 1px 2px grey;
+        }
+      }
+  }
+
+
+  .bloc-section-left{
+    display: flex;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .bloc-section-left-photo{
+    width: 450px;
+    img{
+      width: 400px;
+      height: 300px;
+      box-shadow: 1px 2px 9px #aba9a9;;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .bloc-section-left-content{
+    .description{
+    padding-left: 300px;
+    padding-top: 110px;
+    padding-right: 20px;
+      }
+      .title{
+        position: absolute;
+        right: 390px;
+        padding-bottom: 20px;
+        h1{
+          font-size: 70px;
+          color: $green;
+          // text-shadow: 1px 1px 2px grey;
+        }
+      }
+  }
+}
+
+
+.gradient{
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+

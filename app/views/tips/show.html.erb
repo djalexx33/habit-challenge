@@ -1,1 +1,57 @@
-<h1>Coucou Tips Show</h1>
+  <div class="container d-flex pt-5">
+    <div class="description text-left mb-5 mt-4">
+      <h1><span class="highlight"><%= @tip.title %></span></h1>
+      <div class="tips-header-description">
+        <p><%= @tip.description %></p>
+      </div>
+    </div>
+  <iframe src=<%= @tip.video %> width="800" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
+<div class="container pt-4 mt-4 text-center">
+  <div class="bloc-section-tips pt-5">
+    <div class="bloc-section-right">
+      <div class="bloc-section-right-photo">
+        <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" class="gradient">
+      </div>
+      <div class="bloc-section-right-content">
+        <div class="title">
+          <h1 id="impact">#Energy saved</h1>
+        </div>
+        <div class="description">
+          <p><%= @tip.energy %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bloc-section-left">
+      <div class="bloc-section-left-content text-right">
+        <div class="title">
+          <h1 id="hope">CO2 saved#</h1>
+        </div>
+        <div class="description">
+          <p><%= @tip.co2 %></p>
+        </div>
+      </div>
+      <div class="bloc-section-left-photo">
+      <img src="https://images.unsplash.com/photo-1502252430442-aac78f397426?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+      </div>
+    </div>
+
+    <div class="bloc-section-right">
+      <div class="bloc-section-right-photo">
+      <img src="https://images.unsplash.com/photo-1554672723-d42a16e533db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+      </div>
+      <div class="bloc-section-right-content">
+        <div class="title">
+          <h1 id="how">#Money saved</h1>
+        </div>
+        <div class="description">
+          <p><%= @tip.money %></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
