@@ -6,6 +6,8 @@ import { loadDynamicBannerText } from '../components/banner';
 import { expand } from '../components/card';
 import { popup_challenge_subscription } from '../components/popupchallenge';
 import { alert } from '../components/alert';
+// import { survey_button } from '../components/survey';
+
 
 const divType = document.querySelector('#typed-text');
 if (divType !== null) {
