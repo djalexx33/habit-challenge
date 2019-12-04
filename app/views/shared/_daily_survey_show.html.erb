@@ -1,0 +1,26 @@
+<div class="modal fade popup-survey" id="modal-survey-show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <% daily_answers.each do |daily_answer| %>
+          <div class="div">
+            <h4><%= daily_answer.option.question.title %></h4>
+            <div class="div">
+              <p>Your answer : <%= daily_answer.option.title %></p>
+            </div>
+          </div>
+        <% end %>
+        <div class="div">
+          <p>Your score for this survey : <%= daily_survey.score %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
