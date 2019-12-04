@@ -1,5 +1,6 @@
 class DailySurvey < ApplicationRecord
   after_save :score
+  after_save :add_score_to_user
   belongs_to :inscription
   has_many :daily_answers, inverse_of: :daily_survey, dependent: :destroy
   accepts_nested_attributes_for :daily_answers,
@@ -15,5 +16,11 @@ class DailySurvey < ApplicationRecord
       score += option.pounderation
     end
     score
+  end
+
+  def add_score_to_user
+    user = inscription.user
+    user.score += score
+    user.save!
   end
 end
