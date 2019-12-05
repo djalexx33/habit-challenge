@@ -193,7 +193,7 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
+  top: 16px;
   width: 45px;
   height: 50px;
 }
@@ -215,7 +215,7 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
     margin-top: 16px;
   }
   .avatar-bordered {
-    margin-top: 40px;
+    margin-top: -8px;
   }
   .survey-text {
   display: block !important
