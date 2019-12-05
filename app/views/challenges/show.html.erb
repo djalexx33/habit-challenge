@@ -34,14 +34,14 @@
   <div class="bloc-section pt-4">
     <div class="bloc-section-right">
       <div class="bloc-section-right-photo">
-        <img src="https://images.pexels.com/photos/1141835/pexels-photo-1141835.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="gradient">
+        <%= image_tag @challenge.impact, class: "gradient" %>
       </div>
       <div class="bloc-section-right-content">
         <div class="title">
           <h1 id="impact">#Impact</h1>
         </div>
         <div class="description">
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab.</p>
+          <p><%= @challenge.impact_text %></p>
         </div>
       </div>
     </div>
@@ -52,24 +52,24 @@
           <h1 id="hope">Hope#</h1>
         </div>
         <div class="description">
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab.</p>
+          <p><%= @challenge.hope_text %></p>
         </div>
       </div>
       <div class="bloc-section-left-photo">
-      <img src="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+      <%= image_tag @challenge.hope, class: "gradient" %>
       </div>
     </div>
 
     <div class="bloc-section-right">
       <div class="bloc-section-right-photo">
-      <img src="https://images.unsplash.com/photo-1565885548177-12df13a7e1bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" alt="">
+      <%= image_tag @challenge.how, class: "gradient" %>
       </div>
       <div class="bloc-section-right-content">
         <div class="title">
           <h1 id="how">#How</h1>
         </div>
         <div class="description">
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab.</p>
+          <p><%= @challenge.how_text %></p>
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
             <%= tip.score %> points
           </div>
           <div>
-            <img class="item-avatar center"src="https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg">
+            <%= image_tag tip.avatar, class: "item-avatar center" %>
           </div>
         </div>
         <div class="more-info">
