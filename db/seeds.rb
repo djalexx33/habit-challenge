@@ -6,28 +6,29 @@ Option.destroy_all
 Tip.destroy_all
 
 puts "Creating our users..."
-leonardo = User.create!(first_name: "Leonardo", last_name: "Di Caprio", username: "Leo", email: "leo@gmail.com", avatar: "https://gentlemanmoderne.com/wp-content/uploads/2017/09/leonardo_dicaprio-portrait-blog-homme.jpg", password: "azerty", city: "Los Angeles")
+arthur = User.create!(first_name: "Arthur", last_name: "Menard", username: "tutur", email: "tutur@gmail.com", avatar: "https://avatars0.githubusercontent.com/u/51089614?v=4", password: "azerty", city: "Bordeaux")
 
-pablo = User.create!(first_name: "Pablo", last_name: "Lorenzi", username: "pablito", email: "pablito@gmail.com", password: "azerty", city: "Bordeaux")
-leopold = User.create!(first_name: "Leopold", last_name: "Bardin", username: "leo", email: "leo.bardin@gmail.com", password: "azerty", city: "Bordeaux")
-anna = User.create!(first_name: "Anna", last_name: "Bourrez", username: "nana", email: "nana@gmail.com", password: "azerty", city: "Bordeaux")
-bob = User.create!(first_name: "Bob", last_name: "Dupayrat", username: "bobo", email: "bob.dupayrat@gmail.com", password: "azerty", city: "Bordeaux")
+alex = User.create!(first_name: "Alexandre", last_name: "Barat", username: "djalex", email: "pablito@gmail.com", password: "azerty", city: "Bordeaux", score: 1305, avatar: "https://avatars0.githubusercontent.com/u/51329689?v=4")
+kevin = User.create!(first_name: "Kevin", last_name: "Bardin", username: "leo", email: "leo.bardin@gmail.com", password: "azerty", city: "Bordeaux", score: 1250, avatar: "https://avatars0.githubusercontent.com/u/43972190?v=4")
+noemie = User.create!(first_name: "Noemie", last_name: "Bourrez", username: "nana", email: "nana@gmail.com", password: "azerty", city: "Bordeaux", score: 1320, avatar: "https://avatars2.githubusercontent.com/u/53173785?v=4")
+mahdi = User.create!(first_name: "Mahdi", last_name: "Lamriben", username: "bobo", email: "bob.dupayrat@gmail.com", password: "azerty", city: "Bordeaux", score: 1170, avatar: "https://avatars1.githubusercontent.com/u/55115774?v=4")
 emilie = User.create!(first_name: "Emilie", last_name: "Cardo", username: "mimi", email: "emilie.cardo@gmail.com", password: "azerty", city: "Bordeaux")
 adrien = User.create!(first_name: "Adrien", last_name: "bouffi", username: "adri", email: "adri@gmail.com", password: "azerty", city: "Bordeaux")
 laura = User.create!(first_name: "Laura", last_name: "Brunel", username: "lolo", email: "lolo@gmail.com", password: "azerty", city: "Bordeaux")
-alexandre = User.create!(first_name: "Alexandre", last_name: "Dufour", username: "alex", email: "dufour.a@gmail.com", password: "azerty", city: "Bordeaux")
+alexis = User.create!(first_name: "Alexis", last_name: "Dufour", username: "aleks", email: "dufour.a@gmail.com", password: "azerty", city: "Bordeaux")
 camille = User.create!(first_name: "Camille", last_name: "Fares", username: "cam", email: "camillou@gmail.com", password: "azerty", city: "Bordeaux")
 
-ombeline = User.create!(first_name: "Ombeline", last_name: "Le Bret", username: "bibine", email: "bibine@gmail.com", password: "azerty", city: "Paris")
-hugues = User.create!(first_name: "Hugues", last_name: "carnot", username: "cloug", email: "cloug@gmail.com", password: "azerty", city: "Paris")
-caroline = User.create!(first_name: "Caroline", last_name: "De Williencourt", username: "caro", email: "caro@gmail.com", password: "azerty", city: "Paris")
+marie = User.create!(first_name: "Marie", last_name: "Bégué", username: "bibine", email: "bibine@gmail.com", password: "azerty", city: "Paris", score: 1295, avatar: "https://avatars1.githubusercontent.com/u/50776142?v=4")
+simon = User.create!(first_name: "Simon", last_name: "Letellier", username: "cloug", email: "cloug@gmail.com", password: "azerty", city: "Paris", score: 1200, avatar: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/oqs0hc1ilrkfkxynyr3f.jpg")
+alice = User.create!(first_name: "Alice", last_name: "Roy", username: "caro", email: "caro@gmail.com", password: "azerty", city: "Paris", score: 1210, avatar: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/qeo9jkyzpjaaymspxwor.jpg")
 alain = User.create!(first_name: "Alain", last_name: "Dunes", username: "dudu", email: "dudu@gmail.com", password: "azerty", city: "Paris")
 michelle = User.create!(first_name: "Michelle", last_name: "Lemoine", username: "mich", email: "mich@gmail.com", password: "azerty", city: "Paris")
+
 alphonse = User.create!(first_name: "Alphonse", last_name: "popotte", username: "popotte", email: "popotte@msn.com", password: "azerty", city: "Marseille")
-noemie = User.create!(first_name: "Noemie", last_name: "viral", username: "nono", email: "nono.v@msn.com", password: "azerty", city: "Marseille")
-capucine = User.create!(first_name: "Capucine", last_name: "fabien", username: "capu", email: "capupu@amsn.com", password: "azerty", city: "Marseille")
-aurelie = User.create!(first_name: "Aurelie", last_name: "Moreaux", username: "aurel", email: "aurel@masn.com", password: "azerty", city: "Marseille")
-jonathan = User.create!(first_name: "Jonathan", last_name: "bartiz", username: "jojo", email: "jojojo@msan.com", password: "azerty", city: "Marseille")
+valentin = User.create!(first_name: "Valentin", last_name: "Lassarte", username: "nono", email: "nono.v@msn.com", password: "azerty", city: "Marseille", score: 1190, avatar: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/mw3lw9ugd3aqt7abs7pk.jpg")
+clement = User.create!(first_name: "Clement", last_name: "Camara", username: "capu", email: "capupu@amsn.com", password: "azerty", city: "Marseille", score: 1300, avatar: "https://avatars1.githubusercontent.com/u/55285912?v=4")
+mickael = User.create!(first_name: "Mickel", last_name: "Durand", username: "micka", email: "aurel@masn.com", password: "azerty", city: "Marseille", score: 1260, avatar: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/ifwqxgazstyph4sx4wrl.jpg")
+jonathan = User.create!(first_name: "Jonathan", last_name: "bartiz", username: "jojojojo", email: "jojojo@msan.com", password: "azerty", city: "Marseille")
 bastien = User.create!(first_name: "Bastien", last_name: "Lorem", username: "bast", email: "bast@msan.com", password: "azerty", city: "Marseille")
 nathalie = User.create!(first_name: "Nathalie", last_name: "Natier", username: "nat", email: "natata@msna.com", password: "azerty", city: "Marseille")
 marine = User.create!(first_name: "Marine", last_name: "Dupuis", username: "mama", email: "mamarine@msnaa.com", password: "azerty", city: "Marseille")
@@ -43,7 +44,7 @@ User.create!(first_name: "Alfredo", last_name: "boulanger", username: "bobol", e
 User.create!(first_name: "BOBO", last_name: "poudlard", username: "poud23", email: "poud23@gmail.com", password: "azerty", city: "Cape Town")
 User.create!(first_name: "conardo", last_name: "coxis", username: "zizi", email: "zizi@gmail.com", password: "azerty", city: "Athènes")
 User.create!(first_name: "baltazar", last_name: "Smith", username: "Zoupette", email: "Zoupette@gmail.com", password: "azerty", city: "Rio")
-User.create!(first_name: "arthur", last_name: "Pauloilo", username: "lol", email: "lol@gmail.com", password: "azerty", city: "Santiago")
+User.create!(first_name: "artur", last_name: "Pauloilo", username: "lol", email: "lol@gmail.com", password: "azerty", city: "Santiago")
 User.create!(first_name: "Joannha", last_name: "Poilocu", username: "jojo", email: "jojo@gmail.com", password: "azerty", city: "Sayulita")
 User.create!(first_name: "Alexandre", last_name: "babtu", username: "alex", email: "alex@gmail.com", password: "azerty", city: "Moscow")
 User.create!(first_name: "Baba", last_name: "Cool", username: "babacool1", email: "babacool1@msn.com", password: "azerty", city: "Brest")
@@ -92,7 +93,7 @@ User.create!(first_name: "Baba", last_name: "Cool", username: "babacool50", emai
 puts " ---> many users have been created!"
 
 puts "Creating our challenges..."
-involved = Challenge.create(title: "Get Involved", description: "Get involved, join an association, start devoting time for the protection of the environment", date: "2019-01-06 19:08:40.011480", photo: "https://vosizneias.com/wp-content/uploads/2018/10/AP18286417971595.jpg", badge: "https://fitnessactivist.com/wp-content/uploads/2016/09/Fitness-activist-header-logo.jpg", impact_text: "Single use plastic is the most common form of waste in nature. Only 9 percent of plastic waste is recycled in the world. Every year, 8-12 million tons of plastic end up in our oceans, which is 250 kg every seconds! This kills marine life and ultimately affect your health.", how_text: "The best way to avoid contributing to plastic pollution is to just stop buying it. Single use plastic that is offered everyday in any shop, restaurant or supermarket is not necessary. Simply refuse it, buy in bulk, carry reusable bags, use your own containers and cutlery.", hope_text: "A good action is contagious. People start to realize how bad plastic is for the environment, and most shops and restaurants start to adapt to consumers' will. The more you refuse plastic, the more you will influence people around you to do the same, the more shops will rethink their supply chain, the better for the planet", impact: "https://s.abcnews.com/images/US/national-geographic-plastic-waste-02-ht-jc-180517_hpEmbed_3x2_992.jpg", how: "http://www.aboutmanchester.co.uk/wp-content/uploads/2018/01/Plastic-Trash-Philippines.jpg", hope: "https://annaselundberg.com/wp-content/uploads/2016/02/beach-cleanup.jpg")
+involved = Challenge.create(title: "Get Involved", description: "Get involved, join an association, start devoting time for the protection of the environment", date: "2019-01-06 19:08:40.011480", photo: "https://vosizneias.com/wp-content/uploads/2018/10/AP18286417971595.jpg", badge: "https://fitnessactivist.com/wp-content/uploads/2016/09/Fitness-activist-header-logo.jpg", impact_text: "Single use plastic is the most common form of waste in nature. Only 9 percent of plastic waste is recycled in the world. Every year, 8-12 million tons of plastic end up in our oceans, which is 250 kg every seconds! This kills marine life and ultimately affect your health.", how_text: "The best way to avoid contributing to plastic pollution is to just stop buying it. Single use plastic that is offered everyday in any shop, restaurant or supermarket is not necessary. Simply refuse it, buy in bulk, carry reusable bags, use your own containers and cutlery.", hope_text: "A good action is contagious. People start to realize how bad plastic is for the environment, and most shops and restaurants start to adapt to consumers' will. The more you refuse plastic, the more you will influence people around you to do the same, the more shops will rethink their supply chain, the better for the planet", impact: "https://s.abcnews.com/images/US/national-geographic-plastic-waste-02-ht-jc-180517_hpEmbed_3x2_992.jpg", how: "http://www.aboutmanchester.co.uk/wp-content/uploads/2018/01/Plastic-Trash-Philippines.jpg", hope: "https://noemieselundberg.com/wp-content/uploads/2016/02/beach-cleanup.jpg")
 responsible = Challenge.create(title: "Buy Better", description: "Ask yourself if it is necessary and what industry you will contribute to before purching anything", date: "2019-02-06 19:08:40.011480", photo: "http://1.bp.blogspot.com/_RX1XntT9N_k/TKBKhrC3c0I/AAAAAAAAAB4/Fy8sBDAesk4/s1600/global-warming-pollution.jpg", badge: "https://image.flaticon.com/icons/png/512/783/783256.png", impact_text: "Single use plastic is the most common form of waste in nature. Only 9 percent of plastic waste is recycled in the world. Every year, 8-12 million tons of plastic end up in our oceans, which is 250 kg every seconds! This kills marine life and ultimately affect your health.", how_text: "The best way to avoid contributing to plastic pollution is to just stop buying it. Single use plastic that is offered everyday in any shop, restaurant or supermarket is not necessary. Simply refuse it, buy in bulk, carry reusable bags, use your own containers and cutlery.", hope_text: "A good action is contagious. People start to realize how bad plastic is for the environment, and most shops and restaurants start to adapt to consumers' will. The more you refuse plastic, the more you will influence people around you to do the same, the more shops will rethink their supply chain, the better for the planet", impact: "https://s.abcnews.com/images/US/national-geographic-plastic-waste-02-ht-jc-180517_hpEmbed_3x2_992.jpg", how: "http://www.aboutmanchester.co.uk/wp-content/uploads/2018/01/Plastic-Trash-Philippines.jpg", hope: "https://annaselundberg.com/wp-content/uploads/2016/02/beach-cleanup.jpg")
 vegetate = Challenge.create(title: "Restore Nature", description: "Show the example by picking the trashes in the street to dump them in the public bin around the corner, plant seeds in public parks and around trees", date: "2019-03-06 19:08:40.011480", photo: "https://environmentamerica.org/sites/environment/files/cpn/AMN-033117-REPORT/assets/img/WEB_AMN_Shining-Cities_Slideshow_Austin-01.jpg", badge: "https://www.countryfinancial.com/content/dam/cfin/bands/icons/icon_history_2008_plant-01.png", impact_text: "Single use plastic is the most common form of waste in nature. Only 9 percent of plastic waste is recycled in the world. Every year, 8-12 million tons of plastic end up in our oceans, which is 250 kg every seconds! This kills marine life and ultimately affect your health.", how_text: "The best way to avoid contributing to plastic pollution is to just stop buying it. Single use plastic that is offered everyday in any shop, restaurant or supermarket is not necessary. Simply refuse it, buy in bulk, carry reusable bags, use your own containers and cutlery.", hope_text: "A good action is contagious. People start to realize how bad plastic is for the environment, and most shops and restaurants start to adapt to consumers' will. The more you refuse plastic, the more you will influence people around you to do the same, the more shops will rethink their supply chain, the better for the planet", impact: "https://s.abcnews.com/images/US/national-geographic-plastic-waste-02-ht-jc-180517_hpEmbed_3x2_992.jpg", how: "http://www.aboutmanchester.co.uk/wp-content/uploads/2018/01/Plastic-Trash-Philippines.jpg", hope: "https://annaselundberg.com/wp-content/uploads/2016/02/beach-cleanup.jpg")
 energy = Challenge.create(title: "Energy Switch", description: "Support green energy and stop purchasing from oil, gaz and coal companies", date: "2019-04-06 19:08:40.011480", photo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Wind_power_plants_in_Xinjiang%2C_China.jpg", badge: "https://purepng.com/public/uploads/large/purepng.com-glowing-yellow-light-bulbelectronicsbulb-light-941524679911ixxqy.png", impact_text: "Single use plastic is the most common form of waste in nature. Only 9 percent of plastic waste is recycled in the world. Every year, 8-12 million tons of plastic end up in our oceans, which is 250 kg every seconds! This kills marine life and ultimately affect your health.", how_text: "The best way to avoid contributing to plastic pollution is to just stop buying it. Single use plastic that is offered everyday in any shop, restaurant or supermarket is not necessary. Simply refuse it, buy in bulk, carry reusable bags, use your own containers and cutlery.", hope_text: "A good action is contagious. People start to realize how bad plastic is for the environment, and most shops and restaurants start to adapt to consumers' will. The more you refuse plastic, the more you will influence people around you to do the same, the more shops will rethink their supply chain, the better for the planet", impact: "https://s.abcnews.com/images/US/national-geographic-plastic-waste-02-ht-jc-180517_hpEmbed_3x2_992.jpg", how: "http://www.aboutmanchester.co.uk/wp-content/uploads/2018/01/Plastic-Trash-Philippines.jpg", hope: "https://annaselundberg.com/wp-content/uploads/2016/02/beach-cleanup.jpg")
@@ -107,39 +108,42 @@ plastic = Challenge.create(title: "Plastic Free", description: "Ban sigle-use pl
 puts " ---> 12 challenges have been created!"
 
 puts "Creating some inscription..."
-Inscription.create!(challenge: plastic, user: pablo)
-Inscription.create!(challenge: seasocal, user: pablo)
-Inscription.create!(challenge: meatless, user: pablo)
+Inscription.create!(challenge: plastic, user: alex)
+Inscription.create!(challenge: seasocal, user: alex)
+Inscription.create!(challenge: meatless, user: alex)
 
-Inscription.create!(challenge: water, user: leopold)
-Inscription.create!(challenge: waste, user: leopold)
+Inscription.create!(challenge: water, user: kevin)
+Inscription.create!(challenge: waste, user: kevin)
 
-Inscription.create!(challenge: petrol, user: anna)
-Inscription.create!(challenge: digital, user: anna)
-Inscription.create!(challenge: energy, user: anna)
-Inscription.create!(challenge: food, user: anna)
+Inscription.create!(challenge: petrol, user: noemie)
+Inscription.create!(challenge: digital, user: noemie)
+Inscription.create!(challenge: energy, user: noemie)
+Inscription.create!(challenge: food, user: noemie)
 
-Inscription.create!(challenge: involved, user: bob)
+Inscription.create!(challenge: involved, user: mahdi)
+
 Inscription.create!(challenge: responsible, user: emilie)
 Inscription.create!(challenge: vegetate, user: emilie)
 
 Inscription.create!(challenge: plastic, user: adrien)
 
-Inscription.create!(challenge: food, user: alexandre)
-Inscription.create!(challenge: plastic, user: alexandre)
+Inscription.create!(challenge: plastic, user: laura)
+
+Inscription.create!(challenge: food, user: alexis)
+Inscription.create!(challenge: plastic, user: alexis)
 
 Inscription.create!(challenge: plastic, user: camille)
 
-Inscription.create!(challenge: plastic, user: ombeline)
-Inscription.create!(challenge: meatless, user: ombeline)
+Inscription.create!(challenge: plastic, user: marie)
+Inscription.create!(challenge: meatless, user: marie)
 
-Inscription.create!(challenge: involved, user: hugues)
-Inscription.create!(challenge: digital, user: hugues)
-Inscription.create!(challenge: food, user: hugues)
-Inscription.create!(challenge: plastic, user: hugues)
+Inscription.create!(challenge: involved, user: simon)
+Inscription.create!(challenge: digital, user: simon)
+Inscription.create!(challenge: food, user: simon)
+Inscription.create!(challenge: plastic, user: simon)
 
-Inscription.create!(challenge: petrol, user: caroline)
-Inscription.create!(challenge: plastic, user: caroline)
+Inscription.create!(challenge: petrol, user: alice)
+Inscription.create!(challenge: plastic, user: alice)
 
 Inscription.create!(challenge: waste, user: alain)
 Inscription.create!(challenge: plastic, user: alain)
@@ -151,14 +155,14 @@ Inscription.create!(challenge: responsible, user: alphonse)
 Inscription.create!(challenge: vegetate, user: alphonse)
 Inscription.create!(challenge: plastic, user: alphonse)
 
-Inscription.create!(challenge: plastic, user: noemie)
+Inscription.create!(challenge: plastic, user: valentin)
 
-Inscription.create!(challenge: enegery, user: capucine)
-Inscription.create!(challenge: plastic, user: capucine)
+Inscription.create!(challenge: energy, user: clement)
+Inscription.create!(challenge: plastic, user: clement)
 
-Inscription.create!(challenge: food, user: aurelie)
-Inscription.create!(challenge: waste, user: aurelie)
-Inscription.create!(challenge: plastic, user: aurelie)
+Inscription.create!(challenge: food, user: mickael)
+Inscription.create!(challenge: waste, user: mickael)
+Inscription.create!(challenge: plastic, user: mickael)
 
 Inscription.create!(challenge: plastic, user: jonathan)
 
@@ -174,8 +178,8 @@ Tip.create!(title: "Use a reusable bag", description: "A single plastic bag take
 Tip.create!(title: "Make your own shampoo", description: "Follow our wonderful recipe to do your own shampoo and start to save plastic", challenge: plastic, score: 65, saved_co2: 100, saved_money: 10, saved_energy: 50, avatar: "https://www.passion-savon.fr/1310-thickbox_default/natural-solid-shampoo.jpg", video: "https://player.vimeo.com/video/131666300?color=ee4375&title=0&byline=0&portrait=0", energy: "By doing your own shampoo you will permit a real save in energy of almost 100 kwH, because of all the electricity used by machine during industrial processing", money: "This also allows you to save money: making your own shampoo makes you save on average 100 $ each year! Not bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission thanks to this action: up to 100 kg of Co2 per year!")
 Tip.create!(title: "Refuse straws", description: "A single plastic bag takes hundreds of years to decompose. Straws are one of the most commun plastic waste in the oceans!", challenge: plastic, score: 30, saved_co2: 250, saved_money: 10, saved_energy: 80, avatar: "https://media.mnn.com/assets/images/2018/07/bendable_straws.jpg.653x0_q80_crop-smart.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
 Tip.create!(title: "Buy in bulks", description: "By buying directly in bulk, you do not consume any useless packaging that will end up in your bin, or worse.", challenge: plastic, score: 50, saved_co2: 320, saved_money: 70, saved_energy: 540, avatar: "https://touteca.files.wordpress.com/2015/07/vrac-crac-1.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
-Tip.create!(title: "Print your calendar of seasonal products", description: "By buying directly in bulk, you do not consume any useless packaging that will end up in your bin, or worse.", challenge: seasocal, score: 55, saved_co2: 10, saved_money: 22, saved_energy: 640, avatar: "https://i.pinimg.com/originals/4c/47/e2/4c47e290a7dc5d9e10890cdcdc54791b.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
-Tip.create!(title: "Go to your local markets every week", description: "By buying directly in bulk, you do not consume any useless packaging that will end up in your bin, or worse.", challenge: seasocal, score: 75, saved_co2: 320, saved_money: 70, saved_energy: 530, avatar: "http://greatlakesecho.org/wp-content/uploads/2012/04/farm-market1.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
+Tip.create!(title: "Print your calendar", description: "By buying directly in bulk, you do not consume any useless packaging that will end up in your bin, or worse.", challenge: seasocal, score: 55, saved_co2: 10, saved_money: 22, saved_energy: 640, avatar: "https://i.pinimg.com/originals/4c/47/e2/4c47e290a7dc5d9e10890cdcdc54791b.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
+Tip.create!(title: "Go to the market", description: "By buying directly in bulk, you do not consume any useless packaging that will end up in your bin, or worse.", challenge: seasocal, score: 75, saved_co2: 320, saved_money: 70, saved_energy: 530, avatar: "http://greatlakesecho.org/wp-content/uploads/2012/04/farm-market1.jpg", video: "https://www.youtube.com/embed/CubtcwIZEWc", energy: "By not using single-use plastic bags, you save huge amounts of energy: 5 kwH per bag!", money: "Not purchasing plastic bags saves your money. The reusable bag you carry will last a lifetime whereas single use plastic bags cost you little by little up to 85 $ each year on average. Not too bad, right?", co2: "Every contribution has an impact and you could considerably reduce your CO2 emission: up to 350 kg of Co2 per year!")
 puts "---> Some tips have been created!"
 
 puts "Creating some questions..."
