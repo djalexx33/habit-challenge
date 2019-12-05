@@ -16,24 +16,43 @@
   </div>
 </div>
 
-<div class="container scoring-bloc bg-white pt-3">
-  <h4 class="text-center mb-4">Top users <%= image_tag "trophy.png" %></h4>
-  <%@best_five_users.each_with_index do |user, i| %>
-  <div class="d-flex justify-content-between w-100">
-    <% if [0, 1, 2].include?(i) %>
-      <h5 class=""><%= image_tag "medaille#{i + 1}.png" %></h5>
-    <% else %>
-      <h5 class="number pl-2"><%= i + 1 %></h5>
+<div class="container container-scoring">
+  <div class="container scoring-bloc bg-white pt-3">
+    <h4 class="text-center mb-4 trophy">Top users <%= image_tag "trophy.png" %></h4>
+  <table class="table">
+    <%@best_five_users.each_with_index do |user, i| %>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <% if [0, 1, 2].include?(i) %>
+            <h5><%= image_tag "medaille#{i + 1}.png" %></h5>
+          <% else %>
+            <h5 class="number pl-2 avatar-padding"><%= i + 1 %></h5>
+          <% end %>
+        </th>
+        <td><%= cl_image_tag user.avatar, class: "avatar" %></td>
+        <td><%= user.username.capitalize %></td>
+        <td><span id="score"><b><%= user.score %></b> points</td>
+      </tr>
+    </tbody>
     <% end %>
-    <p><%= user.avatar %><%= user.username.capitalize %></p>
-    <p><span id="score"><%= user.score %></span></p>
+  </table>
   </div>
-  <% end %>
 
+  <div class="scoring-infos mt-2">
+    <h3 class="mb-5"><span class="highlight">Gain points</span> through your challenge !</h3>
+    <h5>1. Daily survey</h5>
+    <p>Once you've susbcrive to a challenge, everyday you'll see a "daily survey" in your Dashboard.
+    They will be three questions and, depending on you daily habbits, you will obtain a certain amount of points.</p>
+    <h5>2. Tips</h5>
+    <p>Every challenge has several tips, helping you to improve yours habbits and consommation.
+    You can pin them to your dashboard and once you have finished them, you will aslo gain points !</p>
+    <h3>Begin now and take the lead !</h3>
+  </div>
 </div>
 
 <div class="page-prez ml-5 my-3">
-  <div class="text-center mb-5">
+  <div class="text-center mb-5 mt-5">
     <div class="challenge-list my-5">
       <h3>Challenge for <%= Date.today.strftime("%B") %>:
       <% @challenges.each do |challenge| %>
