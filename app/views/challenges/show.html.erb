@@ -5,7 +5,7 @@
         <div class="banner">
           <div class="banner-index-content">
             <h1><span id="hashtag">#</span><%= @challenge.title %></h1>
-            <div class="button-banner-show">
+            <div class="button-banner-show2">
               <% if user_signed_in? %>
                 <% if @challenge.inscriptions.where(user: current_user).present? %>
                   <%= link_to "Go to your dashboard", user_path(@user), class: "btn btn-primary btn-lg light-white-button" %>
@@ -75,6 +75,24 @@
     </div>
 
   </div>
+
+  <div class="button-banner-show text-center pt-5 pb-5">
+    <% if user_signed_in? %>
+      <% if @challenge.inscriptions.where(user: current_user).present? %>
+        <div class="dashboard-button">
+          <%= link_to "Go to your dashboard", user_path(@user), class: "btn btn-primary btn-lg light-main-button" %>
+        </div>
+      <% else %>
+        <%= link_to "Subscribe to the challenge", challenge_inscriptions_path(@challenge), method: :post, remote: :true, class: "btn btn-primary btn-lg light-white-button button-challenge" %>
+      <% end %>
+      <button type="button" class="btn btn-primary btn-lg light-main-button button-challenge-execute" data-toggle="modal" data-target="#modal-challenge">Subscribe to the challenge</button>
+      <%= render "shared/popup_challenge" %>
+    <% else %>
+      <button type="button" class="btn btn-primary btn-lg light-main-button" data-toggle="modal" data-target="#exampleModal">Subscribe to challenge</button>
+      <%= render "shared/login_form" %>
+    <% end %>
+  </div>
+
 </div>
 
 <div class="container text-center">
@@ -153,11 +171,26 @@
         <div class="d-flex justify-content-center align-items-center flex-column w-100">
           <%= hidden_field_tag :id, params[:id] %>
           <%= text_field_tag :query, params[:query], class: "w-25 form-control my-3", placeholder: "Type a name or a city"%>
-          <%= submit_tag "Search", class: "btn main-button" %>
+          <%= submit_tag "Search", class: "btn btn-primary main-button" %>
         </div>
       <% end %>
       <div class="query-list d-flex justify-content-center align-items-centerflex-column w-100 mt-4"></div>
     </div>
+
+     <div class="button-banner-show text-center pt-5 pb-3">
+    <% if user_signed_in? %>
+      <% if @challenge.inscriptions.where(user: current_user).present? %>
+        <%= link_to "Go to your dashboard", user_path(@user), class: "btn btn-primary btn-lg light-main-button" %>
+      <% else %>
+        <%= link_to "Subscribe to the challenge", challenge_inscriptions_path(@challenge), method: :post, remote: :true, class: "btn btn-primary btn-lg light-white-button button-challenge" %>
+      <% end %>
+      <button type="button" class="btn btn-primary btn-lg light-main-button button-challenge-execute" data-toggle="modal" data-target="#modal-challenge">Subscribe to the challenge</button>
+      <%= render "shared/popup_challenge" %>
+    <% else %>
+      <button type="button" class="btn btn-primary btn-lg light-main-button" data-toggle="modal" data-target="#exampleModal">Subscribe to challenge</button>
+      <%= render "shared/login_form" %>
+    <% end %>
+  </div>
 </div>
 
 <!-- Return to Top -->

@@ -23,20 +23,20 @@
     <div class="dashboard-profil-content col-md-9">
       <ul class="nav nav-tabs bg-white mt-3 p-4" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active pl-2 pr-4" id="home-tab" data-toggle="tab" href="#challenges" role="tab" aria-controls="challenges" aria-selected="true"><h4 class="h3-border-bottom">My challenges</h4></a>
+          <a class="nav-link <%= 'active' if @tab_active == 0 %> pl-2 pr-4" id="home-tab" data-toggle="tab" href="#challenges" role="tab" aria-controls="challenges" aria-selected="true"><h4 class="h3-border-bottom">My challenges</h4></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link pl-2 pr-4" id="profile-tab" data-toggle="tab" href="#surveys" role="tab" aria-controls="surveys" aria-selected="false"><h4 class="h3-border-bottom">My surveys</h4></a>
+          <a class="nav-link <%= 'active' if @tab_active == 1 %> pl-2 pr-4" id="profile-tab" data-toggle="tab" href="#surveys" role="tab" aria-controls="surveys" aria-selected="false"><h4 class="h3-border-bottom">My surveys</h4></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link pl-2 pr-4" id="profile-tab" data-toggle="tab" href="#tips" role="tab" aria-controls="tips" aria-selected="false"><h4 class="h3-border-bottom">My tips</h4></a>
+          <a class="nav-link <%= 'active' if @tab_active == 2 %> pl-2 pr-4" id="profile-tab" data-toggle="tab" href="#tips" role="tab" aria-controls="tips" aria-selected="false"><h4 class="h3-border-bottom">My tips</h4></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link pl-2 pr-4" id="profile-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false"><h4 class="h3-border-bottom">Edit profile</h4></a>
+          <a class="nav-link <%= 'active' if @tab_active == 3 %> pl-2 pr-4" id="profile-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false"><h4 class="h3-border-bottom">Edit profile</h4></a>
         </li>
       </ul>
       <div class="tab-content mt-3" id="myTabContent">
-        <div class="tab-pane fade show active" id="challenges" role="tabpanel" aria-labelledby="challenges-tab">
+        <div class="tab-pane fade <%= 'show active' if @tab_active == 0 %>" id="challenges" role="tabpanel" aria-labelledby="challenges-tab">
           <% @inscriptions.each do |inscription| %>
             <div class="card-challenge-dashboard bg-white w-100 mb-4">
               <div class="card-challenge-dashboard-img">
@@ -57,11 +57,11 @@
             </div>
           <% end %>
         </div>
-        <div class="tab-pane fade" id="surveys" role="tabpanel" aria-labelledby="surveys-tab">
+        <div class="tab-pane fade <%= 'show active' if @tab_active == 1 %>" id="surveys" role="tabpanel" aria-labelledby="surveys-tab">
           <%#= render "shared/daily_surveys_index" %>
           <%= render "shared/daily_surveys_index" %>
         </div>
-        <div class="tab-pane fade" id="tips" role="tabpanel" aria-labelledby="tips-tab">
+        <div class="tab-pane fade <%= 'show active' if @tab_active == 2 %>" id="tips" role="tabpanel" aria-labelledby="tips-tab">
         <%#= render "shared/tips_card"%>
           <% @user_tips.each do |user_tip| %>
             <div class="tips-dashboard-card">

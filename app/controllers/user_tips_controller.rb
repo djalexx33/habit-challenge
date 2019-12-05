@@ -9,7 +9,7 @@ class UserTipsController < ApplicationController
     @tip = Tip.find(params[:tip_id])
     @user_tip = UserTip.new(user: @user, tip: @tip)
     @user_tip.save
-    redirect_to user_path(current_user)
+    redirect_to user_path(current_user, tab_active: 2)
   end
 
   def destroy
