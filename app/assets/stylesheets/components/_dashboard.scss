@@ -10,7 +10,6 @@
 
 .dashboard-profil-content {
   position: relative;
-  // height: 100vh;
   .btn-challenge {
     position: absolute;
     bottom: 10px;
@@ -33,7 +32,7 @@
     }
   }
   .tab-content {
-    height: 100vh;
+    height: calc(100vh - 140px);
     overflow: scroll;
     .tab-pane {
       border-radius: 10px;
