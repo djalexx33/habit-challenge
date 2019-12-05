@@ -1,3 +1,49 @@
 .collection_radio_buttons {
   padding: 20px;
 }
+
+.survey-score > p {
+  font-size: 15px;
+}
+
+.daily_answer-questions{
+  h2 {
+    font-size: 25px;
+  }
+  h5 {
+    font-size: 15px;
+    font-style: lighter;
+  }
+}
+
+// .new_daily_survey > span > input{
+//   background: $green;
+// }
+
+.new_daily_survey > span > input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #FFF;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.new_daily_survey > span >  input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: $green;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  // border: 2px solid $dark-green;
+}

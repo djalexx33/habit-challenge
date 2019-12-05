@@ -1,6 +1,6 @@
 <div class="modal fade" id="modal-survey-new" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content text-center">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -8,8 +8,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <h1>Day <%= Date.today.strftime("%d") %></h1>
-
+        <h1><span class="highlight">Day <%= Date.today.strftime("%d") %></span></h1>
+        <br>
         <%= simple_form_for [inscription, daily_survey] do |f| %>
           <% questions.each do |question| %>
           <h5><%= question.title %></h5>
@@ -17,7 +17,8 @@
               <%= i.collection_radio_buttons :option_id, question.options, :id, :title %>
             <% end %>
           <% end %>
-          <%= f.submit %>
+          <br>
+          <%= f.submit 'Submit survey', class: "btn btn-primary main-button" %>
         <% end %>
       </div>
     </div>

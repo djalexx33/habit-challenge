@@ -1,6 +1,6 @@
 <div class="modal fade" id="modal-survey-show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content text-center">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -8,16 +8,19 @@
         </button>
       </div>
       <div class="modal-body">
+        <div class="div pb-5">
+          <h1><span class="highlight">Day <%= daily_survey.created_at.strftime("%d") %></span></h1>
+        </div>
         <% daily_answers.each do |daily_answer| %>
-          <div class="div">
-            <h4><%= daily_answer.option.question.title %></h4>
-            <div class="div">
-              <p>Your answer : <%= daily_answer.option.title %></p>
+          <div class="daily_answer-questions pb-5">
+            <h2><%= daily_answer.option.question.title %></h2>
+            <div class="div pt-4">
+              <h5>Your answer : <%= daily_answer.option.title %></h5>
             </div>
           </div>
         <% end %>
-        <div class="div">
-          <p>Your score for this survey : <%= daily_survey.score %></p>
+        <div class="survey-score">
+          <p>Your score for this survey : <strong><%= daily_survey.score %></strong></p>
         </div>
       </div>
     </div>
