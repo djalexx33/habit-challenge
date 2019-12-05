@@ -10,16 +10,16 @@ arthur = User.new(first_name: "Arthur", last_name: "Menard", username: "tutur", 
 arthur.remote_avatar_url = "https://avatars0.githubusercontent.com/u/51089614?v=4"
 arthur.save!
 
-alex = User.new(first_name: "Alexandre", last_name: "Barat", username: "djalex", email: "pablito@gmail.com", password: "azerty", city: "Bordeaux", score: 1305)
+alex = User.new(first_name: "Alexandre", last_name: "Barat", username: "djalexx", email: "pablito@gmail.com", password: "azerty", city: "Bordeaux", score: 1305)
 alex.remote_avatar_url = "https://avatars0.githubusercontent.com/u/51329689?v=4"
 alex.save!
-kevin = User.new(first_name: "Kevin", last_name: "Bardin", username: "leo", email: "leo.bardin@gmail.com", password: "azerty", city: "Bordeaux", score: 1250)
+kevin = User.new(first_name: "Kevin", last_name: "Lam Seck", username: "kev", email: "leo.bardin@gmail.com", password: "azerty", city: "Bordeaux", score: 1250)
 kevin.remote_avatar_url = "https://avatars0.githubusercontent.com/u/43972190?v=4"
 kevin.save!
-noemie = User.new(first_name: "Noemie", last_name: "Bourrez", username: "nana", email: "nana@gmail.com", password: "azerty", city: "Bordeaux", score: 1320)
+noemie = User.new(first_name: "Noemie", last_name: "Bourrez", username: "nono", email: "nana@gmail.com", password: "azerty", city: "Bordeaux", score: 1320)
 noemie.remote_avatar_url = "https://avatars2.githubusercontent.com/u/53173785?v=4"
 noemie.save!
-mahdi = User.new(first_name: "Mahdi", last_name: "Lamriben", username: "bobo", email: "bob.dupayrat@gmail.com", password: "azerty", city: "Bordeaux", score: 1170)
+mahdi = User.new(first_name: "Mahdi", last_name: "Lamriben", username: "madz", email: "bob.dupayrat@gmail.com", password: "azerty", city: "Bordeaux", score: 1170)
 mahdi.remote_avatar_url = "https://avatars1.githubusercontent.com/u/55115774?v=4"
 mahdi.save!
 emilie = User.create!(first_name: "Emilie", last_name: "Cardo", username: "mimi", email: "emilie.cardo@gmail.com", password: "azerty", city: "Bordeaux")
@@ -28,23 +28,23 @@ laura = User.create!(first_name: "Laura", last_name: "Brunel", username: "lolo",
 alexis = User.create!(first_name: "Alexis", last_name: "Dufour", username: "aleks", email: "dufour.a@gmail.com", password: "azerty", city: "Bordeaux")
 camille = User.create!(first_name: "Camille", last_name: "Fares", username: "cam", email: "camillou@gmail.com", password: "azerty", city: "Bordeaux")
 
-marie = User.new(first_name: "Marie", last_name: "Bégué", username: "bibine", email: "bibine@gmail.com", password: "azerty", city: "Paris", score: 1295)
+marie = User.new(first_name: "Marie", last_name: "Bégué", username: "bébé", email: "bibine@gmail.com", password: "azerty", city: "Paris", score: 1295)
 marie.remote_avatar_url = "https://avatars1.githubusercontent.com/u/50776142?v=4"
 marie.save!
-simon = User.new(first_name: "Simon", last_name: "Letellier", username: "cloug", email: "cloug@gmail.com", password: "azerty", city: "Paris", score: 1200)
+simon = User.new(first_name: "Simon", last_name: "Letellier", username: "sisi", email: "cloug@gmail.com", password: "azerty", city: "Paris", score: 1200)
 simon.remote_avatar_url = "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/oqs0hc1ilrkfkxynyr3f.jpg"
 simon.save!
-alice = User.new(first_name: "Alice", last_name: "Roy", username: "caro", email: "caro@gmail.com", password: "azerty", city: "Paris", score: 1210)
+alice = User.new(first_name: "Alice", last_name: "Roy", username: "aliçouille", email: "caro@gmail.com", password: "azerty", city: "Paris", score: 1210)
 alice.remote_avatar_url = "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/qeo9jkyzpjaaymspxwor.jpg"
 alice.save!
-alain = User.create!(first_name: "Alain", last_name: "Dunes", username: "dudu", email: "dudu@gmail.com", password: "azerty", city: "Paris")
+alain = User.create!(first_name: "Alain", last_name: "Dunes", username: "dada", email: "dudu@gmail.com", password: "azerty", city: "Paris")
 michelle = User.create!(first_name: "Michelle", last_name: "Lemoine", username: "mich", email: "mich@gmail.com", password: "azerty", city: "Paris")
 
 alphonse = User.create!(first_name: "Alphonse", last_name: "popotte", username: "popotte", email: "popotte@msn.com", password: "azerty", city: "Marseille")
-valentin = User.new(first_name: "Valentin", last_name: "Lassarte", username: "nono", email: "nono.v@msn.com", password: "azerty", city: "Marseille", score: 1190)
+valentin = User.new(first_name: "Valentin", last_name: "Lassarte", username: "val", email: "nono.v@msn.com", password: "azerty", city: "Marseille", score: 1190)
 valentin.remote_avatar_url = "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/mw3lw9ugd3aqt7abs7pk.jpg"
 valentin.save!
-clement = User.new(first_name: "Clement", last_name: "Camara", username: "capu", email: "capupu@amsn.com", password: "azerty", city: "Marseille", score: 1300)
+clement = User.new(first_name: "Clement", last_name: "Camara", username: "clem", email: "capupu@amsn.com", password: "azerty", city: "Marseille", score: 1300)
 clement.remote_avatar_url = "https://avatars1.githubusercontent.com/u/55285912?v=4"
 clement.save!
 mickael = User.new(first_name: "Mickel", last_name: "Durand", username: "micka", email: "aurel@masn.com", password: "azerty", city: "Marseille", score: 1260)
