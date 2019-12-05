@@ -177,10 +177,12 @@
       <div class="query-list d-flex justify-content-center align-items-centerflex-column w-100 mt-4"></div>
     </div>
 
-     <div class="button-banner-show text-center pt-5 pb-3">
+     <div class="button-banner-show text-center pt-5 pb-2">
     <% if user_signed_in? %>
       <% if @challenge.inscriptions.where(user: current_user).present? %>
-        <%= link_to "Go to your dashboard", user_path(@user), class: "btn btn-primary btn-lg light-main-button" %>
+        <div class="dashboard-button">
+          <%= link_to "Go to your dashboard", user_path(@user), class: "btn btn-primary btn-lg light-main-button" %>
+        </div>
       <% else %>
         <%= link_to "Subscribe to the challenge", challenge_inscriptions_path(@challenge), method: :post, remote: :true, class: "btn btn-primary btn-lg light-white-button button-challenge" %>
       <% end %>
