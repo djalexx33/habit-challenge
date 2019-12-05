@@ -76,7 +76,7 @@
 
   </div>
 
-  <div class="button-banner-show text-center pt-5 pb-5">
+  <div class="button-banner-show text-center pt-5">
     <% if user_signed_in? %>
       <% if @challenge.inscriptions.where(user: current_user).present? %>
         <div class="dashboard-button">
@@ -154,7 +154,7 @@
     <% end %>
   </div>
 
-  <div class="map border-top pt-5 border-dark">
+  <div class="map mt-5 border-dark">
     <h2 class="text-center">Join the <span class="green-text"><%= @challenge.inscriptions.count %></span> people involved in this challenge</h2>
     <div
       id="map"
