@@ -1,15 +1,21 @@
+.scoring-bloc {
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 1px 9px rgba(199, 196, 196, 0.63);
+  #border-scoring {
+    border-bottom: 1px solid $dark-green-gradient;
+  }
+  img {
+    width: 35px;
+  }
+  p {
+    #score {
+      color: $green;
+    }
+  }
+  .number {
+    color: $green;
+  }
+}
 
-// .scoring{
-//   text-align: left;
-//   background-color: rgba(41, 41, 43, 0.5);
-//   border-radius: 10px;
-//   ul {
-//     li {
-//       list-style-type: none;
-//       #score {
-//         color: $green;
-//       }
-//     }
-//   }
-// }
 
