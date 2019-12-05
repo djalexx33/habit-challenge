@@ -9,10 +9,9 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :username, presence: true
-  # validates :avatar, presence: true
+  # validates :avatar, uniqueness: true
   validates :city, presence: true
-  mount_uploader :avatar, PhotoUploader
-
+  mount_uploader :avatar, AvatarUploader
   geocoded_by :city
   after_validation :geocode, if: :will_save_change_to_city?
 
