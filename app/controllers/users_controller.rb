@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     @user = current_user
     @inscriptions = @user.inscriptions
     @user_tips = @user.user_tips
+    @tab_active = params[:tab_active].to_i
   end
 
   def new
