@@ -1,4 +1,5 @@
 class ChallengesController < ApplicationController
+  before_action :scoring
   def index
     @challenges = Challenge.all
   end
@@ -31,12 +32,14 @@ class ChallengesController < ApplicationController
     }
   end
 
-  # def scoring
-  #   @users = User.all
-  #   @scores = []
-  #   @users.each do |user|
-  #     scores << [calulate_score(user)]
-  #   end
-  #   scores.sort.first(10)
-  # end
+  def scoring
+    @users = User.all
+    @best_five_users = User.order(score: :desc).first(5)
+
+    # @top_five_scores = []
+    # @users.each do |user|
+    #   @top_five_scores << user.score
+    # end
+    # top_five_scores.sort.first(10)
+  end
 end
