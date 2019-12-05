@@ -28,7 +28,7 @@ laura = User.create!(first_name: "Laura", last_name: "Brunel", username: "lolo",
 alexis = User.create!(first_name: "Alexis", last_name: "Dufour", username: "aleks", email: "dufour.a@gmail.com", password: "azerty", city: "Bordeaux")
 camille = User.create!(first_name: "Camille", last_name: "Fares", username: "cam", email: "camillou@gmail.com", password: "azerty", city: "Bordeaux")
 
-marie = User.new(first_name: "Marie", last_name: "Bégué", username: "bébé", email: "bibine@gmail.com", password: "azerty", city: "Paris", score: 1295)
+marie = User.new(first_name: "Marie", last_name: "Bégué", username: "Marichou", email: "bibine@gmail.com", password: "azerty", city: "Paris", score: 1295)
 marie.remote_avatar_url = "https://avatars1.githubusercontent.com/u/50776142?v=4"
 marie.save!
 simon = User.new(first_name: "Simon", last_name: "Letellier", username: "sisi", email: "cloug@gmail.com", password: "azerty", city: "Paris", score: 1200)
