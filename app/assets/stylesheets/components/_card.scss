@@ -146,12 +146,20 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
 
 // For daily_surveys cards:
 
+.index-survey{
+// margin-left: 25%;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
-  padding-right: 0px;
+  padding: 0;
+  height: 325px;
+  .button-survey {
+
+  }
 }
 
 .card-trip > img {
@@ -199,9 +207,9 @@ $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
 }
 
 .card-trip-image {
-  height: 300px;
+  height: 200px;
   background-size: cover !important;
-  transition: 0.5s;
+  // transition: 0.5s;
   border-radius: 5px;
 }
 
