@@ -8,6 +8,7 @@ import { popup_challenge_subscription } from '../components/popupchallenge';
 import { alert } from '../components/alert';
 // import { survey_button } from '../components/survey';
 import { anchor } from '../components/anchor';
+import { button } from '../components/button';
 
 
 const divType = document.querySelector('#typed-text');
@@ -22,6 +23,8 @@ initMapbox();
 alert();
 
 anchor();
+
+button();
 
 const popup_btn = document.querySelector(".button-challenge");
 if (popup_btn) {
