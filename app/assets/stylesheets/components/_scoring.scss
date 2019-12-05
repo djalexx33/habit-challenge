@@ -1,21 +1,41 @@
-.scoring-bloc {
+.container-scoring {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 70px;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  #score {
+    color: $green;
+  }
+
+  .scoring-bloc {
   border-radius: 10px;
   width: 500px;
   box-shadow: 0 1px 9px rgba(199, 196, 196, 0.63);
-  #border-scoring {
-    border-bottom: 1px solid $dark-green-gradient;
+  .avatar-padding {
+    padding-top: 5px;
   }
-  img {
-    width: 35px;
+  .avatar {
+    border-radius: 50%;
+    border: 3px solid $green;
   }
-  p {
-    #score {
-      color: $green;
+  .table th, .table td {
+    border-top: none;
+  }
+  .table tbody + tbody {
+    border-top: none;
+  }
+  .trophy {
+    img {
+      width: 35px;
     }
   }
+
   .number {
     color: $green;
   }
 }
+}
+
 
 
