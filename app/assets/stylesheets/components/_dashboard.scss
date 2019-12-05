@@ -1,7 +1,7 @@
 .dashboard-profil-card {
   padding: 0;
   overflow: hidden;
-  background-image: linear-gradient($light-green, $green);
+  background-image: linear-gradient(to right,$dark-green, $dark-green-gradient);
   color: white;
   #border-dashboard {
     border-bottom: 1px solid #91d6bc;
@@ -16,7 +16,7 @@
   }
   .card-challenge-dashboard-infos-description {
     h4 {
-      color: $green;
+      color: $dark-green-gradient;
     }
   }
   .nav-tabs {
