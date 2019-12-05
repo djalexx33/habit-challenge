@@ -34,7 +34,7 @@ class ChallengesController < ApplicationController
 
   def scoring
     @users = User.all
-    @best_five_users = User.order(score: :desc).first(5)
+    @best_five_users = User.order(score: :desc).first(10)
 
     # @top_five_scores = []
     # @users.each do |user|

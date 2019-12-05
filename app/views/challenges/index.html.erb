@@ -16,6 +16,22 @@
   </div>
 </div>
 
+<div class="container scoring-bloc bg-white pt-3">
+  <h4 class="text-center mb-4">Top users <%= image_tag "trophy.png" %></h4>
+  <%@best_five_users.each_with_index do |user, i| %>
+  <div class="d-flex justify-content-between w-100">
+    <% if [0, 1, 2].include?(i) %>
+      <h5 class=""><%= image_tag "medaille#{i + 1}.png" %></h5>
+    <% else %>
+      <h5 class="number pl-2"><%= i + 1 %></h5>
+    <% end %>
+    <p><%= user.avatar %><%= user.username.capitalize %></p>
+    <p><span id="score"><%= user.score %></span></p>
+  </div>
+  <% end %>
+
+</div>
+
 <div class="page-prez ml-5 my-3">
   <div class="text-center mb-5">
     <div class="challenge-list my-5">
