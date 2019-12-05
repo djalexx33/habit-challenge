@@ -1,19 +1,19 @@
 <div id="parallax-world-of-ugg">
   <section>
     <div class="parallax-three" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://s-i.huffpost.com/gen/1393842/images/o-SUCCESS-BOOK-facebook.jpg);">
-    <div class="container">
-      <div class="banner-home">
-        <div class="banner-home-content">
-          <h1>Join the monthly challenge</h1>
+      <div class="container">
+        <div class="banner-home">
+          <div class="banner-home-content">
+            <h1>Join the monthly challenge</h1>
+            <br>
+            <br>
+            <h2 id="typed-text"></h2>
+          </div>
           <br>
-          <br>
-          <h2 id="typed-text"></h2>
+          <%= link_to "Join the movement", challenge_path(@challenge_of_the_month.id), class: "btn btn-primary btn-lg main-button pl-4 pr-4" %>
         </div>
-        <br>
-       <%= link_to "Join the movement", challenge_path(@challenge_of_the_month.id), class: "btn btn-primary btn-lg main-button pl-4 pr-4" %>
+      </div>
     </div>
-    </div>
-  </div>
   </section>
 </div>
 
