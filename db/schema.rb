@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_131617) do
+ActiveRecord::Schema.define(version: 2019_12_04_215246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(version: 2019_12_04_131617) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "number_of_participants"
+    t.string "impact"
+    t.string "how"
+    t.string "hope"
+    t.text "impact_text"
+    t.text "how_text"
+    t.text "hope_text"
   end
 
   create_table "daily_answers", force: :cascade do |t|
